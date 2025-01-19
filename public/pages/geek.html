@@ -6,6 +6,7 @@
     <title>Website - Guilherme S. Scandelari - Geek</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -42,7 +43,7 @@
     <main class="mt-4">
         <div class="container">
             <!-- Banner Section -->
-            <div class="banner mb-4">
+            <div class="banner mb-4 rounded-3">
                 <img 
                     src="../imagens/banner-page-geek.png" 
                     alt="Banner da Página Geek" 
@@ -52,12 +53,108 @@
             </div>
 
             <!-- Full-width jumbotron -->
-            <div class="container py-5 text-center bg-body-tertiary">
+            <div class="p-5 text-center bg-body-tertiary rounded-3 mb-4">
                 <h1 class="text-body-emphasis mb-4">Geek Space!</h1>
                 <p class="col-lg-8 mx-auto lead">
-                    Essa é a área Geek. Aqui você vai encontrar algumas referências que eu gosto do universo nerd!
+                    Bem-vindo à área Geek! Aqui você encontrará algumas das minhas referências favoritas do incrível universo nerd!
                 </p>                
             </div>
+
+            <!-- Área de contatos - Steam, Riot, etc -->
+            <div class="p-5 text-center bg-body-tertiary rounded-3 mb-4">
+                <h2 class="text-center mb-4">Minhas Contas de Jogo</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Card Steam -->
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <img src="../imagens/steam-logo.png" alt="Steam" class="img-fluid mb-3" style="max-height: 100px;">
+                                <h5 class="card-title">Steam</h5>
+                                <p class="card-text">Encontre-me na Steam para jogar juntos e compartilhar conquistas.</p>
+                                <a href="https://steamcommunity.com/id/SEU_ID_STEAM" target="_blank" class="btn btn-primary">Visitar Perfil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Riot -->
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <img src="../imagens/riot-logo.png" alt="Riot Games" class="img-fluid mb-3" style="max-height: 100px;">
+                                <h5 class="card-title">Riot Games</h5>
+                                <p class="card-text">Adicione-me no Valorant, League of Legends ou outros jogos da Riot!</p>
+                                <a href="#" class="btn btn-primary">Adicionar na Riot</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Epic Games -->
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <img src="../imagens/epic-games-logo.png" alt="Epic Games" class="img-fluid mb-3" style="max-height: 100px;">
+                                <h5 class="card-title">Epic Games</h5>
+                                <p class="card-text">Vamos jogar Fortnite, Rocket League e outros jogos da Epic.</p>
+                                <a href="https://www.epicgames.com/id/SEU_ID_EPIC" target="_blank" class="btn btn-primary">Ver Perfil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full-width jumbotron - Configuração e Periféricos -->
+            <div class="p-5 text-center bg-body-tertiary rounded-3 mb-4r">
+                <h2 class="text-center mb-4">Minha Configuração</h2>
+                <p class="text-center col-lg-8 mx-auto lead">
+                    Para os mais curiosos, esse é o meu setup de hardware e software, incluindo os periféricos que uso para trabalhar e jogar.
+                </p>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Card Hardware -->
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Hardware</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-CPU"></i> Processador: AMD Ryzen 5 3600X 6-Core Processor 3.8GHz</li>
+                                    <li><i class="bi bi-memory"></i> RAM: 2x Kingston HyperX Fury Black, 8GB, 2400MHz</li>
+                                    <li><i class="bi bi-gpu-card"></i> Placa de vídeo: Radeon RX 580 Series - 8GB</li>
+                                    <li><i class="bi bi-display"></i> Monitor 1: AOC 2270w 21,5" 60Hz</li>
+                                    <li><i class="bi bi-display-fill"></i> Monitor 2: DELL SE2419HR 24" 75Hz</li>
+                                    <li><i class="bi bi-plug"></i> Fonte: Corsair CX750</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Periféricos -->
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Periféricos</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-keyboard"></i> Teclado: Razer DeathStalker Essential</li>
+                                    <li><i class="bi bi-mouse"></i> Mouse: Corsair HARPOON RGB PRO</li>
+                                    <li><i class="bi bi-headphones"></i> Headset: Behringer BH470</li>
+                                    <li><i class="bi bi-mic"></i> Microfone: Condensador BM800</li>
+                                    <li><i class="bi bi-soundwave"></i> Controle de Som: Behringer U-Phoria UM2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Software -->
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Software</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-laptop"></i> Sistema Operacional: Windows 10 Pro</li>
+                                    <li><i class="bi bi-chat"></i> Comunicação: Discord</li>
+                                    <li><i class="bi bi-mic"></i> Voice Controller: Voicemod</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
