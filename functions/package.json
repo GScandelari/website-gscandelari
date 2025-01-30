@@ -4,6 +4,7 @@
     "firebase-admin": "^13.0.2",
     "firebase-functions": "^6.3.0"
   },
+  "main": "index.js",
   "engines": {
     "node": "18"
   }

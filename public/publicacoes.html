@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicações</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Publicações</h1>
+    <div id="listaPublicacoes"></div>
+
+    <script>
+        async function carregarPublicacoes() {
+            try {
+                const response = await fetch("https://us-central1-website-scandelari.cloudfunctions.net/getPublicacoes");
+                const publicacoes = await response.json();
+
+                const lista = document.getElementById("listaPublicacoes");
+                lista.innerHTML = "";
+
+                publicacoes.forEach(pub => {
+                    const item = document.createElement("div");
+                    item.innerHTML = `
+                        <h2>${pub.titulo}</h2>
+                        <p>${pub.conteudo}</p>
+                        <small>Por ${pub.autor} em ${new Date(pub.data._seconds * 1000).toLocaleString()}</small>
+                        <hr>
+                    `;
+                    lista.appendChild(item);
+                });
+            } catch (error) {
+                console.error("Erro ao carregar publicações:", error);
+            }
+        }
+
+        window.onload = carregarPublicacoes;
+    </script>
+</body>
+</html>

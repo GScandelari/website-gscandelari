@@ -17,3 +17,24 @@ exports.getPublicacoes = functions.https.onRequest((req, res) => {
         }
     });
 });
+
+exports.addPublicacao = functions.https.onRequest(async (req, res) => {
+    try {
+        const { titulo, conteudo, autor } = req.body;
+        if (!titulo || !conteudo || !autor) {
+            return res.status(400).json({ error: "Campos obrigatórios: titulo, conteudo, autor" });
+        }
+
+        const novaPub = {
+            titulo,
+            conteudo,
+            autor,
+            data: admin.firestore.Timestamp.now()
+        };
+
+        await db.collection("publicacoes").add(novaPub);
+        res.json({ message: "Publicação adicionada com sucesso!" });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
