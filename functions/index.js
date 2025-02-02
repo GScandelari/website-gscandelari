@@ -15,7 +15,6 @@ app.use(express.json()); // Garante que req.body seja processado corretamente
 // Rota para obter publicações filtradas por categoria
 app.get("/getPublicacoes", async (req, res) => {
     try {
-        // Busca diretamente a coleção "Geek"
         const snapshot = await db.collection("publicacoes").doc("Geek").collection("posts").get();
 
         if (snapshot.empty) {
@@ -23,15 +22,13 @@ app.get("/getPublicacoes", async (req, res) => {
         }
 
         const publicacoes = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-        console.log("Publicações encontradas:", publicacoes);
-
         res.status(200).json(publicacoes);
     } catch (error) {
         console.error("Erro ao buscar publicações:", error);
         res.status(500).json({ error: "Erro ao buscar publicações", details: error.message });
     }
 });
+
 
 // Rota para adicionar uma nova publicação
 app.post("/addPublicacao", async (req, res) => {
@@ -49,7 +46,7 @@ app.post("/addPublicacao", async (req, res) => {
             data: admin.firestore.Timestamp.now(),
         };
 
-        // Adiciona na coleção correta "Geek"
+        // Adiciona na coleção correta
         const docRef = await db.collection("publicacoes").doc("Geek").collection("posts").add(novaPub);
 
         console.log("Publicação adicionada com sucesso! ID:", docRef.id);
