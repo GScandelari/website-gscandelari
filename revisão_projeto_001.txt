@@ -1,0 +1,84 @@
+Alterações de proposta comercial padrão - site profissional para dentistas de Harmonização Orofacial.
+
+Por que ter um site profissional?
+ - sobre credibilidade: Salvar em um documento "apendice - fontes" a fonte de onde trazemos o número 75%.
+ - sobre SEO local: adicionar no documento "apendice - fontes" mais detalhes sobre SEO local.
+ - 5 temas de cores: corrigir para (Azul Clínico, Rosa Elegante, Roxo Premium, Verde Emerald ou Dourado/Amber)
+ - adicionar "2 modelos de site: Página única ou Multi Páginas.
+
+
+_____
+
+Editar todos os templates para ter a localização (endereço completo no footer da página)
+No footer da página, em Link Rápidos, adicionar "Influenciadores".
+
+_____
+
+
+Pacotes Disponíveis
+
+
+### PACOTE ESSENCIAL — R$ 1.997
+
+**Site One Page profissional**
+
+Inclui:
+- Landing page completa e responsiva (mobile-first)
+- Escolha entre 5 paletas de cores (Azul Clínico, Rosa Elegante, Roxo Premium, Verde Emerald ou Dourado/Amber)
+- Design premium e personalizado com sua identidade visual
+- Seções: Hero, Sobre, Serviços, Avaliações/Depoímentos, Localização, Influenciadores, Contato
+- Botão flutuante de WhatsApp
+- Formulário de contato integrado (FormSubmit) (ESTUDAR MELHORIAS DE IMPLEMENTAÇÃO)
+- Google Maps com localização da clínica
+- Seção de marcas parceiras (Allergan, Merz, Galderma, Sinclair) (TRANSFORMAR CADA MARCA EM LOGOS + NOME MARCA; CARROSSEL)
+- Otimização para celular, tablet e desktop
+- Publicação no ar (Vercel, Netlify ou hospedagem do cliente) (ESTUDAR COMPATIBILIDADE DOS TEMPLATES/PROPOSTAS PARA USO NO Vercel ou Netlify. ALTERNATIVA FINAL, Firebase)
+
+- **Prazo de entrega: 3-5 dias úteis** (UMA VEZ QUE TODAS AS INFORMAÇÕES FORAM PROVIDÊNCIADAS E APROVADAS PELO CLIENE, ISSO INCLUI TEXTOS, FOTOS E VALORES)
+
+**Ideal para:** Profissionais que estão começando e precisam de presença digital rápida e profissional.
+
+
+
+
+
+### PACOTE PROFISSIONAL — R$ 2.797 ⭐ Mais Escolhido
+
+**Site Multi-Páginas completo**
+
+Tudo do Pacote Essencial, **mais:**
+- Upgrade para site multi-páginas com 5 páginas completas (Início, Sobre, Serviços, Avaliações, Contato)
+- Página de serviços com 8 tratamentos detalhados (descrição, tempo, preço médio)
+- Página de avaliações com depoimentos e widget do Google Reviews
+- Navegação entre páginas com menu fixo
+- Design premium com animações suaves
+- Configuração do domínio personalizado (.com.br - necessário ter domínio)
+
+- **Prazo de entrega: 5-7 dias úteis** (UMA VEZ QUE TODAS AS INFORMAÇÕES FORAM PROVIDÊNCIADAS E APROVADAS PELO CLIENE, ISSO INCLUI TEXTOS, FOTOS E VALORES)
+
+**Ideal para:** Profissionais que querem um site completo, com mais conteúdo e páginas dedicadas para cada assunto.
+
+
+
+### PACOTE PREMIUM — R$ 3.497
+
+**Site completo + extras estratégicos**
+
+Tudo do Pacote Profissional, **mais:**
+- Configuração do Google Meu Negócio (otimizado para SEO local) (DESENVOLVER DOCUMENTO DE COMO CONFIGURAR)
+- Integração com Google Analytics + Meta Pixel (Facebook/Instagram Ads) (DESENVOLVER DOCUMENTO DE COMO CONFIGURAR)
+- Página de agradecimento personalizada (pós-formulário)
+- Otimização de SEO on-page (meta tags, Open Graph, Schema markup) (DESENVOLVER DOCUMENTO DE COMO CONFIGURAR)
+- Favicon e ícones personalizados (DESENVOLVER DOCUMENTO DE QUAIS LOCAIS PODEMOS EDITAR OS FAVICON E ICONES PERSONALIZADOS)
+- 1 mês de suporte pós-lançamento (ajustes e atualizações)
+- REMOVER - "Treinamento em vídeo: como editar textos e imagens do site"
+- **Prazo de entrega: 7-10 dias úteis** (UMA VEZ QUE TODAS AS INFORMAÇÕES FORAM PROVIDÊNCIADAS E APROVADAS PELO CLIENE, ISSO INCLUI TEXTOS, FOTOS E VALORES)
+
+**Ideal para:** Profissionais que querem um site 100% otimizado para atrair pacientes pelo Google e redes sociais.
+
+
+FAZER ATUALIZAÇÕES PERTINENTES A "## Comparativo dos Pacotes"
+
+
+CASO NECESSÁRIO, CRIAR PROMPTS DE COMANDOS PARA ATUALIZAR OS TEMPLATES CONFORME ALTERAÇÕES DA PROPOSTA COMERCIAL QUE VENHA A IMPACTAR O QUE ESTÁ SENDO OFERECIDO.
+

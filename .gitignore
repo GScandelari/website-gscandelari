@@ -1,0 +1,14 @@
+# Firebase credentials — nunca versionar
+firebase-config.js
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.production
+
+# Firebase cache
+.firebase/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

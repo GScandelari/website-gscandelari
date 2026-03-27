@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="/Dra.%20Linda%20Mello/version-c/" />
+  <title>Avalia&ccedil;&otilde;es | Dra. Linda Mello</title>
+  <meta name="description" content="Veja o que nossos pacientes dizem sobre os tratamentos de Harmoniza&ccedil;&atilde;o Orofacial com Dra. Linda Mello. Confira as avalia&ccedil;&otilde;es no Google." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#f5f3ff',100:'#ede9fe',200:'#ddd6fe',300:'#c4b5fd',400:'#a78bfa',500:'#8b5cf6',600:'#7c3aed',700:'#6d28d9',800:'#5b21b6',900:'#4c1d95' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+          <span class="text-xl font-bold text-gray-900">Clinic Dra. Linda Mello</span>
+        </a>
+        <button class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars text-xl text-gray-700"></i>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
+          <a href="servicos.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="text-sm font-medium text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+        <div class="flex flex-col gap-2 pt-3">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Sobre</a>
+          <a href="servicos.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="px-3 py-2 rounded-lg text-primary-600 bg-primary-50 font-medium">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition">Agendar Consulta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER DA PÁGINA -->
+  <section class="bg-gradient-to-br from-primary-600 to-primary-800 pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Avalia&ccedil;&otilde;es dos Pacientes</h1>
+      <p class="text-primary-200 text-lg max-w-2xl mx-auto">Veja o que nossos pacientes dizem sobre a experi&ecirc;ncia e os resultados dos procedimentos.</p>
+      <div class="flex items-center justify-center gap-3 mt-6">
+        <div class="flex text-yellow-400 text-xl">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <span class="text-white text-lg font-semibold">4.9/5</span>
+        <span class="text-primary-200">(avalia&ccedil;&otilde;es no Google)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE REVIEWS WIDGET (JotForm) -->
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gray-50 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8">
+        <div class="text-center md:text-left">
+          <div class="flex items-center gap-3 justify-center md:justify-start mb-3">
+            <i class="fa-brands fa-google text-4xl text-gray-700"></i>
+            <div>
+              <p class="font-bold text-gray-900 text-lg">Google Reviews</p>
+              <p class="text-sm text-gray-500">Clinic Dra. Linda Mello</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 justify-center md:justify-start">
+            <span class="text-4xl font-bold text-gray-900">4.9</span>
+            <div>
+              <div class="flex text-yellow-400">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-sm text-gray-500">avalia&ccedil;&otilde;es</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 w-full">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-sm text-gray-600 w-8">5 <i class="fa-solid fa-star text-yellow-400 text-xs"></i></span>
+              <div class="flex-1 bg-gray-200 rounded-full h-2.5"><div class="bg-yellow-400 rounded-full h-2.5" style="width: 88%"></div></div>
+              <span class="text-sm text-gray-500 w-10 text-right">88%</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sm text-gray-600 w-8">4 <i class="fa-solid fa-star text-yellow-400 text-xs"></i></span>
+              <div class="flex-1 bg-gray-200 rounded-full h-2.5"><div class="bg-yellow-400 rounded-full h-2.5" style="width: 9%"></div></div>
+              <span class="text-sm text-gray-500 w-10 text-right">9%</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sm text-gray-600 w-8">3 <i class="fa-solid fa-star text-yellow-400 text-xs"></i></span>
+              <div class="flex-1 bg-gray-200 rounded-full h-2.5"><div class="bg-yellow-400 rounded-full h-2.5" style="width: 2%"></div></div>
+              <span class="text-sm text-gray-500 w-10 text-right">2%</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sm text-gray-600 w-8">2 <i class="fa-solid fa-star text-yellow-400 text-xs"></i></span>
+              <div class="flex-1 bg-gray-200 rounded-full h-2.5"><div class="bg-yellow-400 rounded-full h-2.5" style="width: 1%"></div></div>
+              <span class="text-sm text-gray-500 w-10 text-right">1%</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sm text-gray-600 w-8">1 <i class="fa-solid fa-star text-yellow-400 text-xs"></i></span>
+              <div class="flex-1 bg-gray-200 rounded-full h-2.5"><div class="bg-yellow-400 rounded-full h-2.5" style="width: 0%"></div></div>
+              <span class="text-sm text-gray-500 w-10 text-right">0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- JotForm Widget -->
+      <div class="mt-6">
+        <div id="JFWebsiteWidget-019d0c3fda12787abe4d8d4e598d2f663229"></div>
+        <script src="https://www.jotform.com/website-widgets/embed/019d0c3fda12787abe4d8d4e598d2f663229"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Hist&oacute;rias Reais de Transforma&ccedil;&atilde;o</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-8">
+
+        <!-- Depoimento 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition">
+          <div class="flex text-yellow-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-3">Preenchimento Labial</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            &ldquo;Sempre tive vontade de fazer preenchimento labial mas tinha muito receio de ficar artificial. A Dra. Linda entendeu exatamente o que eu queria e o resultado ficou lindo e super natural! Todos os meus amigos elogiaram e ningu&eacute;m percebeu que eu fiz, ficou apenas com aqu&ecirc;le toque especial. A cl&iacute;nica &eacute; maravilhosa e o atendimento do in&iacute;cio ao fim &eacute; impec&aacute;vel. J&aacute; estou planejando a pr&oacute;xima visita!&rdquo;
+          </p>
+          <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+            <img src="https://i.pravatar.cc/48?img=20" alt="paciente" class="w-12 h-12 rounded-full"/>
+            <div>
+              <p class="font-semibold text-gray-900">Camila S.</p>
+              <p class="text-sm text-gray-400"><i class="fa-brands fa-google mr-1"></i>Avaliou no Google</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition">
+          <div class="flex text-yellow-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-3">Harmoniza&ccedil;&atilde;o Completa</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            &ldquo;Fiz a harmoniza&ccedil;&atilde;o orofacial completa e n&atilde;o poderia estar mais feliz com o resultado! A Dra. Linda fez um planejamento incr&iacute;vel, explicou cada etapa com paci&ecirc;ncia e o resultado superou todas as minhas expectativas. Minha autoestima melhorou 100%. Todos perguntam o que eu fiz porque ficou t&atilde;o natural. Recomendo de olhos fechados!&rdquo;
+          </p>
+          <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+            <img src="https://i.pravatar.cc/48?img=25" alt="paciente" class="w-12 h-12 rounded-full"/>
+            <div>
+              <p class="font-semibold text-gray-900">Fernanda M.</p>
+              <p class="text-sm text-gray-400"><i class="fa-brands fa-google mr-1"></i>Avaliou no Google</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition">
+          <div class="flex text-yellow-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-3">Toxina Botul&iacute;nica (Botox)</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            &ldquo;Era minha primeira vez fazendo botox e estava bastante nervosa. A Dra. Linda me acolheu, explicou tudo nos m&iacute;nimos detalhes e o procedimento foi super tranquilo! N&atilde;o senti praticamente nada. O resultado ficou maravilhoso &mdash; minha testa lisinha e com express&atilde;o natural. J&aacute; agendei a pr&oacute;xima aplica&ccedil;&atilde;o. Super recomendo para quem tem medo!&rdquo;
+          </p>
+          <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+            <img src="https://i.pravatar.cc/48?img=32" alt="paciente" class="w-12 h-12 rounded-full"/>
+            <div>
+              <p class="font-semibold text-gray-900">Juliana R.</p>
+              <p class="text-sm text-gray-400"><i class="fa-brands fa-google mr-1"></i>Avaliou no Google</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition">
+          <div class="flex text-yellow-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-3">Bioestimuladores de Col&aacute;geno</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            &ldquo;Fiz Sculptra com a Dra. Linda e o resultado &eacute; impressionante! Minha pele ficou muito mais firme e vi&ccedil;osa. O melhor &eacute; que o resultado vai melhorando com o tempo conforme o col&aacute;geno &eacute; produzido. Profissional atenciosa, &eacute;tica e com resultados que falam por si. Minha cl&iacute;nica de refer&ecirc;ncia para sempre!&rdquo;
+          </p>
+          <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+            <img src="https://i.pravatar.cc/48?img=44" alt="paciente" class="w-12 h-12 rounded-full"/>
+            <div>
+              <p class="font-semibold text-gray-900">Patricia L.</p>
+              <p class="text-sm text-gray-400"><i class="fa-brands fa-google mr-1"></i>Avaliou no Google</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Quer fazer parte dessas hist&oacute;rias?</h2>
+      <p class="text-primary-100 text-lg mb-8">Agende sua avalia&ccedil;&atilde;o e comece sua transforma&ccedil;&atilde;o.</p>
+      <a href="contato.html" class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl inline-block">
+        <i class="fa-solid fa-calendar-check mr-2"></i>Agendar Avalia&ccedil;&atilde;o
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <span class="text-lg font-bold">Dra. Linda Mello</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmoniza&ccedil;&atilde;o Orofacial.<br/>CRO-SP 136797</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">P&aacute;ginas</h4>
+          <div class="space-y-2">
+            <a href="index.html" class="block text-gray-400 text-sm hover:text-white transition">In&iacute;cio</a>
+            <a href="sobre.html" class="block text-gray-400 text-sm hover:text-white transition">Sobre</a>
+            <a href="servicos.html" class="block text-gray-400 text-sm hover:text-white transition">Servi&ccedil;os</a>
+            <a href="avaliacoes.html" class="block text-gray-400 text-sm hover:text-white transition">Avalia&ccedil;&otilde;es</a>
+            <a href="contato.html" class="block text-gray-400 text-sm hover:text-white transition">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contato</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <p><i class="fa-solid fa-phone mr-2"></i>(13) 99603-7772</p>
+            <p><i class="fa-solid fa-location-dot mr-2"></i>Santos - SP</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Redes Sociais</h4>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/dra.lindamello" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/5513996037772" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 Dra. Linda Mello. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5513996037772?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all duration-300 float">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+</body>
+</html>

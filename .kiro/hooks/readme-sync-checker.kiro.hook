@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "name": "README Sync Checker",
+  "description": "When any file is edited, reviews the changes and checks if any existing README in the project (root or subfolders) is still accurate and up to date. If not, suggests the necessary updates for the user to accept or decline.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.html",
+      "**/*.md",
+      "**/*.txt"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A file was just edited in the project. Your job is to check if any existing README file in the project is still accurate and up to date given the recent change.\n\nSteps:\n1. Read the edited file to understand what changed.\n2. Search for README files that already exist anywhere in the project (root level or any subfolder). Do NOT create new README files — only consider ones that already exist.\n3. For each relevant README found, compare it against the recent change: does it accurately reflect the current state of the project? Consider things like: new versions/templates added or removed, updated features, changed structure, new guides or files referenced, etc.\n4. If all relevant READMEs are already up to date, just say so briefly.\n5. If any README needs updating, propose the exact changes as file edit suggestions so the user can accept or decline them. Do not apply changes automatically."
+  }
+}

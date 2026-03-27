@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(convert:*)",
+      "Bash(python3:*)",
+      "Bash(wc:*)",
+      "WebFetch(domain:www.google.com)",
+      "WebSearch",
+      "WebFetch(domain:www.doctoralia.com.br)",
+      "Bash(firebase --version:*)",
+      "Bash(firebase deploy:*)"
+    ]
+  }
+}

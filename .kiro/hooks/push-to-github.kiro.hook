@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Push to GitHub",
+  "description": "Pushes the current project to GitHub at https://github.com/GScandelari/website-gscandelari by staging all changes, committing with a timestamp message, and pushing to the remote.",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "git add -A && git commit -m \"Update: $(date '+%Y-%m-%d %H:%M:%S')\" && git remote set-url origin https://github.com/GScandelari/website-gscandelari.git && git push origin main || git push origin master"
+  }
+}
