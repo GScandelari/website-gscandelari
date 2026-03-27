@@ -22,3 +22,8 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+
+// Cache offline: na segunda visita, dados carregam do IndexedDB instantaneamente
+db.enablePersistence({ synchronizeTabs: true }).catch(function(err) {
+  console.warn('Firestore persistence não disponível:', err.code);
+});
