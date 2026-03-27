@@ -620,7 +620,7 @@
         <div id="listaProposta" class="collapsible-content">
           <div class="px-5 pb-5 border-t border-gray-800 pt-5">
             <div id="propostasContainer" class="space-y-3">
-              <p class="text-sm text-gray-500 text-center py-4">Carregando propostas...</p>
+              <p class="text-sm text-gray-500 text-center py-4">Clique para carregar as propostas.</p>
             </div>
           </div>
         </div>
@@ -655,12 +655,13 @@
   });
 
   // Toggle seções colapsáveis
+  var propostasCarregadas = false;
   function toggleSection(id) {
     var el = document.getElementById(id);
     var chevron = document.getElementById('chevron-' + id);
     el.classList.toggle('open');
     chevron.classList.toggle('rotated');
-    if (id === 'listaProposta' && el.classList.contains('open')) {
+    if (id === 'listaProposta' && el.classList.contains('open') && !propostasCarregadas) {
       carregarPropostas();
     }
   }
@@ -933,6 +934,7 @@
     db.collection('propostas').add(d).then(function() {
       btn.innerHTML = '<i class="fa-solid fa-check"></i> Salvo \u2713';
       btn.classList.replace('bg-blue-600', 'bg-emerald-600');
+      propostasCarregadas = false; // força reload na próxima abertura da lista
       setTimeout(function() {
         btn.disabled = false;
         btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Salvar no Firebase';
@@ -957,50 +959,100 @@
       container.innerHTML = '';
       snap.forEach(function(doc) {
         var d = doc.data();
-        var dataStr = d.dataVisita || '';
         var procs = (d.procedimentos || []).join(', ');
+
+        // Card wrapper
         var card = document.createElement('div');
         card.className = 'bg-gray-800 border border-gray-700 rounded-lg overflow-hidden';
-        card.innerHTML =
-          '<button onclick="toggleDetalhes(\'' + doc.id + '\')" class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-750 transition">' +
-            '<div class="flex-1 min-w-0">' +
-              '<p class="text-sm font-medium text-white truncate">' + (d.nomeProfissional || 'Sem nome') + '</p>' +
-              '<p class="text-xs text-gray-500">' + dataStr + ' &bull; ' + (d.pacote || '') + ' &bull; ' + (d.valorNegociado || '') + '</p>' +
-            '</div>' +
-            '<i id="chev-' + doc.id + '" class="fa-solid fa-chevron-down text-gray-600 text-xs chevron-icon ml-2"></i>' +
-          '</button>' +
-          '<div id="det-' + doc.id + '" class="collapsible-content">' +
-            '<div class="px-4 pb-3 border-t border-gray-700 pt-3 text-xs text-gray-400 space-y-1">' +
-              '<p><strong>CRO:</strong> ' + (d.cro || '-') + ' | <strong>Gênero:</strong> ' + (d.genero || '-') + '</p>' +
-              '<p><strong>Clínica:</strong> ' + (d.nomeClinica || '-') + '</p>' +
-              '<p><strong>WhatsApp:</strong> ' + (d.whatsapp || '-') + ' | <strong>Tel:</strong> ' + (d.telefone || '-') + '</p>' +
-              '<p><strong>E-mail:</strong> ' + (d.email || '-') + ' | <strong>Instagram:</strong> ' + (d.instagram || '-') + '</p>' +
-              (d.facebook ? '<p><strong>Facebook:</strong> ' + d.facebook + '</p>' : '') +
-              (d.tiktok ? '<p><strong>TikTok:</strong> ' + d.tiktok + '</p>' : '') +
-              '<p><strong>Endereço:</strong> ' + (d.endereco || '-') + ', ' + (d.cidadeUf || '-') + ' - ' + (d.cep || '-') + '</p>' +
-              (d.referencia ? '<p><strong>Referência:</strong> ' + d.referencia + '</p>' : '') +
-              '<p><strong>Estac.:</strong> ' + (d.estacionamento || '-') + ' | <strong>Transp.:</strong> ' + (d.transportePublico || '-') + '</p>' +
-              '<p class="pt-1"><strong>Horários:</strong> Seg ' + (d.horSeg || '-') + ' | Ter ' + (d.horTer || '-') + ' | Qua ' + (d.horQua || '-') + ' | Qui ' + (d.horQui || '-') + ' | Sex ' + (d.horSex || '-') + ' | Sáb ' + (d.horSab || '-') + ' | Dom ' + (d.horDom || '-') + '</p>' +
-              '<p class="pt-1"><strong>Formação:</strong> ' + (d.universidade || '-') + ' - ' + (d.cursoGrad || '-') + '</p>' +
-              (d.posGrad ? '<p><strong>Pós:</strong> ' + d.posGrad + ' - ' + (d.posGradInstituicao || '') + '</p>' : '') +
-              (d.anosExperiencia ? '<p><strong>Experiência:</strong> ' + d.anosExperiencia + '</p>' : '') +
-              (procs ? '<p class="pt-1"><strong>Procedimentos:</strong> ' + procs + '</p>' : '') +
-              (d.googleNota ? '<p><strong>Google:</strong> ' + d.googleNota + ' (' + (d.googleQtd || '?') + ' avaliações)</p>' : '') +
-              ((d.marcas || []).length ? '<p><strong>Marcas:</strong> ' + d.marcas.join(', ') + '</p>' : '') +
-              '<p class="pt-1"><strong>Cor:</strong> ' + (d.corPreferida || '-') + ' | <strong>Domínio:</strong> ' + (d.dominio || '-') + (d.dominioNome ? ' - ' + d.dominioNome : '') + '</p>' +
-              '<p><strong>Tema:</strong> ' + (d.tema || '-') + ' | <strong>Tipo:</strong> ' + (d.tipoSite || '-') + '</p>' +
-              '<p><strong>Pagamento:</strong> ' + (d.formaPagamento || '-') + '</p>' +
-              (d.observacoes ? '<p><strong>Obs:</strong> ' + d.observacoes + '</p>' : '') +
-              '<div class="flex gap-2 mt-3">' +
-                '<button onclick="exportarPropostaSalva(\'' + doc.id + '\')" class="px-3 py-1.5 bg-emerald-600/20 text-emerald-400 rounded text-xs hover:bg-emerald-600/30 transition"><i class="fa-solid fa-file-arrow-down mr-1"></i>Exportar .TXT</button>' +
-                '<button onclick="excluirProposta(\'' + doc.id + '\')" class="px-3 py-1.5 bg-red-600/20 text-red-400 rounded text-xs hover:bg-red-600/30 transition"><i class="fa-solid fa-trash mr-1"></i>Excluir</button>' +
-              '</div>' +
-            '</div>' +
-          '</div>';
-        card.dataset.proposta = JSON.stringify(d);
         card.id = 'card-' + doc.id;
+        card.dataset.proposta = JSON.stringify(d);
+
+        // Header button
+        var btn = document.createElement('button');
+        btn.className = 'w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-750 transition';
+        btn.onclick = function() { toggleDetalhes(doc.id); };
+
+        var info = document.createElement('div');
+        info.className = 'flex-1 min-w-0';
+        var nome = document.createElement('p');
+        nome.className = 'text-sm font-medium text-white truncate';
+        nome.textContent = d.nomeProfissional || 'Sem nome';
+        var meta = document.createElement('p');
+        meta.className = 'text-xs text-gray-500';
+        meta.textContent = [d.dataVisita, d.pacote, d.valorNegociado].filter(Boolean).join(' • ');
+        info.appendChild(nome);
+        info.appendChild(meta);
+
+        var chev = document.createElement('i');
+        chev.id = 'chev-' + doc.id;
+        chev.className = 'fa-solid fa-chevron-down text-gray-600 text-xs chevron-icon ml-2';
+
+        btn.appendChild(info);
+        btn.appendChild(chev);
+
+        // Details panel
+        var det = document.createElement('div');
+        det.id = 'det-' + doc.id;
+        det.className = 'collapsible-content';
+
+        var inner = document.createElement('div');
+        inner.className = 'px-4 pb-3 border-t border-gray-700 pt-3 text-xs text-gray-400 space-y-1';
+
+        function row(label, val) {
+          if (!val) return;
+          var p = document.createElement('p');
+          var b = document.createElement('strong');
+          b.textContent = label + ': ';
+          p.appendChild(b);
+          p.appendChild(document.createTextNode(val));
+          inner.appendChild(p);
+        }
+
+        row('CRO', d.cro + (d.genero ? ' | Gênero: ' + d.genero : ''));
+        row('Clínica', d.nomeClinica);
+        row('WhatsApp', d.whatsapp + (d.telefone ? ' | Tel: ' + d.telefone : ''));
+        row('E-mail', d.email + (d.instagram ? ' | Instagram: ' + d.instagram : ''));
+        if (d.facebook) row('Facebook', d.facebook);
+        if (d.tiktok) row('TikTok', d.tiktok);
+        row('Endereço', [d.endereco, d.cidadeUf, d.cep].filter(Boolean).join(', '));
+        if (d.referencia) row('Referência', d.referencia);
+        row('Estac.', d.estacionamento + (d.transportePublico ? ' | Transp.: ' + d.transportePublico : ''));
+        row('Horários', 'Seg ' + (d.horSeg||'-') + ' | Ter ' + (d.horTer||'-') + ' | Qua ' + (d.horQua||'-') + ' | Qui ' + (d.horQui||'-') + ' | Sex ' + (d.horSex||'-') + ' | Sáb ' + (d.horSab||'-') + ' | Dom ' + (d.horDom||'-'));
+        row('Formação', [d.universidade, d.cursoGrad].filter(Boolean).join(' - '));
+        if (d.posGrad) row('Pós', [d.posGrad, d.posGradInstituicao].filter(Boolean).join(' - '));
+        if (d.anosExperiencia) row('Experiência', d.anosExperiencia);
+        if (procs) row('Procedimentos', procs);
+        if (d.googleNota) row('Google', d.googleNota + ' (' + (d.googleQtd || '?') + ' avaliações)');
+        if ((d.marcas || []).length) row('Marcas', d.marcas.join(', '));
+        row('Cor', d.corPreferida + (d.corOutra ? ' (' + d.corOutra + ')' : '') + ' | Domínio: ' + (d.dominio || '-') + (d.dominioNome ? ' - ' + d.dominioNome : ''));
+        row('Tema', (d.tema || '-') + ' | Tipo: ' + (d.tipoSite || '-'));
+        row('Pagamento', d.formaPagamento);
+        if (d.observacoes) row('Obs', d.observacoes);
+
+        // Actions
+        var actions = document.createElement('div');
+        actions.className = 'flex gap-2 mt-3';
+
+        var btnExport = document.createElement('button');
+        btnExport.className = 'px-3 py-1.5 bg-emerald-600/20 text-emerald-400 rounded text-xs hover:bg-emerald-600/30 transition';
+        btnExport.innerHTML = '<i class="fa-solid fa-file-arrow-down mr-1"></i>Exportar .TXT';
+        btnExport.onclick = function() { exportarPropostaSalva(doc.id); };
+
+        var btnDel = document.createElement('button');
+        btnDel.className = 'px-3 py-1.5 bg-red-600/20 text-red-400 rounded text-xs hover:bg-red-600/30 transition';
+        btnDel.innerHTML = '<i class="fa-solid fa-trash mr-1"></i>Excluir';
+        btnDel.onclick = function() { excluirProposta(doc.id); };
+
+        actions.appendChild(btnExport);
+        actions.appendChild(btnDel);
+        inner.appendChild(actions);
+        det.appendChild(inner);
+
+        card.appendChild(btn);
+        card.appendChild(det);
         container.appendChild(card);
       });
+      propostasCarregadas = true;
     }).catch(function(err) {
       container.innerHTML = '<p class="text-sm text-red-400 text-center py-4">Erro ao carregar: ' + err.message + '</p>';
     });
@@ -1036,6 +1088,7 @@
     db.collection('propostas').doc(id).delete().then(function() {
       var card = document.getElementById('card-' + id);
       if (card) card.remove();
+      propostasCarregadas = false;
       var container = document.getElementById('propostasContainer');
       if (!container.children.length) {
         container.innerHTML = '<p class="text-sm text-gray-500 text-center py-4">Nenhuma proposta salva.</p>';
