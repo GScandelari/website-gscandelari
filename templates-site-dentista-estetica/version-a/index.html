@@ -30,8 +30,13 @@
 </head>
 <body class="font-sans text-gray-800 antialiased">
 
+  <!-- BANNER TEMPLATE -->
+  <div id="dev-banner" style="position:relative;z-index:9999;background:#facc15;color:#000;text-align:center;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:0.05em;">
+    ESTA PÁGINA É UM PROJETO TEMPLATE NÃO FUNCIONAL — USO EXCLUSIVO PARA DEV SITES GSCANDELARI
+  </div>
+
   <!-- NAVBAR -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur shadow-sm">
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur shadow-sm" style="top: var(--banner-h, 37px)">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 md:h-20">
         <a href="#hero" class="flex items-center gap-2">
@@ -652,6 +657,21 @@
   <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all duration-300 float">
     <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
   </a>
+
+  <script>
+    // Ajusta a navbar para ficar abaixo do banner de template
+    function adjustNavbar() {
+      var banner = document.getElementById('dev-banner');
+      var navbar = document.getElementById('navbar');
+      if (banner && navbar) {
+        var h = banner.offsetHeight + 'px';
+        document.documentElement.style.setProperty('--banner-h', h);
+        navbar.style.top = h;
+      }
+    }
+    adjustNavbar();
+    window.addEventListener('resize', adjustNavbar);
+  </script>
 
 </body>
 </html>
