@@ -30,44 +30,49 @@
 </head>
 <body class="font-sans text-gray-800 antialiased">
 
-  <!-- BANNER TEMPLATE -->
-  <div id="dev-banner" style="position:relative;z-index:9999;background:#facc15;color:#000;text-align:center;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:0.05em;">
-    ESTA PÁGINA É UM PROJETO TEMPLATE NÃO FUNCIONAL — USO EXCLUSIVO PARA DEV SITES GSCANDELARI
-  </div>
+  <!-- BANNER + NAVBAR fixos no topo, empilhados sem sobreposição -->
+  <div style="position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;flex-direction:column;">
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur shadow-sm" style="top: var(--banner-h, 37px)">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16 md:h-20">
-        <a href="#hero" class="flex items-center gap-2">
-          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
-          <span class="text-xl font-bold text-gray-900">[NOME DO DENTISTA]</span>
-        </a>
-        <!-- Mobile menu button -->
-        <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-          <i class="fa-solid fa-bars text-xl text-gray-700"></i>
-        </button>
-        <!-- Desktop menu -->
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#sobre" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
-          <a href="#servicos" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Servi&ccedil;os</a>
-          <a href="#avaliacoes" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
-          <a href="#localizacao" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Localiza&ccedil;&atilde;o</a>
-          <a href="#contato" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
-        </div>
-      </div>
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
-        <div class="flex flex-col gap-2 pt-3">
-          <a href="#sobre" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre</a>
-          <a href="#servicos" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Servi&ccedil;os</a>
-          <a href="#avaliacoes" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Avalia&ccedil;&otilde;es</a>
-          <a href="#localizacao" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Localiza&ccedil;&atilde;o</a>
-          <a href="#contato" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Agendar Consulta</a>
-        </div>
-      </div>
+    <!-- BANNER TEMPLATE -->
+    <div style="background:#facc15;color:#000;text-align:center;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:0.05em;">
+      ESTA PÁGINA É UM PROJETO TEMPLATE NÃO FUNCIONAL — USO EXCLUSIVO PARA DEV SITES GSCANDELARI
     </div>
-  </nav>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="w-full transition-all duration-300 bg-white/95 backdrop-blur shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+          <a href="#hero" class="flex items-center gap-2">
+            <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+            <span class="text-xl font-bold text-gray-900">[NOME DO DENTISTA]</span>
+          </a>
+          <!-- Mobile menu button -->
+          <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <i class="fa-solid fa-bars text-xl text-gray-700"></i>
+          </button>
+          <!-- Desktop menu -->
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#sobre" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
+            <a href="#servicos" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Servi&ccedil;os</a>
+            <a href="#avaliacoes" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+            <a href="#localizacao" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Localiza&ccedil;&atilde;o</a>
+            <a href="#contato" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+          <div class="flex flex-col gap-2 pt-3">
+            <a href="#sobre" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre</a>
+            <a href="#servicos" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Servi&ccedil;os</a>
+            <a href="#avaliacoes" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Avalia&ccedil;&otilde;es</a>
+            <a href="#localizacao" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Localiza&ccedil;&atilde;o</a>
+            <a href="#contato" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </div>
 
   <!-- HERO -->
   <section id="hero" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
@@ -657,21 +662,6 @@
   <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all duration-300 float">
     <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
   </a>
-
-  <script>
-    // Ajusta a navbar para ficar abaixo do banner de template
-    function adjustNavbar() {
-      var banner = document.getElementById('dev-banner');
-      var navbar = document.getElementById('navbar');
-      if (banner && navbar) {
-        var h = banner.offsetHeight + 'px';
-        document.documentElement.style.setProperty('--banner-h', h);
-        navbar.style.top = h;
-      }
-    }
-    adjustNavbar();
-    window.addEventListener('resize', adjustNavbar);
-  </script>
 
 </body>
 </html>
