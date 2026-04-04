@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Sites | GScandelari</title>
+  <!-- Preconnect para reduzir latência DNS/TLS -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://www.gstatic.com" />
+  <link rel="preconnect" href="https://firestore.googleapis.com" />
+
+  <!-- Tailwind CSS via CDN play (JIT no browser — adequado para página interna/dev) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <style>
+    html{scroll-behavior:smooth}
+    .collapsible-content{max-height:0;overflow:hidden;transition:max-height .4s ease}
+    .collapsible-content.open{max-height:5000px}
+    .chevron-icon{transition:transform .3s ease}
+    .chevron-icon.rotated{transform:rotate(180deg)}
+  </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen font-sans antialiased">
+
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+          <i class="fa-solid fa-folder-tree text-lg"></i>
+        </div>
+        <h1 class="text-2xl font-bold">Dev Sites</h1>
+      </div>
+      <p class="text-gray-400 text-sm">Projetos hospedados &mdash; GScandelari</p>
+    </div>
+
+    <!-- Projetos -->
+    <div class="space-y-4">
+
+      <!-- Dr. Douglas de Siqueira -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl hover:border-blue-600/50 transition-all duration-300">
+        <div class="p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 bg-blue-600/20 rounded-lg flex items-center justify-center">
+              <i class="fa-solid fa-tooth text-blue-400"></i>
+            </div>
+            <div>
+              <h2 class="font-semibold text-white">Dr. Douglas de Siqueira</h2>
+              <p class="text-xs text-gray-500">Dentista &bull; Harmoniza&ccedil;&atilde;o Orofacial &bull; Santos/SP &bull; 3 vers&otilde;es</p>
+            </div>
+          </div>
+          <div class="pl-12 space-y-2">
+            <a href="Dr.%20Douglas%20de%20Siqueira/version-a/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-blue-600/20 hover:text-blue-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-blue-400 transition"></i>
+              <span>Version A</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; One Page Azul Cl&iacute;nico</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="Dr.%20Douglas%20de%20Siqueira/version-b/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-rose-600/20 hover:text-rose-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-rose-400 transition"></i>
+              <span>Version B</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; One Page Rosa Elegante</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="Dr.%20Douglas%20de%20Siqueira/version-c/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-purple-600/20 hover:text-purple-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-purple-400 transition"></i>
+              <span>Version C</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; Multi-p&aacute;ginas Roxo Premium</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dra. Linda Mello -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl hover:border-purple-600/50 transition-all duration-300">
+        <div class="p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 bg-purple-600/20 rounded-lg flex items-center justify-center">
+              <i class="fa-solid fa-tooth text-purple-400"></i>
+            </div>
+            <div>
+              <h2 class="font-semibold text-white">Dra. Linda Mello</h2>
+              <p class="text-xs text-gray-500">Dentista &bull; Harmoniza&ccedil;&atilde;o Orofacial &bull; Santos/SP &bull; Multi-p&aacute;ginas</p>
+            </div>
+          </div>
+          <div class="pl-12 space-y-2">
+            <a href="Dra.%20Linda%20Mello/version-c/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-purple-600/20 hover:text-purple-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-purple-400 transition"></i>
+              <span>Version C Multi</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; Multi-p&aacute;ginas Roxo Premium</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Templates Site Dentista Estética -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl hover:border-blue-600/50 transition-all duration-300">
+        <div class="p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 bg-purple-600/20 rounded-lg flex items-center justify-center">
+              <i class="fa-solid fa-palette text-purple-400"></i>
+            </div>
+            <div>
+              <h2 class="font-semibold text-white">Templates Site Dentista Est&eacute;tica</h2>
+              <p class="text-xs text-gray-500">Templates base &bull; 10 vers&otilde;es dispon&iacute;veis</p>
+            </div>
+          </div>
+          <div class="pl-12 space-y-2">
+            <a href="templates-site-dentista-estetica/version-a/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-blue-600/20 hover:text-blue-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-blue-400 transition"></i>
+              <span>Version A</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; One Page Azul Cl&iacute;nico</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-a-multi/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-blue-600/20 hover:text-blue-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-blue-400 transition"></i>
+              <span>Version A Multi</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; Multi-p&aacute;ginas Azul Cl&iacute;nico</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-b/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-rose-600/20 hover:text-rose-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-rose-400 transition"></i>
+              <span>Version B</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; One Page Rosa Elegante</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-b-multi/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-rose-600/20 hover:text-rose-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-rose-400 transition"></i>
+              <span>Version B Multi</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; Multi-p&aacute;ginas Rosa Elegante</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-c/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-purple-600/20 hover:text-purple-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-purple-400 transition"></i>
+              <span>Version C</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; One Page Roxo Premium</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-c-multi/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-purple-600/20 hover:text-purple-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-purple-400 transition"></i>
+              <span>Version C Multi</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; Multi-p&aacute;ginas Roxo Premium</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-d/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-emerald-600/20 hover:text-emerald-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-emerald-400 transition"></i>
+              <span>Version D</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; One Page Verde Emerald</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-d-multi/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-emerald-600/20 hover:text-emerald-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-emerald-400 transition"></i>
+              <span>Version D Multi</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; Multi-p&aacute;ginas Verde Emerald</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-e/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-amber-600/20 hover:text-amber-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-amber-400 transition"></i>
+              <span>Version E</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; One Page Dourado/Amber</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+            <a href="templates-site-dentista-estetica/version-e-multi/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-amber-600/20 hover:text-amber-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-amber-400 transition"></i>
+              <span>Version E Multi</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; Multi-p&aacute;ginas Dourado/Amber</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Templates Jiu-Jitsu Athlete -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl hover:border-orange-600/50 transition-all duration-300">
+        <div class="p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 bg-orange-600/20 rounded-lg flex items-center justify-center">
+              <i class="fa-solid fa-hand-fist text-orange-400"></i>
+            </div>
+            <div>
+              <h2 class="font-semibold text-white">Templates Jiu-Jitsu Athlete</h2>
+              <p class="text-xs text-gray-500">Template base &bull; Atleta profissional de Jiu-Jitsu</p>
+            </div>
+          </div>
+          <div class="pl-12 space-y-2">
+            <a href="templates-jiujitsu-athlete/index.html" class="flex items-center gap-2 px-4 py-2.5 bg-gray-800 rounded-lg text-sm text-gray-300 hover:bg-orange-600/20 hover:text-orange-400 transition group">
+              <i class="fa-solid fa-globe text-gray-600 group-hover:text-orange-400 transition"></i>
+              <span>Single Page</span>
+              <span class="text-xs text-gray-600 ml-1">&mdash; Dark + Laranja / Estilo Marcial</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Nova Proposta -->
+    <div class="mt-12">
+      <div class="bg-gray-900 border border-gray-800 rounded-xl">
+        <button onclick="toggleSection('formProposta')" class="w-full p-5 flex items-center gap-3 text-left">
+          <div class="w-9 h-9 bg-emerald-600/20 rounded-lg flex items-center justify-center">
+            <i class="fa-solid fa-file-contract text-emerald-400"></i>
+          </div>
+          <h2 class="font-semibold text-white flex-1">Nova Proposta</h2>
+          <i id="chevron-formProposta" class="fa-solid fa-chevron-down text-gray-500 chevron-icon"></i>
+        </button>
+        <div id="formProposta" class="collapsible-content">
+          <div class="px-5 pb-5 border-t border-gray-800 pt-5">
+            <form id="propostaForm" onsubmit="return false">
+
+              <!-- 1. Dados Pessoais e Profissionais -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">1. Dados Pessoais e Profissionais</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Data da Visita</label>
+                  <input type="date" id="dataVisita" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Nome completo (como quer aparecer no site)</label>
+                  <input type="text" id="nomeProfissional" placeholder="Dr(a). Nome Completo" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">CRO (número e estado)</label>
+                  <input type="text" id="cro" placeholder="CRO-SP 12345" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Gênero (Dr./Dra.)</label>
+                  <select id="genero" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="">Selecione...</option>
+                    <option value="Masculino (Dr.)">Masculino (Dr.)</option>
+                    <option value="Feminino (Dra.)">Feminino (Dra.)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 2. Contato e Redes Sociais -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">2. Contato e Redes Sociais</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">WhatsApp da clínica (com DDD)</label>
+                  <input type="tel" id="whatsapp" placeholder="(11) 99999-9999" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Telefone fixo</label>
+                  <input type="tel" id="telefone" placeholder="(11) 3333-3333" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">E-mail profissional</label>
+                  <input type="email" id="email" placeholder="email@exemplo.com" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Instagram (link ou @)</label>
+                  <input type="text" id="instagram" placeholder="@perfil" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Facebook (link ou nome da página)</label>
+                  <input type="text" id="facebook" placeholder="facebook.com/pagina" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">TikTok</label>
+                  <input type="text" id="tiktok" placeholder="@perfil" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Site atual (se houver)</label>
+                  <input type="text" id="siteAtual" placeholder="https://www.exemplo.com.br" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <!-- 3. Localização da Clínica -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">3. Localização da Clínica</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Nome do estabelecimento/clínica</label>
+                  <input type="text" id="nomeClinica" placeholder="Clínica / Consultório" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Endereço completo (rua, número, sala, bairro)</label>
+                  <input type="text" id="endereco" placeholder="Rua, número, sala, bairro" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Cidade - UF</label>
+                  <input type="text" id="cidadeUf" placeholder="Santos - SP" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">CEP</label>
+                  <input type="text" id="cep" placeholder="00000-000" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Referência ou ponto de localização</label>
+                  <input type="text" id="referencia" placeholder="Próximo ao shopping..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Estacionamento</label>
+                  <select id="estacionamento" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="">Selecione...</option>
+                    <option value="Próprio">Próprio</option>
+                    <option value="Conveniado">Conveniado</option>
+                    <option value="Próximo">Próximo</option>
+                    <option value="Não possui">Não possui</option>
+                  </select>
+                </div>
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Transporte público próximo (metrô, ônibus)</label>
+                  <input type="text" id="transportePublico" placeholder="Metrô Linha X, Ônibus..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <!-- 4. Horário de Funcionamento -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">4. Horário de Funcionamento</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Segunda-feira</label>
+                  <input type="text" id="horSeg" placeholder="08:00 - 18:00" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Terça-feira</label>
+                  <input type="text" id="horTer" placeholder="08:00 - 18:00" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Quarta-feira</label>
+                  <input type="text" id="horQua" placeholder="08:00 - 18:00" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Quinta-feira</label>
+                  <input type="text" id="horQui" placeholder="08:00 - 18:00" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Sexta-feira</label>
+                  <input type="text" id="horSex" placeholder="08:00 - 18:00" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Sábado</label>
+                  <input type="text" id="horSab" placeholder="08:00 - 12:00 ou Fechado" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Domingo</label>
+                  <input type="text" id="horDom" placeholder="Fechado" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <!-- 5. Formação Acadêmica e Certificações -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">5. Formação Acadêmica e Certificações</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Universidade de graduação</label>
+                  <input type="text" id="universidade" placeholder="USP, UNESP..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Curso e período</label>
+                  <input type="text" id="cursoGrad" placeholder="Odontologia - 2010 a 2015" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Pós-graduação / Especialização</label>
+                  <input type="text" id="posGrad" placeholder="Harmonização Orofacial" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Instituição e período</label>
+                  <input type="text" id="posGradInstituicao" placeholder="Instituição - 2016 a 2018" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Outros cursos, congressos ou certificações relevantes</label>
+                  <textarea id="outrosCursos" rows="3" placeholder="1. Curso X&#10;2. Congresso Y&#10;3. Certificação Z" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none resize-none"></textarea>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Anos de experiência profissional</label>
+                  <input type="text" id="anosExperiencia" placeholder="10 anos" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <!-- 6. Sobre Você (Biografia) -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">6. Sobre Você (Biografia para o Site)</h3>
+              <div class="mb-6">
+                <p class="text-xs text-gray-500 mb-2">Texto curto (2 a 4 parágrafos): sua história, por que escolheu a área, missão, diferenciais.</p>
+                <textarea id="biografia" rows="5" placeholder="Escreva sobre você ou cole o descritivo do seu perfil do WhatsApp/Instagram..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none resize-none"></textarea>
+              </div>
+
+              <!-- 7. Procedimentos / Serviços -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">7. Procedimentos / Serviços Oferecidos</h3>
+              <div class="mb-6">
+                <p class="text-xs text-gray-500 mb-2">Liste os procedimentos. Para cada um: nome, breve descrição (opcional), duração (opcional), preço (opcional).</p>
+                <div class="space-y-2" id="procedimentosContainer">
+                  <input type="text" id="proc1" placeholder="1. Ex: Botox - Toxina botulínica para rugas" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc2" placeholder="2." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc3" placeholder="3." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc4" placeholder="4." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc5" placeholder="5." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc6" placeholder="6." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc7" placeholder="7." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc8" placeholder="8." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc9" placeholder="9." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc10" placeholder="10." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc11" placeholder="11." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  <input type="text" id="proc12" placeholder="12." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="mt-3">
+                  <label class="block text-xs text-gray-500 mb-1">Deseja exibir preços no site?</label>
+                  <select id="exibirPrecos" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="">Selecione...</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 8. Avaliações do Google -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">8. Avaliações do Google</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Link das avaliações no Google</label>
+                  <input type="text" id="googleLink" placeholder="https://g.co/..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Nota atual no Google</label>
+                  <input type="text" id="googleNota" placeholder="4.8" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Quantidade de avaliações</label>
+                  <input type="text" id="googleQtd" placeholder="150" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Código embed de widget (Elfsight, etc.) - opcional</label>
+                  <textarea id="googleEmbed" rows="2" placeholder="Cole o código embed aqui..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none resize-none"></textarea>
+                </div>
+              </div>
+
+              <!-- 9. Marcas e Produtos -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">9. Marcas e Produtos que Trabalha</h3>
+              <div class="mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
+                  <label class="flex items-center gap-2 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-300 cursor-pointer hover:border-gray-600">
+                    <input type="checkbox" id="marcaAllergan" class="accent-blue-500" /> Allergan (Botox, Juvéderm)
+                  </label>
+                  <label class="flex items-center gap-2 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-300 cursor-pointer hover:border-gray-600">
+                    <input type="checkbox" id="marcaMerz" class="accent-blue-500" /> Merz (Xeomin, Belotero, Radiesse)
+                  </label>
+                  <label class="flex items-center gap-2 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-300 cursor-pointer hover:border-gray-600">
+                    <input type="checkbox" id="marcaGalderma" class="accent-blue-500" /> Galderma (Restylane, Sculptra, Dysport)
+                  </label>
+                  <label class="flex items-center gap-2 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-300 cursor-pointer hover:border-gray-600">
+                    <input type="checkbox" id="marcaSinclair" class="accent-blue-500" /> Sinclair (Ellansé)
+                  </label>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Outras marcas</label>
+                  <input type="text" id="marcasOutras" placeholder="Outras marcas..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <!-- 10. Influenciadores Digitais -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">10. Influenciadores Digitais Atendidos (opcional)</h3>
+              <div class="mb-6">
+                <p class="text-xs text-gray-500 mb-2">Informe @ do Instagram e número aproximado de seguidores (com autorização).</p>
+                <div class="space-y-2">
+                  <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="influe1" placeholder="@influenciador1" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                    <input type="text" id="influeSegs1" placeholder="Seguidores (ex: 50k)" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  </div>
+                  <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="influe2" placeholder="@influenciador2" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                    <input type="text" id="influeSegs2" placeholder="Seguidores" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  </div>
+                  <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="influe3" placeholder="@influenciador3" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                    <input type="text" id="influeSegs3" placeholder="Seguidores" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  </div>
+                  <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="influe4" placeholder="@influenciador4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                    <input type="text" id="influeSegs4" placeholder="Seguidores" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- 11. Fotos e Imagens (checklist informativo) -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">11. Fotos e Imagens</h3>
+              <div class="mb-6">
+                <p class="text-xs text-gray-500 mb-2">Lembrete: solicitar ao cliente as seguintes fotos em alta resolução (JPG ou PNG):</p>
+                <div class="space-y-1">
+                  <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
+                    <input type="checkbox" id="fotoPerfilCheck" class="accent-emerald-500" /> Foto de perfil profissional
+                  </label>
+                  <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
+                    <input type="checkbox" id="fotoClinicaCheck" class="accent-emerald-500" /> Foto na clínica / consultório
+                  </label>
+                  <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
+                    <input type="checkbox" id="fotoFachadaCheck" class="accent-emerald-500" /> Foto da fachada ou recepção
+                  </label>
+                  <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
+                    <input type="checkbox" id="logoCheck" class="accent-emerald-500" /> Logo em PNG (fundo transparente)
+                  </label>
+                  <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
+                    <input type="checkbox" id="antesDepoisCheck" class="accent-emerald-500" /> Fotos antes e depois (com autorização)
+                  </label>
+                </div>
+                <div class="mt-2">
+                  <label class="block text-xs text-gray-500 mb-1">Observações sobre fotos</label>
+                  <input type="text" id="fotosObs" placeholder="Notas sobre material recebido..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <!-- 12. Preferências do Site -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">12. Preferências do Site</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Preferência de cor</label>
+                  <select id="corPreferida" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="">Selecione...</option>
+                    <option value="Azul clínico">Azul clínico</option>
+                    <option value="Rosa elegante">Rosa elegante</option>
+                    <option value="Roxo premium">Roxo premium</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Dourado">Dourado</option>
+                    <option value="Outra">Outra</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Outra cor (se selecionou "Outra")</label>
+                  <input type="text" id="corOutra" placeholder="Especifique..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Site de referência que gosta (link)</label>
+                  <input type="text" id="siteReferencia" placeholder="https://www.exemplo.com.br" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Domínio próprio?</label>
+                  <select id="dominio" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="">Selecione...</option>
+                    <option value="Já possui">Já possui</option>
+                    <option value="Quer registrar">Quer registrar</option>
+                    <option value="Usar domínio padrão">Usar domínio padrão</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Domínio (se já possui ou quer registrar)</label>
+                  <input type="text" id="dominioNome" placeholder="www.drnome.com.br" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <!-- 13. Informações Adicionais -->
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">13. Informações Adicionais</h3>
+              <div class="mb-6">
+                <p class="text-xs text-gray-500 mb-2">Convênios aceitos, formas de pagamento da clínica, depoimentos em vídeo, etc.</p>
+                <textarea id="infoAdicionais" rows="3" placeholder="Algo mais que gostaria de incluir no site?" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none resize-none"></textarea>
+              </div>
+
+              <!-- 14. Proposta Comercial -->
+              <h3 class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3 pt-4 border-t border-gray-700">Proposta Comercial</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Pacote</label>
+                  <select id="pacote" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="">Selecione...</option>
+                    <option value="Essencial R$1.997">Essencial R$1.997</option>
+                    <option value="Profissional R$2.797">Profissional R$2.797</option>
+                    <option value="Premium R$3.497">Premium R$3.497</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Tema preferido</label>
+                  <select id="tema" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="">Selecione...</option>
+                    <option value="A - Azul">A - Azul</option>
+                    <option value="B - Rosa">B - Rosa</option>
+                    <option value="C - Roxo">C - Roxo</option>
+                    <option value="D - Verde">D - Verde</option>
+                    <option value="E - Dourado">E - Dourado</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Tipo de Site</label>
+                  <select id="tipoSite" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="One Page">One Page</option>
+                    <option value="Multi-páginas">Multi-páginas</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Valor Negociado</label>
+                  <input type="text" id="valorNegociado" placeholder="R$ 0,00" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-500 mb-1">Forma de Pagamento</label>
+                  <select id="formaPagamento" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+                    <option value="">Selecione...</option>
+                    <option value="PIX (5% desconto)">PIX (5% desconto)</option>
+                    <option value="Cartão até 6x">Cartão até 6x</option>
+                    <option value="Boleto">Boleto</option>
+                    <option value="50% + 50%">50% + 50%</option>
+                  </select>
+                </div>
+                <div class="md:col-span-2">
+                  <label class="block text-xs text-gray-500 mb-1">Observações da proposta</label>
+                  <textarea id="observacoes" rows="3" placeholder="Anotações adicionais sobre a negociação..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none resize-none"></textarea>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <div class="flex gap-3">
+                <button type="button" onclick="exportarTxt()" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-4 rounded-lg text-sm transition flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-file-arrow-down"></i> Exportar .TXT
+                </button>
+                <button type="button" id="btnSalvar" onclick="salvarFirebase()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-4 rounded-lg text-sm transition flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-cloud-arrow-up"></i> Salvar no Firebase
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Propostas Salvas -->
+    <div class="mt-4">
+      <div class="bg-gray-900 border border-gray-800 rounded-xl">
+        <button onclick="toggleSection('listaProposta')" class="w-full p-5 flex items-center gap-3 text-left">
+          <div class="w-9 h-9 bg-blue-600/20 rounded-lg flex items-center justify-center">
+            <i class="fa-solid fa-list-check text-blue-400"></i>
+          </div>
+          <h2 class="font-semibold text-white flex-1">Propostas Salvas</h2>
+          <i id="chevron-listaProposta" class="fa-solid fa-chevron-down text-gray-500 chevron-icon"></i>
+        </button>
+        <div id="listaProposta" class="collapsible-content">
+          <div class="px-5 pb-5 border-t border-gray-800 pt-5">
+            <div id="propostasContainer" class="space-y-3">
+              <p class="text-sm text-gray-500 text-center py-4">Clique para carregar as propostas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-16 pt-6 border-t border-gray-800 text-center">
+      <p class="text-xs text-gray-600">&copy; 2026 GScandelari &mdash; Dev Sites</p>
+    </div>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="/firebase-config.js"></script>
+<script>
+  // Auto-preencher data da visita com hoje
+  document.getElementById('dataVisita').valueAsDate = new Date();
+
+  // Auto-preenchimento ao trocar pacote
+  document.getElementById('pacote').addEventListener('change', function() {
+    var val = this.value;
+    var tipo = document.getElementById('tipoSite');
+    var valor = document.getElementById('valorNegociado');
+    if (val.includes('Essencial')) {
+      tipo.value = 'One Page';
+      valor.value = 'R$ 1.997';
+    } else if (val.includes('Profissional')) {
+      tipo.value = 'Multi-páginas';
+      valor.value = 'R$ 2.797';
+    } else if (val.includes('Premium')) {
+      tipo.value = 'Multi-páginas';
+      valor.value = 'R$ 3.497';
+    }
+  });
+
+  // Toggle seções colapsáveis
+  var propostasCarregadas = false;
+  function toggleSection(id) {
+    var el = document.getElementById(id);
+    var chevron = document.getElementById('chevron-' + id);
+    el.classList.toggle('open');
+    chevron.classList.toggle('rotated');
+    if (id === 'listaProposta' && el.classList.contains('open') && !propostasCarregadas) {
+      carregarPropostas();
+    }
+  }
+
+  // Helper: valor de campo
+  function v(id) { var el = document.getElementById(id); return el ? el.value || '' : ''; }
+  function ch(id) { var el = document.getElementById(id); return el ? el.checked : false; }
+
+  // Coletar dados do formulário
+  function coletarDados() {
+    // Procedimentos
+    var procs = [];
+    for (var i = 1; i <= 12; i++) {
+      var p = v('proc' + i);
+      if (p) procs.push(p);
+    }
+    // Marcas
+    var marcas = [];
+    if (ch('marcaAllergan')) marcas.push('Allergan (Botox, Juvéderm)');
+    if (ch('marcaMerz')) marcas.push('Merz (Xeomin, Belotero, Radiesse)');
+    if (ch('marcaGalderma')) marcas.push('Galderma (Restylane, Sculptra, Dysport)');
+    if (ch('marcaSinclair')) marcas.push('Sinclair (Ellansé)');
+    if (v('marcasOutras')) marcas.push(v('marcasOutras'));
+    // Influenciadores
+    var influenciadores = [];
+    for (var j = 1; j <= 4; j++) {
+      var inf = v('influe' + j);
+      if (inf) influenciadores.push(inf + ' - ' + v('influeSegs' + j));
+    }
+    // Fotos checklist
+    var fotos = [];
+    if (ch('fotoPerfilCheck')) fotos.push('Foto de perfil');
+    if (ch('fotoClinicaCheck')) fotos.push('Foto na clínica');
+    if (ch('fotoFachadaCheck')) fotos.push('Foto fachada/recepção');
+    if (ch('logoCheck')) fotos.push('Logo PNG');
+    if (ch('antesDepoisCheck')) fotos.push('Antes e depois');
+
+    return {
+      dataVisita: v('dataVisita'),
+      nomeProfissional: v('nomeProfissional'),
+      cro: v('cro'),
+      genero: v('genero'),
+      whatsapp: v('whatsapp'),
+      telefone: v('telefone'),
+      email: v('email'),
+      instagram: v('instagram'),
+      facebook: v('facebook'),
+      tiktok: v('tiktok'),
+      siteAtual: v('siteAtual'),
+      nomeClinica: v('nomeClinica'),
+      endereco: v('endereco'),
+      cidadeUf: v('cidadeUf'),
+      cep: v('cep'),
+      referencia: v('referencia'),
+      estacionamento: v('estacionamento'),
+      transportePublico: v('transportePublico'),
+      horSeg: v('horSeg'),
+      horTer: v('horTer'),
+      horQua: v('horQua'),
+      horQui: v('horQui'),
+      horSex: v('horSex'),
+      horSab: v('horSab'),
+      horDom: v('horDom'),
+      universidade: v('universidade'),
+      cursoGrad: v('cursoGrad'),
+      posGrad: v('posGrad'),
+      posGradInstituicao: v('posGradInstituicao'),
+      outrosCursos: v('outrosCursos'),
+      anosExperiencia: v('anosExperiencia'),
+      biografia: v('biografia'),
+      procedimentos: procs,
+      exibirPrecos: v('exibirPrecos'),
+      googleLink: v('googleLink'),
+      googleNota: v('googleNota'),
+      googleQtd: v('googleQtd'),
+      googleEmbed: v('googleEmbed'),
+      marcas: marcas,
+      influenciadores: influenciadores,
+      fotosRecebidas: fotos,
+      fotosObs: v('fotosObs'),
+      corPreferida: v('corPreferida'),
+      corOutra: v('corOutra'),
+      siteReferencia: v('siteReferencia'),
+      dominio: v('dominio'),
+      dominioNome: v('dominioNome'),
+      infoAdicionais: v('infoAdicionais'),
+      pacote: v('pacote'),
+      tema: v('tema'),
+      tipoSite: v('tipoSite'),
+      valorNegociado: v('valorNegociado'),
+      formaPagamento: v('formaPagamento'),
+      observacoes: v('observacoes')
+    };
+  }
+
+  // Montar texto formatado
+  function montarTexto(d) {
+    var linhas = [
+      '================================================================================',
+      '  FORMULÁRIO DE DADOS — SITE PROFISSIONAL',
+      '  Harmonização Orofacial / Odontologia Estética',
+      '================================================================================',
+      '',
+      'Data da Visita: ' + (d.dataVisita || '-'),
+      '',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '1. DADOS PESSOAIS E PROFISSIONAIS',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '',
+      'Nome completo: ' + (d.nomeProfissional || '-'),
+      'CRO: ' + (d.cro || '-'),
+      'Gênero: ' + (d.genero || '-'),
+      '',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '2. CONTATO E REDES SOCIAIS',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '',
+      'WhatsApp: ' + (d.whatsapp || '-'),
+      'Telefone fixo: ' + (d.telefone || '-'),
+      'E-mail: ' + (d.email || '-'),
+      'Instagram: ' + (d.instagram || '-'),
+      'Facebook: ' + (d.facebook || '-'),
+      'TikTok: ' + (d.tiktok || '-'),
+      'Site atual: ' + (d.siteAtual || '-'),
+      '',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '3. LOCALIZAÇÃO DA CLÍNICA',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '',
+      'Clínica: ' + (d.nomeClinica || '-'),
+      'Endereço: ' + (d.endereco || '-'),
+      'Cidade - UF: ' + (d.cidadeUf || '-'),
+      'CEP: ' + (d.cep || '-'),
+      'Referência: ' + (d.referencia || '-'),
+      'Estacionamento: ' + (d.estacionamento || '-'),
+      'Transporte público: ' + (d.transportePublico || '-'),
+      '',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '4. HORÁRIO DE FUNCIONAMENTO',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '',
+      'Segunda: ' + (d.horSeg || '-'),
+      'Terça: ' + (d.horTer || '-'),
+      'Quarta: ' + (d.horQua || '-'),
+      'Quinta: ' + (d.horQui || '-'),
+      'Sexta: ' + (d.horSex || '-'),
+      'Sábado: ' + (d.horSab || '-'),
+      'Domingo: ' + (d.horDom || '-'),
+      '',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '5. FORMAÇÃO ACADÊMICA E CERTIFICAÇÕES',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '',
+      'Universidade: ' + (d.universidade || '-'),
+      'Curso/Período: ' + (d.cursoGrad || '-'),
+      'Pós-graduação: ' + (d.posGrad || '-'),
+      'Instituição/Período: ' + (d.posGradInstituicao || '-'),
+      'Outros cursos: ' + (d.outrosCursos || '-'),
+      'Anos de experiência: ' + (d.anosExperiencia || '-'),
+      '',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '6. SOBRE VOCÊ (BIOGRAFIA)',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '',
+      d.biografia || '(não informado)',
+      '',
+      '────────────────────────────────────────────────────────────────────────────────',
+      '7. PROCEDIMENTOS / SERVIÇOS OFERECIDOS',
+      '────────────────────────────────────────────────────────────────────────────────',
+      ''
+    ];
+    var procs = d.procedimentos || [];
+    if (procs.length) {
+      for (var i = 0; i < procs.length; i++) {
+        linhas.push((i + 1) + '. ' + procs[i]);
+      }
+    } else {
+      linhas.push('(nenhum informado)');
+    }
+    linhas.push('Exibir preços no site: ' + (d.exibirPrecos || '-'));
+    linhas.push('');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('8. AVALIAÇÕES DO GOOGLE');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('');
+    linhas.push('Link: ' + (d.googleLink || '-'));
+    linhas.push('Nota: ' + (d.googleNota || '-'));
+    linhas.push('Quantidade: ' + (d.googleQtd || '-'));
+    if (d.googleEmbed) linhas.push('Embed: ' + d.googleEmbed);
+    linhas.push('');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('9. MARCAS E PRODUTOS');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('');
+    var marcas = d.marcas || [];
+    linhas.push(marcas.length ? marcas.join(', ') : '(nenhuma informada)');
+    linhas.push('');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('10. INFLUENCIADORES DIGITAIS');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('');
+    var infs = d.influenciadores || [];
+    if (infs.length) {
+      for (var k = 0; k < infs.length; k++) linhas.push((k + 1) + '. ' + infs[k]);
+    } else {
+      linhas.push('(nenhum informado)');
+    }
+    linhas.push('');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('11. FOTOS E IMAGENS');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('');
+    var fotos = d.fotosRecebidas || [];
+    linhas.push('Recebidas: ' + (fotos.length ? fotos.join(', ') : 'nenhuma marcada'));
+    if (d.fotosObs) linhas.push('Obs: ' + d.fotosObs);
+    linhas.push('');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('12. PREFERÊNCIAS DO SITE');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('');
+    linhas.push('Cor preferida: ' + (d.corPreferida || '-') + (d.corOutra ? ' (' + d.corOutra + ')' : ''));
+    linhas.push('Site referência: ' + (d.siteReferencia || '-'));
+    linhas.push('Domínio: ' + (d.dominio || '-') + (d.dominioNome ? ' - ' + d.dominioNome : ''));
+    linhas.push('');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('13. INFORMAÇÕES ADICIONAIS');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('');
+    linhas.push(d.infoAdicionais || '(nenhuma)');
+    linhas.push('');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('PROPOSTA COMERCIAL');
+    linhas.push('────────────────────────────────────────────────────────────────────────────────');
+    linhas.push('');
+    linhas.push('Pacote: ' + (d.pacote || '-'));
+    linhas.push('Tema: ' + (d.tema || '-'));
+    linhas.push('Tipo de Site: ' + (d.tipoSite || '-'));
+    linhas.push('Valor Negociado: ' + (d.valorNegociado || '-'));
+    linhas.push('Forma de Pagamento: ' + (d.formaPagamento || '-'));
+    linhas.push('Observações: ' + (d.observacoes || '(nenhuma)'));
+    linhas.push('');
+    linhas.push('================================================================================');
+    linhas.push('  GScandelari - Dev Sites');
+    linhas.push('================================================================================');
+    return linhas.join('\n');
+  }
+
+  // Exportar como .TXT
+  function exportarTxt() {
+    var d = coletarDados();
+    var texto = montarTexto(d);
+    var slug = (d.nomeProfissional || 'prospect').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
+    var nome = 'proposta-' + slug + '-' + d.dataVisita + '.txt';
+    var blob = new Blob([texto], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = nome;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  // Salvar no Firebase
+  function salvarFirebase() {
+    var btn = document.getElementById('btnSalvar');
+    var d = coletarDados();
+    d.criadoEm = firebase.firestore.FieldValue.serverTimestamp();
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Salvando...';
+    db.collection('propostas').add(d).then(function() {
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Salvo \u2713';
+      btn.classList.replace('bg-blue-600', 'bg-emerald-600');
+      propostasCarregadas = false; // força reload na próxima abertura da lista
+      setTimeout(function() {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Salvar no Firebase';
+        btn.classList.replace('bg-emerald-600', 'bg-blue-600');
+      }, 2000);
+    }).catch(function(err) {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Salvar no Firebase';
+      alert('Erro ao salvar: ' + err.message);
+    });
+  }
+
+  // Carregar propostas do Firestore
+  function carregarPropostas() {
+    var container = document.getElementById('propostasContainer');
+    container.innerHTML = '<p class="text-sm text-gray-500 text-center py-4">Carregando...</p>';
+    db.collection('propostas').orderBy('criadoEm', 'desc').limit(50).get().then(function(snap) {
+      if (snap.empty) {
+        container.innerHTML = '<p class="text-sm text-gray-500 text-center py-4">Nenhuma proposta salva.</p>';
+        return;
+      }
+      container.innerHTML = '';
+      snap.forEach(function(doc) {
+        var d = doc.data();
+        var procs = (d.procedimentos || []).join(', ');
+
+        // Card wrapper
+        var card = document.createElement('div');
+        card.className = 'bg-gray-800 border border-gray-700 rounded-lg overflow-hidden';
+        card.id = 'card-' + doc.id;
+        card.dataset.proposta = JSON.stringify(d);
+
+        // Header button
+        var btn = document.createElement('button');
+        btn.className = 'w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-750 transition';
+        btn.onclick = function() { toggleDetalhes(doc.id); };
+
+        var info = document.createElement('div');
+        info.className = 'flex-1 min-w-0';
+        var nome = document.createElement('p');
+        nome.className = 'text-sm font-medium text-white truncate';
+        nome.textContent = d.nomeProfissional || 'Sem nome';
+        var meta = document.createElement('p');
+        meta.className = 'text-xs text-gray-500';
+        meta.textContent = [d.dataVisita, d.pacote, d.valorNegociado].filter(Boolean).join(' • ');
+        info.appendChild(nome);
+        info.appendChild(meta);
+
+        var chev = document.createElement('i');
+        chev.id = 'chev-' + doc.id;
+        chev.className = 'fa-solid fa-chevron-down text-gray-600 text-xs chevron-icon ml-2';
+
+        btn.appendChild(info);
+        btn.appendChild(chev);
+
+        // Details panel
+        var det = document.createElement('div');
+        det.id = 'det-' + doc.id;
+        det.className = 'collapsible-content';
+
+        var inner = document.createElement('div');
+        inner.className = 'px-4 pb-3 border-t border-gray-700 pt-3 text-xs text-gray-400 space-y-1';
+
+        function row(label, val) {
+          if (!val) return;
+          var p = document.createElement('p');
+          var b = document.createElement('strong');
+          b.textContent = label + ': ';
+          p.appendChild(b);
+          p.appendChild(document.createTextNode(val));
+          inner.appendChild(p);
+        }
+
+        row('CRO', d.cro + (d.genero ? ' | Gênero: ' + d.genero : ''));
+        row('Clínica', d.nomeClinica);
+        row('WhatsApp', d.whatsapp + (d.telefone ? ' | Tel: ' + d.telefone : ''));
+        row('E-mail', d.email + (d.instagram ? ' | Instagram: ' + d.instagram : ''));
+        if (d.facebook) row('Facebook', d.facebook);
+        if (d.tiktok) row('TikTok', d.tiktok);
+        row('Endereço', [d.endereco, d.cidadeUf, d.cep].filter(Boolean).join(', '));
+        if (d.referencia) row('Referência', d.referencia);
+        row('Estac.', d.estacionamento + (d.transportePublico ? ' | Transp.: ' + d.transportePublico : ''));
+        row('Horários', 'Seg ' + (d.horSeg||'-') + ' | Ter ' + (d.horTer||'-') + ' | Qua ' + (d.horQua||'-') + ' | Qui ' + (d.horQui||'-') + ' | Sex ' + (d.horSex||'-') + ' | Sáb ' + (d.horSab||'-') + ' | Dom ' + (d.horDom||'-'));
+        row('Formação', [d.universidade, d.cursoGrad].filter(Boolean).join(' - '));
+        if (d.posGrad) row('Pós', [d.posGrad, d.posGradInstituicao].filter(Boolean).join(' - '));
+        if (d.anosExperiencia) row('Experiência', d.anosExperiencia);
+        if (procs) row('Procedimentos', procs);
+        if (d.googleNota) row('Google', d.googleNota + ' (' + (d.googleQtd || '?') + ' avaliações)');
+        if ((d.marcas || []).length) row('Marcas', d.marcas.join(', '));
+        row('Cor', d.corPreferida + (d.corOutra ? ' (' + d.corOutra + ')' : '') + ' | Domínio: ' + (d.dominio || '-') + (d.dominioNome ? ' - ' + d.dominioNome : ''));
+        row('Tema', (d.tema || '-') + ' | Tipo: ' + (d.tipoSite || '-'));
+        row('Pagamento', d.formaPagamento);
+        if (d.observacoes) row('Obs', d.observacoes);
+
+        // Actions
+        var actions = document.createElement('div');
+        actions.className = 'flex gap-2 mt-3';
+
+        var btnExport = document.createElement('button');
+        btnExport.className = 'px-3 py-1.5 bg-emerald-600/20 text-emerald-400 rounded text-xs hover:bg-emerald-600/30 transition';
+        btnExport.innerHTML = '<i class="fa-solid fa-file-arrow-down mr-1"></i>Exportar .TXT';
+        btnExport.onclick = function() { exportarPropostaSalva(doc.id); };
+
+        var btnDel = document.createElement('button');
+        btnDel.className = 'px-3 py-1.5 bg-red-600/20 text-red-400 rounded text-xs hover:bg-red-600/30 transition';
+        btnDel.innerHTML = '<i class="fa-solid fa-trash mr-1"></i>Excluir';
+        btnDel.onclick = function() { excluirProposta(doc.id); };
+
+        actions.appendChild(btnExport);
+        actions.appendChild(btnDel);
+        inner.appendChild(actions);
+        det.appendChild(inner);
+
+        card.appendChild(btn);
+        card.appendChild(det);
+        container.appendChild(card);
+      });
+      propostasCarregadas = true;
+    }).catch(function(err) {
+      container.innerHTML = '<p class="text-sm text-red-400 text-center py-4">Erro ao carregar: ' + err.message + '</p>';
+    });
+  }
+
+  // Toggle detalhes de proposta salva
+  function toggleDetalhes(id) {
+    var det = document.getElementById('det-' + id);
+    var chev = document.getElementById('chev-' + id);
+    det.classList.toggle('open');
+    chev.classList.toggle('rotated');
+  }
+
+  // Exportar proposta salva como TXT
+  function exportarPropostaSalva(id) {
+    var card = document.getElementById('card-' + id);
+    var d = JSON.parse(card.dataset.proposta);
+    var texto = montarTexto(d);
+    var slug = (d.nomeProfissional || 'prospect').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
+    var nome = 'proposta-' + slug + '-' + (d.dataVisita || 'sem-data') + '.txt';
+    var blob = new Blob([texto], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = nome;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  // Excluir proposta
+  function excluirProposta(id) {
+    if (!confirm('Tem certeza que deseja excluir esta proposta?')) return;
+    db.collection('propostas').doc(id).delete().then(function() {
+      var card = document.getElementById('card-' + id);
+      if (card) card.remove();
+      propostasCarregadas = false;
+      var container = document.getElementById('propostasContainer');
+      if (!container.children.length) {
+        container.innerHTML = '<p class="text-sm text-gray-500 text-center py-4">Nenhuma proposta salva.</p>';
+      }
+    }).catch(function(err) {
+      alert('Erro ao excluir: ' + err.message);
+    });
+  }
+</script>
+</body>
+</html>

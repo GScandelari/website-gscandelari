@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="/Dr.%20Douglas%20de%20Siqueira/version-c/" />
+  <title>Dr. Douglas de Siqueira | Harmonização Orofacial</title>
+  <meta name="description" content="Dr. Douglas de Siqueira - Dentista especialista em Harmonização Orofacial em Santos/SP. Botox, Preenchimento, Bioestimuladores e mais. Barão Office Santos. Agende sua avaliação!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#f5f3ff',100:'#ede9fe',200:'#ddd6fe',300:'#c4b5fd',400:'#a78bfa',500:'#8b5cf6',600:'#7c3aed',700:'#6d28d9',800:'#5b21b6',900:'#4c1d95' },
+            gold: { 400:'#facc15',500:'#eab308',600:'#ca8a04' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(76,29,149,0.88), rgba(124,58,237,0.72)), url('https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1920&q=80') center/cover no-repeat;
+    }
+    .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.15); }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+          <span class="text-xl font-bold text-gray-900">Dr. Douglas de Siqueira</span>
+        </a>
+        <button class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars text-xl text-gray-700"></i>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-primary-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
+          <a href="servicos.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+        <div class="flex flex-col gap-2 pt-3">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-primary-600 bg-primary-50 font-medium">In&iacute;cio</a>
+          <a href="sobre.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Sobre</a>
+          <a href="servicos.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition">Agendar Consulta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-0 w-full">
+      <div class="max-w-2xl">
+        <div class="glass inline-block px-4 py-2 rounded-full mb-6">
+          <span class="text-white/90 text-sm font-medium"><i class="fa-solid fa-award mr-2"></i>Refer&ecirc;ncia em Harmoniza&ccedil;&atilde;o Orofacial</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Harmonize sua beleza com <span class="text-primary-300">confian&ccedil;a</span> e naturalidade
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
+          Procedimentos est&eacute;ticos de alto padr&atilde;o por Dr. Douglas de Siqueira &mdash; CRO-SP 83786. Tecnologia avan&ccedil;ada e atendimento exclusivo em Santos/SP.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl text-center">
+            <i class="fa-brands fa-whatsapp mr-2"></i>Agendar Avalia&ccedil;&atilde;o
+          </a>
+          <a href="servicos.html" class="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition text-center">
+            Ver Tratamentos
+          </a>
+        </div>
+        <div class="flex items-center gap-6 mt-10">
+          <div class="flex -space-x-2">
+            <img src="https://i.pravatar.cc/40?img=1" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+            <img src="https://i.pravatar.cc/40?img=5" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+            <img src="https://i.pravatar.cc/40?img=9" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+          </div>
+          <div>
+            <div class="flex text-yellow-400 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-white/70 text-sm">+500 pacientes satisfeitos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUES RÁPIDOS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-user-doctor text-2xl text-primary-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">22+ Anos</h3>
+          <p class="text-sm text-gray-500">de Experi&ecirc;ncia</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-face-smile text-2xl text-primary-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">500+</h3>
+          <p class="text-sm text-gray-500">Procedimentos Realizados</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-star text-2xl text-primary-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">4.2/5</h3>
+          <p class="text-sm text-gray-500">no Google Reviews</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-certificate text-2xl text-primary-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">Certificado</h3>
+          <p class="text-sm text-gray-500">Produtos Oficiais</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS RESUMO -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Tratamentos</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Nossos Principais Servi&ccedil;os</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-face-smile-beam text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Harmoniza&ccedil;&atilde;o Facial</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Planejamento facial completo para equil&iacute;brio e harmonia.</p>
+          <a href="servicos.html" class="text-primary-600 text-sm font-semibold hover:underline">Saiba mais &rarr;</a>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-heart text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Preenchimento Facial e Labial</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">&Aacute;cido hialur&ocirc;nico premium para l&aacute;bios e face.</p>
+          <a href="servicos.html" class="text-primary-600 text-sm font-semibold hover:underline">Saiba mais &rarr;</a>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-syringe text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Botox</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Suaviza rugas com resultado natural e rejuvenescedor.</p>
+          <a href="servicos.html" class="text-primary-600 text-sm font-semibold hover:underline">Saiba mais &rarr;</a>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-teeth text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Lentes de Porcelana</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Sorriso perfeito, branco e alinhado.</p>
+          <a href="servicos.html" class="text-primary-600 text-sm font-semibold hover:underline">Saiba mais &rarr;</a>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="servicos.html" class="inline-flex items-center gap-2 px-8 py-3 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Ver Todos os Servi&ccedil;os <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS PARCEIRAS -->
+  <section class="py-16 bg-white border-y border-gray-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm text-gray-400 uppercase tracking-wider font-semibold mb-10">Marcas que trabalhamos</p>
+    </div>
+    <style>
+      @keyframes carousel-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .brands-carousel {
+        display: flex;
+        animation: carousel-scroll 20s linear infinite;
+        width: max-content;
+      }
+      .brands-carousel:hover {
+        animation-play-state: paused;
+      }
+      .brand-card {
+        flex-shrink: 0;
+        width: 180px;
+        height: 90px;
+        margin: 0 24px;
+        background: #f9fafb;
+        border: 1px solid #f3f4f6;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.3s, transform 0.3s;
+        cursor: pointer;
+      }
+      .brand-card:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        transform: translateY(-2px);
+      }
+      .brand-card img {
+        height: 40px;
+        object-fit: contain;
+        margin-bottom: 4px;
+      }
+      .brand-card .brand-fallback {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: #6b7280;
+        letter-spacing: 0.05em;
+      }
+      .brand-card .brand-label {
+        font-size: 0.7rem;
+        color: #9ca3af;
+        margin-top: 2px;
+      }
+    </style>
+    <div class="overflow-hidden">
+      <div class="brands-carousel">
+        <!-- Set 1 (original) -->
+        <div class="brand-card">
+          <img src="assets/marca-allergan.png" alt="Allergan" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">ALLERGAN</span>
+          <span class="brand-label">Botox&reg; &amp; Juv&eacute;derm&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-merz.png" alt="Merz" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">MERZ</span>
+          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-galderma.png" alt="Galderma" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">GALDERMA</span>
+          <span class="brand-label">Restylane&reg; &amp; Sculptra&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-sinclair.png" alt="Sinclair" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">SINCLAIR</span>
+          <span class="brand-label">Ellans&eacute;&reg;</span>
+        </div>
+        <!-- Set 2 (duplicate for infinite loop) -->
+        <div class="brand-card">
+          <img src="assets/marca-allergan.png" alt="Allergan" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">ALLERGAN</span>
+          <span class="brand-label">Botox&reg; &amp; Juv&eacute;derm&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-merz.png" alt="Merz" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">MERZ</span>
+          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-galderma.png" alt="Galderma" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">GALDERMA</span>
+          <span class="brand-label">Restylane&reg; &amp; Sculptra&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-sinclair.png" alt="Sinclair" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">SINCLAIR</span>
+          <span class="brand-label">Ellans&eacute;&reg;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Pronto para realçar sua beleza?</h2>
+      <p class="text-primary-100 text-lg mb-8">Agende agora sua avalia&ccedil;&atilde;o e descubra o melhor tratamento para voc&ecirc;.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl">
+          <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp
+        </a>
+        <a href="contato.html" class="px-8 py-4 border-2 border-white/40 text-white font-semibold rounded-full hover:bg-white/10 transition">
+          Formul&aacute;rio de Contato
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <span class="text-lg font-bold">Dr. Douglas de Siqueira</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmoniza&ccedil;&atilde;o Orofacial.<br/>CRO-SP 83786</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">P&aacute;ginas</h4>
+          <div class="space-y-2">
+            <a href="index.html" class="block text-gray-400 text-sm hover:text-white transition">In&iacute;cio</a>
+            <a href="sobre.html" class="block text-gray-400 text-sm hover:text-white transition">Sobre</a>
+            <a href="servicos.html" class="block text-gray-400 text-sm hover:text-white transition">Servi&ccedil;os</a>
+            <a href="avaliacoes.html" class="block text-gray-400 text-sm hover:text-white transition">Avalia&ccedil;&otilde;es</a>
+            <a href="#influenciadores" class="block text-gray-400 text-sm hover:text-white transition">Influenciadores</a>
+            <a href="contato.html" class="block text-gray-400 text-sm hover:text-white transition">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contato</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <p><i class="fa-solid fa-phone mr-2"></i>(13) 98816-9625</p>
+            <p><i class="fa-solid fa-envelope mr-2"></i>drdouglasdesiqueira@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2"></i>R. Bar&atilde;o de Paranapiacaba, 233 - Sala 703<br/>Encruzilhada - Santos/SP - 11050-251</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Redes Sociais</h4>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/drdouglasdesiqueira" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/drdouglasdesiqueira" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/5513988169625" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 Dr. Douglas de Siqueira. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all duration-300 float">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços | [NOME DO DENTISTA]</title>
+  <meta name="description" content="Conheça todos os tratamentos de Harmonização Orofacial oferecidos por [NOME DO DENTISTA]. Botox, Preenchimento, Bioestimuladores e mais." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+          <span class="text-xl font-bold text-gray-900">[NOME DO DENTISTA]</span>
+        </a>
+        <button class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars text-xl text-gray-700"></i>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
+          <a href="servicos.html" class="text-sm font-medium text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+        <div class="flex flex-col gap-2 pt-3">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Sobre</a>
+          <a href="servicos.html" class="px-3 py-2 rounded-lg text-primary-600 bg-primary-50 font-medium">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition">Agendar Consulta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER DA PÁGINA -->
+  <section class="bg-gradient-to-br from-primary-600 to-primary-800 pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Nossos Servi&ccedil;os</h1>
+      <p class="text-primary-200 text-lg max-w-2xl mx-auto">Procedimentos est&eacute;ticos faciais realizados com as melhores t&eacute;cnicas e produtos do mercado mundial.</p>
+    </div>
+  </section>
+
+  <!-- 8 TRATAMENTOS DETALHADOS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <!-- 1. Toxina Botulínica -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="botox">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-syringe text-2xl text-primary-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Toxina Botul&iacute;nica (Botox)</h3>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i>20-30 min</span>
+                <span class="text-lg font-bold text-primary-600">A partir de R$ [XXX]</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              A toxina botul&iacute;nica &eacute; o procedimento est&eacute;tico mais realizado no mundo. Atua relaxando a musculatura facial de forma controlada, suavizando rugas e linhas de express&atilde;o na testa, entre as sobrancelhas (glabela) e ao redor dos olhos (p&eacute;s de galinha).
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              O resultado &eacute; uma apar&ecirc;ncia rejuvenescida e descansada, mantendo a naturalidade das express&otilde;es faciais. O efeito come&ccedil;a a ser percebido entre 3 a 7 dias e dura em m&eacute;dia de 4 a 6 meses.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Rugas din&acirc;micas</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Testa</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Glabela</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">P&eacute;s de galinha</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Resultado natural</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Bioestimuladores de Colágeno -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="bioestimuladores">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-sparkles text-2xl text-primary-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Bioestimuladores de Col&aacute;geno</h3>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i>30-60 min</span>
+                <span class="text-lg font-bold text-primary-600">A partir de R$ [XXXX]</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Os bioestimuladores (Radiesse, Sculptra e Ellans&eacute;) estimulam a produ&ccedil;&atilde;o natural de col&aacute;geno pelo organismo, promovendo rejuvenescimento progressivo da pele. S&atilde;o ideais para tratar flacidez, perda de volume facial e melhorar a qualidade da pele.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              O resultado &eacute; gradual e pode durar de 1 a 4 anos, dependendo do produto utilizado. O tratamento &eacute; personalizado de acordo com a necessidade de cada paciente, podendo ser aplicado em rosto, pesco&ccedil;o, colo e m&atilde;os.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Radiesse</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Sculptra</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Ellans&eacute;</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Col&aacute;geno</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Rejuvenescimento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Preenchimento Labial e Facial -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="preenchimento">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-heart text-2xl text-primary-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Preenchimento Labial e Facial</h3>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i>30-45 min</span>
+                <span class="text-lg font-bold text-primary-600">A partir de R$ [XXXX]</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              O preenchimento com &aacute;cido hialur&ocirc;nico &eacute; utilizado para restaurar volume, definir contornos e suavizar sulcos faciais. Nos l&aacute;bios, promove volume, hidrata&ccedil;&atilde;o e defini&ccedil;&atilde;o do contorno labial de forma natural e harm&ocirc;nica.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Tamb&eacute;m &eacute; aplicado em malar (ma&ccedil;&atilde;s do rosto), mand&iacute;bula, queixo e sulco nasogeniano. Utilizamos apenas produtos de marcas premium como Juv&eacute;derm (Allergan) e Restylane (Galderma). Dura&ccedil;&atilde;o m&eacute;dia: 8 a 18 meses.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">L&aacute;bios</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Malar</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Mand&iacute;bula</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Queixo</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">&Aacute;cido Hialur&ocirc;nico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Rinomodelação -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="rinomodelacao">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-wand-magic-sparkles text-2xl text-primary-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Rinomodela&ccedil;&atilde;o</h3>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i>20-30 min</span>
+                <span class="text-lg font-bold text-primary-600">A partir de R$ [XXXX]</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              A rinomodela&ccedil;&atilde;o &eacute; uma t&eacute;cnica n&atilde;o-cir&uacute;rgica que utiliza &aacute;cido hialur&ocirc;nico para corrigir imperfei&ccedil;&otilde;es no dorso nasal, arrebitamento da ponta e assimetrias, sem necessidade de cirurgia.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              O procedimento &eacute; r&aacute;pido, com resultado imediato e recupera&ccedil;&atilde;o praticamente inexistente. &Eacute; ideal para quem deseja harmonizar o perfil sem submeter-se a um procedimento cir&uacute;rgico. Dura&ccedil;&atilde;o: 12 a 18 meses.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Sem cirurgia</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Resultado imediato</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Perfil nasal</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Revers&iacute;vel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Harmonização Orofacial Completa -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 ring-2 ring-primary-200" id="harmonizacao">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-face-smile-beam text-2xl text-white"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <div>
+                <span class="text-xs bg-primary-600 text-white px-2 py-0.5 rounded-full uppercase font-bold tracking-wider mb-2 inline-block">Mais Procurado</span>
+                <h3 class="text-2xl font-bold text-gray-900">Harmoniza&ccedil;&atilde;o Orofacial Completa</h3>
+              </div>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i>60-90 min</span>
+                <span class="text-lg font-bold text-primary-600">A partir de R$ [XXXX]</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              A harmoniza&ccedil;&atilde;o orofacial completa &eacute; um planejamento facial global que combina diferentes t&eacute;cnicas &mdash; toxina botul&iacute;nica, preenchimento com &aacute;cido hialur&ocirc;nico, bioestimuladores, entre outros &mdash; para alcan&ccedil;ar equil&iacute;brio, simetria e harmonia de todo o rosto.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Cada protocolo &eacute; 100% personalizado, levando em considera&ccedil;&atilde;o a anatomia facial, os desejos e as necessidades de cada paciente. O resultado &eacute; um rosto mais harmonioso, jovem e natural.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Personalizado</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Multi-t&eacute;cnicas</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Simetria facial</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Resultado completo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Fios de PDO -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="fios-pdo">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-arrows-up-to-line text-2xl text-primary-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Fios de PDO (Lifting Facial)</h3>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i>45-60 min</span>
+                <span class="text-lg font-bold text-primary-600">A partir de R$ [XXXX]</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Os fios de PDO (polidioxanona) s&atilde;o fios absorv&iacute;veis que promovem sustenta&ccedil;&atilde;o e lifting facial sem cirurgia. Estimulam a produ&ccedil;&atilde;o de col&aacute;geno, melhorando a firmeza e a sustenta&ccedil;&atilde;o dos tecidos.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Indicados para flacidez de face, pesco&ccedil;o, papada e sobrancelhas ca&iacute;das. O procedimento tem recupera&ccedil;&atilde;o r&aacute;pida e resultados que duram de 12 a 18 meses, com est&iacute;mulo de col&aacute;geno continuado.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Lifting sem cirurgia</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Fios absorv&iacute;veis</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Sustenta&ccedil;&atilde;o</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Col&aacute;geno</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Skinbooster / Profhilo -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="skinbooster">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-droplet text-2xl text-primary-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Skinbooster / Profhilo</h3>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i>20-30 min</span>
+                <span class="text-lg font-bold text-primary-600">A partir de R$ [XXX]</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Os Skinboosters e o Profhilo s&atilde;o tratamentos injet&aacute;veis de &aacute;cido hialur&ocirc;nico que promovem hidrata&ccedil;&atilde;o profunda, luminosidade e melhora da textura da pele de dentro para fora.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Diferente do preenchimento, n&atilde;o adicionam volume &mdash; atuam na qualidade da pele, devolvendo vi&ccedil;o e elasticidade. Indicados para face, pesco&ccedil;o, colo e m&atilde;os. Protocolo geralmente de 3 sess&otilde;es com intervalo de 30 dias.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Hidrata&ccedil;&atilde;o profunda</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Luminosidade</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Profhilo</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Qualidade da pele</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Sorriso Gengival e Masseter -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="sorriso-gengival">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-teeth-open text-2xl text-primary-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Sorriso Gengival e Masseter</h3>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i>15-20 min</span>
+                <span class="text-lg font-bold text-primary-600">A partir de R$ [XXX]</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              O tratamento do sorriso gengival utiliza toxina botul&iacute;nica para reduzir a exposi&ccedil;&atilde;o excessiva da gengiva ao sorrir, proporcionando um sorriso mais harm&ocirc;nico e est&eacute;tico.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              J&aacute; o tratamento do masseter (bruxismo) al&eacute;m de aliviar a tens&atilde;o e dores na articula&ccedil;&atilde;o, afina o contorno do rosto, proporcionando um perfil mais delicado. Ambos s&atilde;o procedimentos r&aacute;pidos com dura&ccedil;&atilde;o de 4 a 6 meses.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Sorriso gengival</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Bruxismo</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Afinamento facial</span>
+              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Procedimento r&aacute;pido</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ficou com alguma d&uacute;vida?</h2>
+      <p class="text-primary-100 text-lg mb-8">Agende sua avalia&ccedil;&atilde;o gratuita e descubra qual procedimento &eacute; ideal para voc&ecirc;.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos." class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl">
+          <i class="fa-brands fa-whatsapp mr-2"></i>Falar no WhatsApp
+        </a>
+        <a href="contato.html" class="px-8 py-4 border-2 border-white/40 text-white font-semibold rounded-full hover:bg-white/10 transition">
+          Formul&aacute;rio de Contato
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <span class="text-lg font-bold">[NOME DO DENTISTA]</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmoniza&ccedil;&atilde;o Orofacial.<br/>CRO-SP [XXXXX]</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">P&aacute;ginas</h4>
+          <div class="space-y-2">
+            <a href="index.html" class="block text-gray-400 text-sm hover:text-white transition">In&iacute;cio</a>
+            <a href="sobre.html" class="block text-gray-400 text-sm hover:text-white transition">Sobre</a>
+            <a href="servicos.html" class="block text-gray-400 text-sm hover:text-white transition">Servi&ccedil;os</a>
+            <a href="avaliacoes.html" class="block text-gray-400 text-sm hover:text-white transition">Avalia&ccedil;&otilde;es</a>
+            <a href="index.html#influenciadores" class="block text-gray-400 text-sm hover:text-white transition">Influenciadores</a>
+            <a href="contato.html" class="block text-gray-400 text-sm hover:text-white transition">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contato</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <p><i class="fa-solid fa-phone mr-2"></i>[(XX) XXXXX-XXXX]</p>
+            <p><i class="fa-solid fa-envelope mr-2"></i>[EMAIL@DOMINIO.COM.BR]</p>
+            <p><i class="fa-solid fa-location-dot mr-2"></i>[ENDERE&Ccedil;O COMPLETO]<br/>[CIDADE - UF] - [CEP]</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Redes Sociais</h4>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/[INSTAGRAM]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/[FACEBOOK]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/55[WHATSAPP]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 [NOME DO DENTISTA]. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all duration-300 float">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+</body>
+</html>

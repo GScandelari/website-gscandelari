@@ -1,0 +1,55 @@
+Você é um desenvolvedor web especialista em segurança. Preciso que você refatore o arquivo `index.html` de um projeto de site estático hospedado no Firebase Hosting.
+
+## Contexto
+- O projeto é uma página estática (sem build tool como Vite ou Webpack)
+- Está hospedado em Firebase Hosting no domínio gscandelari.com.br
+- O arquivo index.html contém credenciais do Firebase hardcoded diretamente no HTML
+- O site é público (vitrine de propostas comerciais)
+- Não há backend — tudo roda no client-side
+
+## Problema
+As credenciais do Firebase estão expostas no código fonte do index.html:
+```js
+const firebaseConfig = {
+  apiKey: "...",
+  authDomain: "...",
+  databaseURL: "...",
+  projectId: "...",
+  storageBucket: "...",
+  messagingSenderId: "...",
+  appId: "...",
+  measurementId: "..."
+};
+O que preciso que você faça
+Crie um arquivo separado chamado firebase-config.js na raiz do projeto contendo apenas o objeto firebaseConfig e a inicialização do Firebase. Use placeholders nos valores das credenciais (ex: "YOUR_API_KEY").
+
+Atualize o index.html para:
+
+Remover o bloco <script> com as credenciais hardcoded
+Adicionar <script src="/firebase-config.js"></script> antes dos scripts do Firebase SDK
+Manter todo o restante do código intacto
+Crie (ou atualize) o arquivo .gitignore na raiz do projeto adicionando:
+
+firebase-config.js
+.env
+.env.local
+Crie um arquivo firebase-config.example.js com os mesmos placeholders, que DEVE ser versionado, servindo de referência para configuração.
+
+Regras importantes
+Não altere nenhuma outra parte do index.html além do bloco de credenciais
+Não quebre nenhuma funcionalidade existente
+O arquivo firebase-config.js deve ser carregado ANTES dos scripts firebase-app-compat.js e firebase-firestore-compat.js
+Mantenha os comentários de setup que já existem no código original
+Entregue
+Conteúdo completo do firebase-config.js
+Conteúdo completo do firebase-config.example.js
+Apenas o trecho modificado do index.html (a seção <head> onde os scripts são carregados)
+Conteúdo do .gitignore atualizado
+
+
+---
+
+Depois que o Claude gerar os arquivos, lembra de dois passos manuais que o código sozinho não resolve:
+
+1. Restringir a API key por domínio no Google Cloud Console (HTTP referrers → `gscandelari.com.br/*`)
+2. Revisar as regras do Firestore no Firebase Console para não deixar em test mode

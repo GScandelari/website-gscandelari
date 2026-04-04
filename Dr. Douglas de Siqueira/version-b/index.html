@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Douglas de Siqueira | Harmonização Orofacial</title>
+  <meta name="description" content="Dr. Douglas de Siqueira - Dentista especialista em Harmonização Orofacial em Santos/SP. Botox, Preenchimento, Bioestimuladores e mais. Barão Office Santos. Agende sua avaliação!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#fff1f2',100:'#ffe4e6',200:'#fecdd3',300:'#fda4af',400:'#fb7185',500:'#f43f5e',600:'#e11d48',700:'#be123c',800:'#9f1239',900:'#881337' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(136,19,55,0.85), rgba(225,29,72,0.7)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1920&q=80') center/cover no-repeat;
+    }
+    .glass { background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.18); }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .float { animation: float 3s ease-in-out infinite; }
+    @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+    .shimmer { background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%); background-size: 200% 100%; animation: shimmer 3s infinite; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <a href="#hero" class="flex items-center gap-2">
+          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+          <span class="text-xl font-bold text-gray-900">Dr. Douglas de Siqueira</span>
+        </a>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars text-xl text-gray-700"></i>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#sobre" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
+          <a href="#servicos" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="#avaliacoes" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="#localizacao" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Localiza&ccedil;&atilde;o</a>
+          <a href="#contato" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+        <div class="flex flex-col gap-2 pt-3">
+          <a href="#sobre" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre</a>
+          <a href="#servicos" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Servi&ccedil;os</a>
+          <a href="#avaliacoes" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Avalia&ccedil;&otilde;es</a>
+          <a href="#localizacao" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Localiza&ccedil;&atilde;o</a>
+          <a href="#contato" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Agendar Consulta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 shimmer"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-0 w-full relative z-10">
+      <div class="max-w-2xl">
+        <div class="glass inline-block px-4 py-2 rounded-full mb-6">
+          <span class="text-white/90 text-sm font-medium"><i class="fa-solid fa-gem mr-2"></i>Harmoniza&ccedil;&atilde;o Orofacial Premium</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Sua beleza merece <span class="text-primary-300">cuidado de excel&ecirc;ncia</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
+          Realce o que voc&ecirc; tem de mais bonito com procedimentos personalizados por Dr. Douglas de Siqueira &mdash; CRO-SP 83786. Sofistica&ccedil;&atilde;o, seguran&ccedil;a e naturalidade.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl text-center">
+            <i class="fa-brands fa-whatsapp mr-2"></i>Agendar Avalia&ccedil;&atilde;o
+          </a>
+          <a href="#servicos" class="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition text-center">
+            Nossos Tratamentos
+          </a>
+        </div>
+        <div class="flex items-center gap-6 mt-10">
+          <div class="flex -space-x-2">
+            <img src="https://i.pravatar.cc/40?img=16" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+            <img src="https://i.pravatar.cc/40?img=23" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+            <img src="https://i.pravatar.cc/40?img=31" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+            <img src="https://i.pravatar.cc/40?img=44" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+          </div>
+          <div>
+            <div class="flex text-yellow-400 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-white/70 text-sm">+500 pacientes satisfeitos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative order-2 md:order-1">
+          <img src="/Dr.%20Douglas%20de%20Siqueira/foto_perfil.png" alt="Dr. Douglas de Siqueira" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"/>
+          <div class="absolute -bottom-6 -left-6 bg-primary-600 text-white p-6 rounded-2xl shadow-xl hidden md:block">
+            <p class="text-3xl font-bold">22+</p>
+            <p class="text-sm text-primary-100">Anos de Experi&ecirc;ncia</p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Sobre o Profissional</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Dr. Douglas de Siqueira</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Cirurgi&atilde;o-dentista formado pelo Centro Universit&aacute;rio Braz Cubas (1999&ndash;2003), com mais de 22 anos de experi&ecirc;ncia. Especialista em harmoniza&ccedil;&atilde;o facial e odontologia est&eacute;tica de alto padr&atilde;o.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Tratamentos modernos para real&ccedil;ar sua beleza e autoestima com seguran&ccedil;a e naturalidade. Localizado no Bar&atilde;o Office Santos, oferecemos atendimento personalizado com as melhores t&eacute;cnicas e produtos do mercado.
+          </p>
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-graduation-cap text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Centro Universit&aacute;rio Braz Cubas</p>
+                <p class="text-sm text-gray-500">Gradua&ccedil;&atilde;o em Odontologia (1999&ndash;2003)</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-certificate text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">[Institui&ccedil;&atilde;o da P&oacute;s]</p>
+                <p class="text-sm text-gray-500">P&oacute;s-gradua&ccedil;&atilde;o em Harmoniza&ccedil;&atilde;o Orofacial</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-id-card text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">CRO-SP 83786</p>
+                <p class="text-sm text-gray-500">Registro ativo no Conselho Regional de Odontologia</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contato" class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">
+            <i class="fa-solid fa-calendar-check"></i> Agendar Avalia&ccedil;&atilde;o
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-20 md:py-28 bg-gradient-to-b from-primary-50/50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Tratamentos</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Procedimentos Exclusivos</h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Cada procedimento &eacute; planejado de forma personalizada para valorizar a sua beleza natural com sofistica&ccedil;&atilde;o e seguran&ccedil;a.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Harmonização Facial -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-face-smile-beam text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Harmoniza&ccedil;&atilde;o Facial</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Planejamento facial completo para equil&iacute;brio, simetria e harmonia do rosto.</p>
+        </div>
+        <!-- Preenchimento Facial e Labial -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-heart text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Preenchimento Facial e Labial</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Volume e defini&ccedil;&atilde;o com &aacute;cido hialur&ocirc;nico de alta qualidade para l&aacute;bios e face.</p>
+        </div>
+        <!-- Contorno Facial -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-diamond text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Contorno Facial</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Defini&ccedil;&atilde;o de mento, mand&iacute;bula e malar para um rosto mais harm&ocirc;nico e definido.</p>
+        </div>
+        <!-- Botox -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-syringe text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Botox</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Suaviza rugas e linhas de express&atilde;o com resultado natural e rejuvenescedor.</p>
+        </div>
+        <!-- Fios de Colágeno -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-arrows-up-to-line text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Fios de Col&aacute;geno</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Lifting facial n&atilde;o cir&uacute;rgico com fios absorv&iacute;veis para sustenta&ccedil;&atilde;o e firmeza.</p>
+        </div>
+        <!-- Bioestimuladores -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-sparkles text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Bioestimuladores</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Radiesse, Sculptra e Ellans&eacute; para estimular col&aacute;geno e rejuvenescer a pele.</p>
+        </div>
+        <!-- Ultrassom Microfocado -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-wave-square text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Ultrassom Microfocado</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Tecnologia avan&ccedil;ada para lifting e firmeza da pele sem cirurgia.</p>
+        </div>
+        <!-- Lentes de Porcelana -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-teeth text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Lentes de Porcelana</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Lentes de contato dental para um sorriso perfeito, branco e alinhado.</p>
+        </div>
+        <!-- Implantes Dentários -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-tooth text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Implantes Dent&aacute;rios</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Reabilita&ccedil;&atilde;o oral com implantes de &uacute;ltima gera&ccedil;&atilde;o para devolver seu sorriso.</p>
+        </div>
+        <!-- Cirurgia de Siso -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-notes-medical text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Cirurgia de Siso</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Extra&ccedil;&atilde;o de sisos com seguran&ccedil;a, conforto e recupera&ccedil;&atilde;o r&aacute;pida.</p>
+        </div>
+        <!-- Clareamento Dental -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-sun text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Clareamento Dental</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Dentes mais brancos e luminosos com t&eacute;cnicas seguras e eficazes.</p>
+        </div>
+        <!-- Skinbooster -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-droplet text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Skinbooster</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Hidrata&ccedil;&atilde;o profunda e luminosidade para uma pele vi&ccedil;osa e rejuvenescida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section id="avaliacoes" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
+      </div>
+      <!-- Google Reviews Widget - JotForm -->
+      <div class="mt-10 flex justify-center">
+        <div id="JFWebsiteWidget-019d024c6b9277d2b51eab884c53f05b3138"></div>
+        <script src="https://www.jotform.com/website-widgets/embed/019d024c6b9277d2b51eab884c53f05b3138"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao" class="py-20 md:py-28 bg-gradient-to-b from-white to-primary-50/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Localiza&ccedil;&atilde;o</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Visite nossa cl&iacute;nica</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-primary-100/30">
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-location-dot text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Endere&ccedil;o</p>
+                <p class="text-gray-500 text-sm">R. Bar&atilde;o de Paranapiacaba, 233 - Sala 703 - Encruzilhada<br/>Santos - SP, CEP 11050-251<br/><span class="text-gray-400">Bar&atilde;o Office Santos</span></p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-clock text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Hor&aacute;rio de Atendimento</p>
+                <p class="text-gray-500 text-sm">Seg - Sex: 08h &agrave;s 19h<br/>S&aacute;b - Dom: Fechado</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-phone text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Telefone / WhatsApp</p>
+                <p class="text-gray-500 text-sm">(13) 98816-9625</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-envelope text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">E-mail</p>
+                <p class="text-gray-500 text-sm">drdouglasdesiqueira@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-sm h-80 md:h-full min-h-[320px]">
+          <iframe src="https://maps.google.com/maps?q=R.+Bar%C3%A3o+de+Paranapiacaba,+233+-+Encruzilhada,+Santos+-+SP,+11050-251&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; min-height:320px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Barão Office Santos - Dr. Douglas de Siqueira"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS PARCEIRAS -->
+  <section class="py-16 bg-white border-y border-gray-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm text-gray-400 uppercase tracking-wider font-semibold mb-10">Marcas que trabalhamos</p>
+    </div>
+    <style>
+      @keyframes carousel-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .brands-carousel {
+        display: flex;
+        animation: carousel-scroll 20s linear infinite;
+        width: max-content;
+      }
+      .brands-carousel:hover {
+        animation-play-state: paused;
+      }
+      .brand-card {
+        flex-shrink: 0;
+        width: 180px;
+        height: 90px;
+        margin: 0 24px;
+        background: #f9fafb;
+        border: 1px solid #f3f4f6;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.3s, transform 0.3s;
+        cursor: pointer;
+      }
+      .brand-card:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        transform: translateY(-2px);
+      }
+      .brand-card img {
+        height: 40px;
+        object-fit: contain;
+        margin-bottom: 4px;
+      }
+      .brand-card .brand-fallback {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: #6b7280;
+        letter-spacing: 0.05em;
+      }
+      .brand-card .brand-label {
+        font-size: 0.7rem;
+        color: #9ca3af;
+        margin-top: 2px;
+      }
+    </style>
+    <div class="overflow-hidden">
+      <div class="brands-carousel">
+        <!-- Set 1 (original) -->
+        <div class="brand-card">
+          <img src="assets/marca-allergan.png" alt="Allergan" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">ALLERGAN</span>
+          <span class="brand-label">Botox&reg; &amp; Juv&eacute;derm&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-merz.png" alt="Merz" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">MERZ</span>
+          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-galderma.png" alt="Galderma" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">GALDERMA</span>
+          <span class="brand-label">Restylane&reg; &amp; Sculptra&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-sinclair.png" alt="Sinclair" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">SINCLAIR</span>
+          <span class="brand-label">Ellans&eacute;&reg;</span>
+        </div>
+        <!-- Set 2 (duplicate for infinite loop) -->
+        <div class="brand-card">
+          <img src="assets/marca-allergan.png" alt="Allergan" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">ALLERGAN</span>
+          <span class="brand-label">Botox&reg; &amp; Juv&eacute;derm&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-merz.png" alt="Merz" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">MERZ</span>
+          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-galderma.png" alt="Galderma" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">GALDERMA</span>
+          <span class="brand-label">Restylane&reg; &amp; Sculptra&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-sinclair.png" alt="Sinclair" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">SINCLAIR</span>
+          <span class="brand-label">Ellans&eacute;&reg;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-20 md:py-28 bg-gradient-to-b from-white to-primary-50/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Contato</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Agende sua transforma&ccedil;&atilde;o</h2>
+          <p class="text-gray-500 leading-relaxed mb-8">D&ecirc; o primeiro passo para realçar sua beleza. Preencha o formul&aacute;rio ou fale conosco pelo WhatsApp.</p>
+          <div class="flex flex-col gap-4">
+            <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="inline-flex items-center gap-3 px-6 py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition shadow-lg shadow-green-500/25">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              <div>
+                <p class="text-sm opacity-80">WhatsApp</p>
+                <p>(13) 98816-9625</p>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/drdouglasdesiqueira" target="_blank" class="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:opacity-90 transition shadow-lg">
+              <i class="fa-brands fa-instagram text-2xl"></i>
+              <div>
+                <p class="text-sm opacity-80">Instagram</p>
+                <p>@drdouglasdesiqueira</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-primary-100/30">
+          <form action="https://formsubmit.co/drdouglasdesiqueira@gmail.com" method="POST" class="space-y-5">
+            <input type="hidden" name="_subject" value="Nova mensagem do site" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://drdouglasdesiqueira.com.br/obrigado" />
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">Nome completo</label>
+              <input type="text" name="nome" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="Seu nome completo" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">WhatsApp</label>
+              <input type="tel" name="whatsapp" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="(XX) XXXXX-XXXX" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">Procedimento de interesse</label>
+              <select name="procedimento" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-gray-500">
+                <option value="">Selecione um procedimento</option>
+                <option>Harmoniza&ccedil;&atilde;o Facial</option>
+                <option>Preenchimento Facial e Labial</option>
+                <option>Contorno (Mento, Mand&iacute;bula, Malar)</option>
+                <option>Botox</option>
+                <option>Fios de Col&aacute;geno</option>
+                <option>Bioestimuladores</option>
+                <option>Ultrassom Microfocado</option>
+                <option>Lentes de Contato de Porcelana</option>
+                <option>Implantes Dent&aacute;rios</option>
+                <option>Cirurgia de Siso</option>
+                <option>Clareamento Dental</option>
+                <option>Skinbooster</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">Mensagem (opcional)</label>
+              <textarea name="mensagem" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition resize-none" placeholder="Conte-nos mais sobre o que voc&ecirc; procura..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">
+              <i class="fa-solid fa-paper-plane mr-2"></i>Enviar Mensagem
+            </button>
+            <p class="text-xs text-gray-400 text-center">Ao enviar, voc&ecirc; concorda com nossa pol&iacute;tica de privacidade.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <span class="text-lg font-bold">Dr. Douglas de Siqueira</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmoniza&ccedil;&atilde;o Orofacial.<br/>CRO-SP 83786</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Links R&aacute;pidos</h4>
+          <div class="space-y-2">
+            <a href="#sobre" class="block text-gray-400 text-sm hover:text-white transition">Sobre</a>
+            <a href="#servicos" class="block text-gray-400 text-sm hover:text-white transition">Servi&ccedil;os</a>
+            <a href="#avaliacoes" class="block text-gray-400 text-sm hover:text-white transition">Avalia&ccedil;&otilde;es</a>
+            <a href="#influenciadores" class="block text-gray-400 text-sm hover:text-white transition">Influenciadores</a>
+            <a href="#contato" class="block text-gray-400 text-sm hover:text-white transition">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contato</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <p><i class="fa-solid fa-phone mr-2"></i>(13) 98816-9625</p>
+            <p><i class="fa-solid fa-envelope mr-2"></i>drdouglasdesiqueira@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2"></i>R. Bar&atilde;o de Paranapiacaba, 233 - Sala 703<br/>Encruzilhada - Santos/SP - 11050-251</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Redes Sociais</h4>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/drdouglasdesiqueira" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/drdouglasdesiqueira" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/5513988169625" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 Dr. Douglas de Siqueira. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all duration-300 float">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+</body>
+</html>

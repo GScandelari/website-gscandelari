@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[NOME DO DENTISTA] | Harmonização Orofacial</title>
+  <meta name="description" content="[NOME DO DENTISTA] - Especialista em Harmonização Orofacial. Botox, Preenchimento, Bioestimuladores e mais. Agende sua avaliação!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#f5f3ff',100:'#ede9fe',200:'#ddd6fe',300:'#c4b5fd',400:'#a78bfa',500:'#8b5cf6',600:'#7c3aed',700:'#6d28d9',800:'#5b21b6',900:'#4c1d95' },
+            gold: { 400:'#facc15',500:'#eab308',600:'#ca8a04' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(76,29,149,0.88), rgba(124,58,237,0.72)), url('https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1920&q=80') center/cover no-repeat;
+    }
+    .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.15); }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .float { animation: float 3s ease-in-out infinite; }
+    @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+    .shimmer { background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%); background-size: 200% 100%; animation: shimmer 3s infinite; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- BANNER + NAVBAR fixos no topo, empilhados sem sobreposição -->
+  <div style="position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;flex-direction:column;">
+    <div style="background:#facc15;color:#000;text-align:center;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:0.05em;">
+      ESTA PÁGINA É UM PROJETO TEMPLATE NÃO FUNCIONAL — USO EXCLUSIVO PARA DEV SITES GSCANDELARI
+    </div>
+    <!-- NAVBAR -->
+    <nav class="w-full bg-white/95 backdrop-blur shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <a href="#hero" class="flex items-center gap-2">
+          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+          <span class="text-xl font-bold text-gray-900">[NOME DO DENTISTA]</span>
+        </a>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars text-xl text-gray-700"></i>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#sobre" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
+          <a href="#servicos" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="#avaliacoes" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="#localizacao" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Localiza&ccedil;&atilde;o</a>
+          <a href="#contato" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+        <div class="flex flex-col gap-2 pt-3">
+          <a href="#sobre" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre</a>
+          <a href="#servicos" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Servi&ccedil;os</a>
+          <a href="#avaliacoes" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Avalia&ccedil;&otilde;es</a>
+          <a href="#localizacao" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Localiza&ccedil;&atilde;o</a>
+          <a href="#contato" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Agendar Consulta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 shimmer"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-0 w-full relative z-10">
+      <div class="max-w-2xl">
+        <div class="glass inline-block px-4 py-2 rounded-full mb-6">
+          <span class="text-white/90 text-sm font-medium"><i class="fa-solid fa-gem mr-2"></i>Harmoniza&ccedil;&atilde;o Orofacial Premium</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Sua beleza merece <span class="text-primary-300">cuidado de excel&ecirc;ncia</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
+          Realce o que voc&ecirc; tem de mais bonito com procedimentos personalizados por [NOME DO DENTISTA] &mdash; [CRO-SP XXXXX]. Sofistica&ccedil;&atilde;o, seguran&ccedil;a e naturalidade.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl text-center">
+            <i class="fa-brands fa-whatsapp mr-2"></i>Agendar Avalia&ccedil;&atilde;o
+          </a>
+          <a href="#servicos" class="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition text-center">
+            Nossos Tratamentos
+          </a>
+        </div>
+        <div class="flex items-center gap-6 mt-10">
+          <div class="flex -space-x-2">
+            <img src="https://i.pravatar.cc/40?img=16" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+            <img src="https://i.pravatar.cc/40?img=23" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+            <img src="https://i.pravatar.cc/40?img=31" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+            <img src="https://i.pravatar.cc/40?img=44" class="w-10 h-10 rounded-full border-2 border-white" alt="paciente"/>
+          </div>
+          <div>
+            <div class="flex text-yellow-400 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-white/70 text-sm">+[XXX] pacientes satisfeitas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative order-2 md:order-1">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80" alt="[NOME DO DENTISTA]" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"/>
+          <div class="absolute -bottom-6 -left-6 bg-primary-600 text-white p-6 rounded-2xl shadow-xl hidden md:block">
+            <p class="text-3xl font-bold">[X]+</p>
+            <p class="text-sm text-primary-100">Anos de Experi&ecirc;ncia</p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Sobre a Profissional</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Dra. [NOME DO DENTISTA]</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            [Breve descri&ccedil;&atilde;o pessoal. Exemplo: Apaixonada pela est&eacute;tica facial e pelo poder transformador da harmoniza&ccedil;&atilde;o orofacial. Formada pela [UNIVERSIDADE] com especializa&ccedil;&atilde;o em procedimentos est&eacute;ticos avan&ccedil;ados.]
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            [Complemento. Exemplo: Meu objetivo &eacute; realçar a beleza &uacute;nica de cada paciente, sempre priorizando naturalidade, seguran&ccedil;a e bem-estar.]
+          </p>
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-graduation-cap text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">[UNIVERSIDADE]</p>
+                <p class="text-sm text-gray-500">Gradua&ccedil;&atilde;o em Odontologia</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-certificate text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">[INSTITUI&Ccedil;&Atilde;O P&Oacute;S]</p>
+                <p class="text-sm text-gray-500">P&oacute;s-gradua&ccedil;&atilde;o em Harmoniza&ccedil;&atilde;o Orofacial</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-id-card text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">CRO-SP [XXXXX]</p>
+                <p class="text-sm text-gray-500">Registro ativo no CRO</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contato" class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">
+            <i class="fa-solid fa-calendar-check"></i> Agendar Avalia&ccedil;&atilde;o
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-20 md:py-28 bg-gradient-to-b from-primary-50/50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Tratamentos</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Procedimentos Exclusivos</h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Cada procedimento &eacute; planejado de forma personalizada para valorizar a sua beleza natural com sofistica&ccedil;&atilde;o e seguran&ccedil;a.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-syringe text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Toxina Botul&iacute;nica</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Suaviza rugas e linhas de express&atilde;o com resultado natural e rejuvenescedor.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-toothrkles text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Bioestimuladores</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Radiesse, Sculptra e Ellans&eacute; para estimular col&aacute;geno natural da pele.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-heart text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Preenchimento Labial</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Volume e defini&ccedil;&atilde;o labial com &aacute;cido hialur&ocirc;nico premium.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-wand-magic-sparkles text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Rinomodela&ccedil;&atilde;o</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Corre&ccedil;&atilde;o do perfil nasal sem cirurgia, com resultado imediato.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-face-smile-beam text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Harmoniza&ccedil;&atilde;o Completa</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Planejamento facial completo para equil&iacute;brio e harmonia perfeita.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-arrows-up-to-line text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Fios de PDO</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Lifting facial n&atilde;o cir&uacute;rgico com fios absorv&iacute;veis de &uacute;ltima gera&ccedil;&atilde;o.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-droplet text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Skinbooster</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Hidrata&ccedil;&atilde;o profunda e luminosidade com Profhilo e Skinbooster.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 border border-primary-100/50">
+          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
+            <i class="fa-solid fa-teeth-open text-xl text-primary-600 group-hover:text-white transition"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Sorriso Gengival</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Tratamento de sorriso gengival e bruxismo com toxina botul&iacute;nica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section id="avaliacoes" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Pacientes Satisfeitas</h2>
+        <div class="flex items-center justify-center gap-2 mt-4">
+          <div class="flex text-yellow-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="text-gray-600 font-medium">4.9/5 no Google</span>
+          <span class="text-gray-400">&bull;</span>
+          <span class="text-gray-500">[XXX] avalia&ccedil;&otilde;es</span>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-6 hover:shadow-lg transition border border-primary-100/50">
+          <div class="flex text-yellow-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-4">&ldquo;A Dra. [NOME] &eacute; maravilhosa! Fiz o preenchimento labial e o resultado ficou lindo e super natural. A cl&iacute;nica &eacute; impec&aacute;vel, me senti muito acolhida.&rdquo;</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=20" alt="paciente" class="w-10 h-10 rounded-full"/>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">[Nome da Paciente 1]</p>
+              <p class="text-xs text-gray-400">via Google Reviews</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-6 hover:shadow-lg transition border border-primary-100/50">
+          <div class="flex text-yellow-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-4">&ldquo;Melhor investimento que fiz! A harmoniza&ccedil;&atilde;o ficou perfeita. Profissional atenciosa, dedicada e com um gosto refinado. Todos perguntam o que eu fiz!&rdquo;</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=25" alt="paciente" class="w-10 h-10 rounded-full"/>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">[Nome da Paciente 2]</p>
+              <p class="text-xs text-gray-400">via Google Reviews</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-6 hover:shadow-lg transition border border-primary-100/50">
+          <div class="flex text-yellow-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-4">&ldquo;Eu tinha medo de fazer botox, mas a Dra. [NOME] me deixou super tranquila. O resultado ficou maravilhoso. J&aacute; agendei a manuten&ccedil;&atilde;o! Super recomendo.&rdquo;</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=32" alt="paciente" class="w-10 h-10 rounded-full"/>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">[Nome da Paciente 3]</p>
+              <p class="text-xs text-gray-400">via Google Reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <div class="inline-flex items-center gap-2 bg-gray-100 px-6 py-3 rounded-full">
+          <i class="fa-brands fa-google text-xl"></i>
+          <span class="text-sm text-gray-600">Widget do Google Reviews &mdash; <a href="#" class="text-primary-600 underline">[INSERIR LINK DO ELFSIGHT OU WIDGET]</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao" class="py-20 md:py-28 bg-gradient-to-b from-white to-primary-50/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Localiza&ccedil;&atilde;o</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Visite nossa cl&iacute;nica</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-primary-100/30">
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-location-dot text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Endere&ccedil;o</p>
+                <p class="text-gray-500 text-sm">[RUA, N&Uacute;MERO - BAIRRO]<br/>[CIDADE - UF, CEP XXXXX-XXX]</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-clock text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Hor&aacute;rio de Atendimento</p>
+                <p class="text-gray-500 text-sm">Seg - Sex: 09h &agrave;s 19h<br/>S&aacute;b: 09h &agrave;s 13h</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-phone text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Telefone / WhatsApp</p>
+                <p class="text-gray-500 text-sm">[(XX) XXXXX-XXXX]</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-envelope text-primary-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">E-mail</p>
+                <p class="text-gray-500 text-sm">[EMAIL@DOMINIO.COM.BR]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-sm h-80 md:h-full min-h-[320px]">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1976577639465!2d-46.65529678502155!3d-23.564611284682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c0776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; min-height:320px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da clínica"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS PARCEIRAS -->
+  <section class="py-16 bg-white border-y border-gray-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm text-gray-400 uppercase tracking-wider font-semibold mb-10">Marcas que trabalhamos</p>
+    </div>
+    <style>
+      @keyframes carousel-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .brands-carousel {
+        display: flex;
+        animation: carousel-scroll 20s linear infinite;
+        width: max-content;
+      }
+      .brands-carousel:hover {
+        animation-play-state: paused;
+      }
+      .brand-card {
+        flex-shrink: 0;
+        width: 180px;
+        height: 90px;
+        margin: 0 24px;
+        background: #f9fafb;
+        border: 1px solid #f3f4f6;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.3s, transform 0.3s;
+        cursor: pointer;
+      }
+      .brand-card:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        transform: translateY(-2px);
+      }
+      .brand-card img {
+        height: 40px;
+        object-fit: contain;
+        margin-bottom: 4px;
+      }
+      .brand-card .brand-fallback {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: #6b7280;
+        letter-spacing: 0.05em;
+      }
+      .brand-card .brand-label {
+        font-size: 0.7rem;
+        color: #9ca3af;
+        margin-top: 2px;
+      }
+    </style>
+    <div class="overflow-hidden">
+      <div class="brands-carousel">
+        <!-- Set 1 (original) -->
+        <div class="brand-card">
+          <img src="assets/marca-allergan.png" alt="Allergan" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">ALLERGAN</span>
+          <span class="brand-label">Botox&reg; &amp; Juv&eacute;derm&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-merz.png" alt="Merz" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">MERZ</span>
+          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-galderma.png" alt="Galderma" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">GALDERMA</span>
+          <span class="brand-label">Restylane&reg; &amp; Sculptra&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-sinclair.png" alt="Sinclair" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">SINCLAIR</span>
+          <span class="brand-label">Ellans&eacute;&reg;</span>
+        </div>
+        <!-- Set 2 (duplicate for infinite loop) -->
+        <div class="brand-card">
+          <img src="assets/marca-allergan.png" alt="Allergan" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">ALLERGAN</span>
+          <span class="brand-label">Botox&reg; &amp; Juv&eacute;derm&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-merz.png" alt="Merz" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">MERZ</span>
+          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-galderma.png" alt="Galderma" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">GALDERMA</span>
+          <span class="brand-label">Restylane&reg; &amp; Sculptra&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="assets/marca-sinclair.png" alt="Sinclair" class="brand-logo" style="display:none"/>
+          <span class="brand-fallback">SINCLAIR</span>
+          <span class="brand-label">Ellans&eacute;&reg;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFLUENCIADORES DIGITAIS -->
+  <section id="influenciadores" class="py-20 md:py-28 bg-gradient-to-b from-primary-50/30 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Confian&ccedil;a de quem &eacute; refer&ecirc;ncia</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Influenciadores que j&aacute; atendemos</h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Profissionais reconhecidos nas redes sociais confiam no nosso trabalho para cuidar da sua est&eacute;tica facial.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Influenciador 1 -->
+        <a href="https://www.instagram.com/[INFLUENCIADOR_1]" target="_blank" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 text-center border border-primary-100/50">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 p-[3px]">
+            <div class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+              <img src="https://i.pravatar.cc/80?img=47" alt="[INFLUENCIADOR_1]" class="w-full h-full object-cover"/>
+            </div>
+          </div>
+          <p class="font-bold text-gray-900 group-hover:text-primary-600 transition">@[INFLUENCIADOR_1]</p>
+          <p class="text-sm text-gray-400 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>[XXX]K seguidores</p>
+          <div class="mt-3">
+            <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
+          </div>
+        </a>
+        <!-- Influenciador 2 -->
+        <a href="https://www.instagram.com/[INFLUENCIADOR_2]" target="_blank" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 text-center border border-primary-100/50">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 p-[3px]">
+            <div class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+              <img src="https://i.pravatar.cc/80?img=38" alt="[INFLUENCIADOR_2]" class="w-full h-full object-cover"/>
+            </div>
+          </div>
+          <p class="font-bold text-gray-900 group-hover:text-primary-600 transition">@[INFLUENCIADOR_2]</p>
+          <p class="text-sm text-gray-400 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>[XXX]K seguidores</p>
+          <div class="mt-3">
+            <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
+          </div>
+        </a>
+        <!-- Influenciador 3 -->
+        <a href="https://www.instagram.com/[INFLUENCIADOR_3]" target="_blank" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 text-center border border-primary-100/50">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 p-[3px]">
+            <div class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+              <img src="https://i.pravatar.cc/80?img=26" alt="[INFLUENCIADOR_3]" class="w-full h-full object-cover"/>
+            </div>
+          </div>
+          <p class="font-bold text-gray-900 group-hover:text-primary-600 transition">@[INFLUENCIADOR_3]</p>
+          <p class="text-sm text-gray-400 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>[XXX]K seguidores</p>
+          <div class="mt-3">
+            <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
+          </div>
+        </a>
+        <!-- Influenciador 4 -->
+        <a href="https://www.instagram.com/[INFLUENCIADOR_4]" target="_blank" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 text-center border border-primary-100/50">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 p-[3px]">
+            <div class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+              <img src="https://i.pravatar.cc/80?img=15" alt="[INFLUENCIADOR_4]" class="w-full h-full object-cover"/>
+            </div>
+          </div>
+          <p class="font-bold text-gray-900 group-hover:text-primary-600 transition">@[INFLUENCIADOR_4]</p>
+          <p class="text-sm text-gray-400 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>[XXX]K seguidores</p>
+          <div class="mt-3">
+            <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-20 md:py-28 bg-gradient-to-b from-white to-primary-50/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Contato</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Agende sua transforma&ccedil;&atilde;o</h2>
+          <p class="text-gray-500 leading-relaxed mb-8">D&ecirc; o primeiro passo para realçar sua beleza. Preencha o formul&aacute;rio ou fale conosco pelo WhatsApp.</p>
+          <div class="flex flex-col gap-4">
+            <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="inline-flex items-center gap-3 px-6 py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition shadow-lg shadow-green-500/25">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              <div>
+                <p class="text-sm opacity-80">WhatsApp</p>
+                <p>[(XX) XXXXX-XXXX]</p>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/[INSTAGRAM]" target="_blank" class="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:opacity-90 transition shadow-lg">
+              <i class="fa-brands fa-instagram text-2xl"></i>
+              <div>
+                <p class="text-sm opacity-80">Instagram</p>
+                <p>@[INSTAGRAM]</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-primary-100/30">
+          <form action="https://formsubmit.co/[SEU-EMAIL@DOMINIO.COM]" method="POST" class="space-y-5">
+            <input type="hidden" name="_subject" value="Nova mensagem do site" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://[SEU-DOMINIO]/obrigado" />
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">Nome completo</label>
+              <input type="text" name="nome" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="Seu nome completo" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">WhatsApp</label>
+              <input type="tel" name="whatsapp" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="(XX) XXXXX-XXXX" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">Procedimento de interesse</label>
+              <select name="procedimento" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-gray-500">
+                <option value="">Selecione um procedimento</option>
+                <option>Toxina Botul&iacute;nica (Botox)</option>
+                <option>Bioestimuladores de Col&aacute;geno</option>
+                <option>Preenchimento Labial / Facial</option>
+                <option>Rinomodela&ccedil;&atilde;o</option>
+                <option>Harmoniza&ccedil;&atilde;o Completa</option>
+                <option>Fios de PDO</option>
+                <option>Skinbooster / Profhilo</option>
+                <option>Sorriso Gengival / Masseter</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">Mensagem (opcional)</label>
+              <textarea name="mensagem" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition resize-none" placeholder="Conte-nos mais sobre o que voc&ecirc; procura..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">
+              <i class="fa-solid fa-paper-plane mr-2"></i>Enviar Mensagem
+            </button>
+            <p class="text-xs text-gray-400 text-center">Ao enviar, voc&ecirc; concorda com nossa pol&iacute;tica de privacidade.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <span class="text-lg font-bold">[NOME DO DENTISTA]</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmoniza&ccedil;&atilde;o Orofacial.<br/>CRO-SP [XXXXX]</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Links R&aacute;pidos</h4>
+          <div class="space-y-2">
+            <a href="#sobre" class="block text-gray-400 text-sm hover:text-white transition">Sobre</a>
+            <a href="#servicos" class="block text-gray-400 text-sm hover:text-white transition">Servi&ccedil;os</a>
+            <a href="#avaliacoes" class="block text-gray-400 text-sm hover:text-white transition">Avalia&ccedil;&otilde;es</a>
+            <a href="#influenciadores" class="block text-gray-400 text-sm hover:text-white transition">Influenciadores</a>
+            <a href="#contato" class="block text-gray-400 text-sm hover:text-white transition">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contato</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <p><i class="fa-solid fa-phone mr-2"></i>[(XX) XXXXX-XXXX]</p>
+            <p><i class="fa-solid fa-envelope mr-2"></i>[EMAIL@DOMINIO.COM.BR]</p>
+            <p><i class="fa-solid fa-location-dot mr-2"></i>[ENDERE&Ccedil;O COMPLETO]<br/>[CIDADE - UF] - [CEP]</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Redes Sociais</h4>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/[INSTAGRAM]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/[FACEBOOK]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/55[WHATSAPP]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 [NOME DO DENTISTA]. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all duration-300 float">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+</body>
+</html>

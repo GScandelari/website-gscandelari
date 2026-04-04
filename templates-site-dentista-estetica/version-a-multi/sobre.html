@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre | [NOME DO DENTISTA]</title>
+  <meta name="description" content="Conheça [NOME DO DENTISTA], especialista em Harmonização Orofacial. Formação, certificações e experiência." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+          <span class="text-xl font-bold text-gray-900">[NOME DO DENTISTA]</span>
+        </a>
+        <button class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars text-xl text-gray-700"></i>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="text-sm font-medium text-primary-600 transition">Sobre</a>
+          <a href="servicos.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+        <div class="flex flex-col gap-2 pt-3">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="px-3 py-2 rounded-lg text-primary-600 bg-primary-50 font-medium">Sobre</a>
+          <a href="servicos.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition">Agendar Consulta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER DA PÁGINA -->
+  <section class="bg-gradient-to-br from-primary-600 to-primary-800 pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Sobre o Profissional</h1>
+      <p class="text-primary-200 text-lg max-w-2xl mx-auto">Conhe&ccedil;a a trajet&oacute;ria, forma&ccedil;&atilde;o e a miss&atilde;o por tr&aacute;s do nosso trabalho.</p>
+    </div>
+  </section>
+
+  <!-- SOBRE DETALHADO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="[NOME DO DENTISTA]" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"/>
+          <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-2xl shadow-xl hidden md:block">
+            <p class="text-3xl font-bold">[X]+</p>
+            <p class="text-sm text-primary-100">Anos de Experi&ecirc;ncia</p>
+          </div>
+        </div>
+        <div>
+          <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Quem sou eu</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Dr(a). [NOME DO DENTISTA]</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            [Par&aacute;grafo 1 &mdash; hist&oacute;ria pessoal. Exemplo: Desde crian&ccedil;a sempre fui fascinado(a) pela est&eacute;tica e pelo cuidado com as pessoas. Essa paix&atilde;o me levou &agrave; Odontologia e, posteriormente, &agrave; Harmoniza&ccedil;&atilde;o Orofacial.]
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            [Par&aacute;grafo 2 &mdash; forma&ccedil;&atilde;o. Exemplo: Graduado(a) pela [UNIVERSIDADE], com p&oacute;s-gradua&ccedil;&atilde;o em Harmoniza&ccedil;&atilde;o Orofacial pela [INSTITUI&Ccedil;&Atilde;O]. Participei de cursos e congressos nacionais e internacionais para estar sempre atualizado(a) com as melhores t&eacute;cnicas.]
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            [Par&aacute;grafo 3 &mdash; miss&atilde;o. Exemplo: Minha miss&atilde;o &eacute; devolver a autoestima e a confian&ccedil;a dos meus pacientes atrav&eacute;s de procedimentos seguros, &eacute;ticos e com resultados naturais.]
+          </p>
+          <a href="contato.html" class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">
+            <i class="fa-solid fa-calendar-check"></i> Agendar Avalia&ccedil;&atilde;o
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAÇÃO E CERTIFICAÇÕES -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Forma&ccedil;&atilde;o</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Certifica&ccedil;&otilde;es e Institui&ccedil;&otilde;es</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-graduation-cap text-primary-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">[UNIVERSIDADE]</h3>
+          <p class="text-gray-500 text-sm">Gradua&ccedil;&atilde;o em Odontologia &mdash; [ANO]</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-certificate text-primary-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">[INSTITUI&Ccedil;&Atilde;O P&Oacute;S]</h3>
+          <p class="text-gray-500 text-sm">P&oacute;s-gradua&ccedil;&atilde;o em Harmoniza&ccedil;&atilde;o Orofacial &mdash; [ANO]</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-id-card text-primary-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">CRO-SP [XXXXX]</h3>
+          <p class="text-gray-500 text-sm">Registro ativo no Conselho Regional de Odontologia</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-award text-primary-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">[CURSO / CONGRESSO 1]</h3>
+          <p class="text-gray-500 text-sm">[Descri&ccedil;&atilde;o breve do curso ou congresso]</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-award text-primary-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">[CURSO / CONGRESSO 2]</h3>
+          <p class="text-gray-500 text-sm">[Descri&ccedil;&atilde;o breve do curso ou congresso]</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-award text-primary-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">[CURSO / CONGRESSO 3]</h3>
+          <p class="text-gray-500 text-sm">[Descri&ccedil;&atilde;o breve do curso ou congresso]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Vamos conversar sobre seus objetivos?</h2>
+      <p class="text-primary-100 text-lg mb-8">Agende sua avalia&ccedil;&atilde;o e descubra como posso ajudar voc&ecirc;.</p>
+      <a href="contato.html" class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl inline-block">
+        <i class="fa-solid fa-calendar-check mr-2"></i>Agendar Avalia&ccedil;&atilde;o
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <span class="text-lg font-bold">[NOME DO DENTISTA]</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmoniza&ccedil;&atilde;o Orofacial.<br/>CRO-SP [XXXXX]</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">P&aacute;ginas</h4>
+          <div class="space-y-2">
+            <a href="index.html" class="block text-gray-400 text-sm hover:text-white transition">In&iacute;cio</a>
+            <a href="sobre.html" class="block text-gray-400 text-sm hover:text-white transition">Sobre</a>
+            <a href="servicos.html" class="block text-gray-400 text-sm hover:text-white transition">Servi&ccedil;os</a>
+            <a href="avaliacoes.html" class="block text-gray-400 text-sm hover:text-white transition">Avalia&ccedil;&otilde;es</a>
+            <a href="index.html#influenciadores" class="block text-gray-400 text-sm hover:text-white transition">Influenciadores</a>
+            <a href="contato.html" class="block text-gray-400 text-sm hover:text-white transition">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contato</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <p><i class="fa-solid fa-phone mr-2"></i>[(XX) XXXXX-XXXX]</p>
+            <p><i class="fa-solid fa-envelope mr-2"></i>[EMAIL@DOMINIO.COM.BR]</p>
+            <p><i class="fa-solid fa-location-dot mr-2"></i>[ENDERE&Ccedil;O COMPLETO]<br/>[CIDADE - UF] - [CEP]</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Redes Sociais</h4>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/[INSTAGRAM]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/[FACEBOOK]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/55[WHATSAPP]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 [NOME DO DENTISTA]. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all duration-300 float">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+</body>
+</html>
