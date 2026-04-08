@@ -201,9 +201,9 @@
       }
       .brand-card {
         flex-shrink: 0;
-        width: 180px;
-        height: 90px;
-        margin: 0 24px;
+        width: 240px;
+        height: 100px;
+        margin: 0 20px;
         background: #f9fafb;
         border: 1px solid #f3f4f6;
         border-radius: 16px;
@@ -211,6 +211,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 12px 16px;
         transition: box-shadow 0.3s, transform 0.3s;
         cursor: pointer;
       }
@@ -219,9 +220,12 @@
         transform: translateY(-2px);
       }
       .brand-card img {
-        height: 40px;
+        max-width: 180px;
+        max-height: 52px;
+        width: auto;
+        height: auto;
         object-fit: contain;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
       }
       .brand-card .brand-fallback {
         font-weight: 700;
@@ -239,45 +243,89 @@
       <div class="brands-carousel">
         <!-- Set 1 (original) -->
         <div class="brand-card">
-          <img src="assets/marca-allergan.png" alt="Allergan" class="brand-logo" style="display:none"/>
-          <span class="brand-fallback">ALLERGAN</span>
+          <img src="../Marcas%20Logo/Allergan.png" alt="Allergan"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">ALLERGAN</span>
           <span class="brand-label">Botox&reg; &amp; Juv&eacute;derm&reg;</span>
         </div>
         <div class="brand-card">
-          <img src="assets/marca-merz.png" alt="Merz" class="brand-logo" style="display:none"/>
-          <span class="brand-fallback">MERZ</span>
-          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
-        </div>
-        <div class="brand-card">
-          <img src="assets/marca-galderma.png" alt="Galderma" class="brand-logo" style="display:none"/>
-          <span class="brand-fallback">GALDERMA</span>
+          <img src="../Marcas%20Logo/Galderma.png" alt="Galderma"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">GALDERMA</span>
           <span class="brand-label">Restylane&reg; &amp; Sculptra&reg;</span>
         </div>
         <div class="brand-card">
-          <img src="assets/marca-sinclair.png" alt="Sinclair" class="brand-logo" style="display:none"/>
-          <span class="brand-fallback">SINCLAIR</span>
+          <img src="../Marcas%20Logo/Merz.png" alt="Merz"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">MERZ</span>
+          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="../Marcas%20Logo/Sinclair.png" alt="Sinclair"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">SINCLAIR</span>
           <span class="brand-label">Ellans&eacute;&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="../Marcas%20Logo/Rennova.png" alt="Rennova"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">RENNOVA</span>
+          <span class="brand-label">Bioestimuladores</span>
+        </div>
+        <div class="brand-card">
+          <img src="../Marcas%20Logo/Rennova%20Care.png" alt="Rennova Care"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">RENNOVA CARE</span>
+          <span class="brand-label">Skincare Profissional</span>
         </div>
         <!-- Set 2 (duplicate for infinite loop) -->
         <div class="brand-card">
-          <img src="assets/marca-allergan.png" alt="Allergan" class="brand-logo" style="display:none"/>
-          <span class="brand-fallback">ALLERGAN</span>
+          <img src="../Marcas%20Logo/Allergan.png" alt="Allergan"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">ALLERGAN</span>
           <span class="brand-label">Botox&reg; &amp; Juv&eacute;derm&reg;</span>
         </div>
         <div class="brand-card">
-          <img src="assets/marca-merz.png" alt="Merz" class="brand-logo" style="display:none"/>
-          <span class="brand-fallback">MERZ</span>
-          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
-        </div>
-        <div class="brand-card">
-          <img src="assets/marca-galderma.png" alt="Galderma" class="brand-logo" style="display:none"/>
-          <span class="brand-fallback">GALDERMA</span>
+          <img src="../Marcas%20Logo/Galderma.png" alt="Galderma"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">GALDERMA</span>
           <span class="brand-label">Restylane&reg; &amp; Sculptra&reg;</span>
         </div>
         <div class="brand-card">
-          <img src="assets/marca-sinclair.png" alt="Sinclair" class="brand-logo" style="display:none"/>
-          <span class="brand-fallback">SINCLAIR</span>
+          <img src="../Marcas%20Logo/Merz.png" alt="Merz"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">MERZ</span>
+          <span class="brand-label">Xeomin&reg; &amp; Radiesse&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="../Marcas%20Logo/Sinclair.png" alt="Sinclair"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">SINCLAIR</span>
           <span class="brand-label">Ellans&eacute;&reg;</span>
+        </div>
+        <div class="brand-card">
+          <img src="../Marcas%20Logo/Rennova.png" alt="Rennova"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">RENNOVA</span>
+          <span class="brand-label">Bioestimuladores</span>
+        </div>
+        <div class="brand-card">
+          <img src="../Marcas%20Logo/Rennova%20Care.png" alt="Rennova Care"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+               class="brand-logo"/>
+          <span class="brand-fallback" style="display:none">RENNOVA CARE</span>
+          <span class="brand-label">Skincare Profissional</span>
         </div>
       </div>
     </div>
