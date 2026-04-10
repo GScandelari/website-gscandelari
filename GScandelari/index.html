@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guilherme Scandelari | Desenvolvedor</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#3B82F6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn .6s ease both',
+            'slide-up': 'slideUp .6s ease both',
+          },
+          keyframes: {
+            fadeIn: { from: { opacity: 0 }, to: { opacity: 1 } },
+            slideUp: { from: { opacity: 0, transform: 'translateY(24px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .section-delay-1 { animation-delay: .1s; }
+    .section-delay-2 { animation-delay: .2s; }
+    .section-delay-3 { animation-delay: .3s; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(59,130,246,.15);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #3B82F6;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Fixed background logo */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 800px;
+      height: 80%;
+      background-image: url('logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ensure content is above background */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans antialiased">
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-gray-950/80 backdrop-blur border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <span class="font-semibold tracking-tight text-white">GScandelari</span>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
+        <a href="#sobre"    class="nav-link hover:text-white transition-colors">Sobre</a>
+        <a href="#servicos" class="nav-link hover:text-white transition-colors">Serviços</a>
+        <a href="carreira.html" class="nav-link hover:text-white transition-colors">Carreira</a>
+        <a href="formacao.html" class="nav-link hover:text-white transition-colors">Formação</a>
+        <a href="#projetos" class="nav-link hover:text-white transition-colors">Projetos</a>
+        <a href="#contato"  class="nav-link hover:text-white transition-colors">Contato</a>
+      </div>
+      <a href="#contato"
+         class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium">
+        Fale comigo
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────────── -->
+  <section class="min-h-screen flex items-center pt-16">
+    <div class="max-w-5xl mx-auto px-6 py-24 w-full">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+
+        <!-- Text -->
+        <div class="flex-1 animate-slide-up">
+          <span class="inline-block text-xs font-semibold tracking-widest text-blue-400 uppercase mb-4">
+            Engenheiro de Suporte de Software
+          </span>
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Guilherme<br/>
+            <span class="gradient-text">Scandelari</span>
+          </h1>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
+            Profissional com mais de 14 anos de experiência em TI, especializado em análise de sistemas,
+            suporte técnico e gestão de projetos. Atuando em ambientes corporativos globais com foco em
+            troubleshooting, resolução de incidentes e otimização de processos.
+          </p>
+
+          <!-- Social buttons -->
+          <div class="flex flex-wrap gap-4 mb-10">
+            <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all px-5 py-3 rounded-xl font-medium text-sm">
+              <i class="fab fa-github text-lg"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/guilherme-stanke-scandelari/?locale=pt-BR" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 hover:border-blue-500/40 transition-all px-5 py-3 rounded-xl font-medium text-sm text-blue-400">
+              <i class="fab fa-linkedin text-lg"></i> LinkedIn
+            </a>
+          </div>
+
+          <!-- Tech badges -->
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-400 font-medium">Python</span>
+            <span class="tech-badge px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-full text-xs text-yellow-400 font-medium">SQL</span>
+            <span class="tech-badge px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs text-purple-400 font-medium">Jira</span>
+            <span class="tech-badge px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-xs text-cyan-400 font-medium">Kibana</span>
+            <span class="tech-badge px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full text-xs text-green-400 font-medium">Zendesk</span>
+            <span class="tech-badge px-3 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full text-xs text-orange-400 font-medium">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Avatar -->
+        <div class="flex-shrink-0 animate-fade-in section-delay-2">
+          <div class="relative">
+            <div class="w-[300px] h-[300px] rounded-3xl overflow-hidden border border-white/10">
+              <img src="profile.png" alt="Guilherme Scandelari" class="w-full h-full object-cover">
+            </div>
+            <!-- Decorative ring -->
+            <div class="absolute -inset-3 rounded-3xl border border-blue-500/10 pointer-events-none"></div>
+            <div class="absolute -inset-6 rounded-3xl border border-blue-500/5 pointer-events-none"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ─────────────────────────────────────────────── -->
+  <section id="sobre" class="py-24 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-3">Sobre <span class="gradient-text">mim</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">Quem sou eu</p>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="space-y-4 text-gray-400 leading-relaxed">
+          <p>
+            Atualmente trabalho como <strong class="text-white">Engenheiro de Suporte de Software na Wiley</strong>,
+            focado em suporte técnico para aplicações empresariais, garantindo a estabilidade e continuidade
+            operacional de plataformas críticas de negócio.
+          </p>
+          <p>
+            Minha trajetória profissional inclui passagens por empresas globais como <strong class="text-white">Anheuser-Busch InBev</strong>,
+            <strong class="text-white">CrossKnowledge</strong> e <strong class="text-white">Venturus (Ingenico)</strong>,
+            onde desenvolvi expertise em análise de incidentes complexos, troubleshooting avançado e liderança de equipes técnicas.
+          </p>
+          <p>
+            Apaixonado por tecnologia e educação, desenvolvi projetos inovadores como a solução de
+            <strong class="text-white">Robótica Educacional</strong> usando Arduino e S4A, implementada em escolas públicas,
+            e sistemas de automação para o setor de saúde.
+          </p>
+        </div>
+
+        <!-- Stats cards -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+            <div class="text-4xl font-bold gradient-text mb-1">14+</div>
+            <div class="text-gray-400 text-sm">Anos de experiência</div>
+          </div>
+          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+            <div class="text-4xl font-bold gradient-text mb-1">8</div>
+            <div class="text-gray-400 text-sm">Empresas globais</div>
+          </div>
+          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+            <div class="text-4xl font-bold gradient-text mb-1">4</div>
+            <div class="text-gray-400 text-sm">Pós-graduações</div>
+          </div>
+          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+            <div class="text-4xl font-bold gradient-text mb-1">50+</div>
+            <div class="text-gray-400 text-sm">Habilidades técnicas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVIÇOS ───────────────────────────────────────────── -->
+  <section id="servicos" class="py-24 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-3">Meus <span class="gradient-text">serviços</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">O que eu faço</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-globe text-blue-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Dev Sites — Sites para HOF</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Desenvolvimento de sites profissionais para especialistas de alta performance,
+            com uso de IA para agilizar entregas sem abrir mão da qualidade.
+          </p>
+        </div>
+
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-fire text-orange-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Firebase & Backend</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Praesent vehicula enim vitae nisi efficitur. Soluções serverless, Firestore,
+            autenticação e Cloud Functions.
+          </p>
+        </div>
+
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-server text-green-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">APIs & Node.js</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Desenvolvimento de APIs REST robustas, integrações e microsserviços com
+            Node.js e Express.
+          </p>
+        </div>
+
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
+            <i class="fab fa-python text-blue-300 text-xl"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Automação & Python</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Scripts de automação, webscraping, processamento de dados e integrações
+            com ferramentas de produtividade.
+          </p>
+        </div>
+
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-mobile-alt text-purple-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Landing Pages</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Páginas de alta conversão, responsivas e otimizadas para SEO, com design
+            moderno e carregamento rápido.
+          </p>
+        </div>
+
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-database text-cyan-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Banco de Dados</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Modelagem e administração de bancos relacionais e NoSQL. Firestore,
+            PostgreSQL e MySQL.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJETOS ───────────────────────────────────────────── -->
+  <section id="projetos" class="py-24 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-3">Projetos <span class="gradient-text">recentes</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">Meu portfólio</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Curva Mestra — destaque -->
+        <div class="group sm:col-span-2 lg:col-span-1 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/20 rounded-2xl overflow-hidden card-hover">
+          <div class="h-40 flex items-center justify-center relative overflow-hidden">
+            <img src="curva mestra system.png" alt="Curva Mestra" class="h-full w-full object-contain p-4" />
+            <span class="absolute top-3 right-3 text-xs px-2 py-0.5 bg-yellow-500/10 text-yellow-400 rounded-full border border-yellow-500/20 font-medium">MVP</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">Firebase</span>
+              <span class="text-xs px-2 py-0.5 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">Node.js</span>
+              <span class="text-xs px-2 py-0.5 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">IA</span>
+            </div>
+            <h3 class="font-semibold text-white mb-2">Curva Mestra</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              SaaS para gestão de inventário de clínicas de harmonização facial e corporal,
+              desenvolvido com uso de IA. Sistema em fase de MVP.
+            </p>
+            <div class="flex items-center gap-3">
+              <a href="https://curvamestra.com.br" target="_blank" rel="noopener noreferrer"
+                 class="text-xs text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1">
+                <i class="fas fa-arrow-up-right-from-square"></i> curvamestra.com.br
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dev Sites -->
+        <div class="group bg-white/3 border border-white/8 rounded-2xl overflow-hidden card-hover">
+          <div class="h-40 flex items-center justify-center">
+            <img src="logo.png" alt="Dev Sites" class="h-full w-full object-contain p-4" />
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">JavaScript</span>
+              <span class="text-xs px-2 py-0.5 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">IA</span>
+            </div>
+            <h3 class="font-semibold text-white mb-2">Dev Sites</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              Desenvolvimento de sites para especialistas HOF, com uso de IA para
+              agilizar entregas e elevar a qualidade do produto final.
+            </p>
+            <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+               class="text-xs text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Robótica Educacional -->
+        <div class="group bg-white/3 border border-white/8 rounded-2xl overflow-hidden card-hover">
+          <div class="h-40 flex items-center justify-center">
+            <img src="logo_s4a.png" alt="Robótica Educacional" class="h-full w-full object-contain p-4" />
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">Arduino</span>
+              <span class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">S4A</span>
+            </div>
+            <h3 class="font-semibold text-white mb-2">Robótica Educacional</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              Projeto educacional usando Arduino e S4A para criar maquetes robotizadas.
+              Implementado na rede pública de ensino de Itanhaém-SP.
+            </p>
+            <span class="text-xs text-gray-500">2012 - Grupo Educacional Expoente</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 transition-all px-6 py-3 rounded-xl">
+          <i class="fab fa-github"></i> Ver todos os projetos no GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ────────────────────────────────────────────── -->
+  <section id="contato" class="py-24 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-3">Entre em <span class="gradient-text">contato</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">Vamos conversar</p>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+
+        <!-- Left: CTA text -->
+        <div>
+          <p class="text-gray-400 leading-relaxed mb-8">
+            Tem um projeto em mente ou quer conversar sobre oportunidades? Estou disponível
+            para consultoria técnica, projetos freelance e oportunidades full-time.
+            Vamos conversar sobre como posso ajudar seu negócio.
+          </p>
+
+          <div class="space-y-4">
+
+            <a href="https://wa.me/5541985154041" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-4 bg-green-500/5 border border-green-500/15 hover:border-green-500/30 transition-all rounded-xl px-5 py-4 group">
+              <div class="w-10 h-10 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fab fa-whatsapp text-green-400 text-xl"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 mb-0.5">WhatsApp</div>
+                <div class="text-white font-medium text-sm">(41) 9 8515-4041</div>
+              </div>
+              <i class="fas fa-arrow-right text-gray-600 group-hover:text-green-400 transition-colors ml-auto text-sm"></i>
+            </a>
+
+            <a href="mailto:scandelari.guilherme@hotmail.com"
+               class="flex items-center gap-4 bg-blue-500/5 border border-blue-500/15 hover:border-blue-500/30 transition-all rounded-xl px-5 py-4 group">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-blue-400 text-xl"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 mb-0.5">E-mail pessoal</div>
+                <div class="text-white font-medium text-sm">scandelari.guilherme@hotmail.com</div>
+              </div>
+              <i class="fas fa-arrow-right text-gray-600 group-hover:text-blue-400 transition-colors ml-auto text-sm"></i>
+            </a>
+
+            <a href="mailto:scandelari.guilherme@curvamestra.com"
+               class="flex items-center gap-4 bg-purple-500/5 border border-purple-500/15 hover:border-purple-500/30 transition-all rounded-xl px-5 py-4 group">
+              <div class="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-briefcase text-purple-400 text-xl"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 mb-0.5">E-mail profissional</div>
+                <div class="text-white font-medium text-sm">scandelari.guilherme@curvamestra.com</div>
+              </div>
+              <i class="fas fa-arrow-right text-gray-600 group-hover:text-purple-400 transition-colors ml-auto text-sm"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Right: Social links -->
+        <div class="flex flex-col gap-4">
+
+          <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-4 bg-white/3 border border-white/8 hover:border-white/15 transition-all rounded-xl px-5 py-5 group card-hover">
+            <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fab fa-github text-white text-2xl"></i>
+            </div>
+            <div>
+              <div class="text-white font-semibold">GitHub</div>
+              <div class="text-gray-500 text-sm">github.com/GScandelari</div>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square text-gray-600 group-hover:text-white transition-colors ml-auto text-sm"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/guilherme-stanke-scandelari/?locale=pt-BR" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-4 bg-blue-900/10 border border-blue-500/10 hover:border-blue-500/25 transition-all rounded-xl px-5 py-5 group card-hover">
+            <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fab fa-linkedin text-blue-400 text-2xl"></i>
+            </div>
+            <div>
+              <div class="text-white font-semibold">LinkedIn</div>
+              <div class="text-gray-500 text-sm">Guilherme Stanke Scandelari</div>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square text-gray-600 group-hover:text-blue-400 transition-colors ml-auto text-sm"></i>
+          </a>
+
+          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 mt-2">
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Disponível para projetos freelance, consultoria e oportunidades full-time.
+              Respondo em até 24 horas.
+            </p>
+            <div class="flex items-center gap-2 mt-4">
+              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span class="text-green-400 text-xs font-medium">Disponível para novos projetos</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-gray-600 text-sm">
+        © 2025 Guilherme Scandelari. Todos os direitos reservados.
+      </span>
+      <div class="flex items-center gap-5 text-gray-600">
+        <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+           class="hover:text-white transition-colors text-lg"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/guilherme-stanke-scandelari/?locale=pt-BR" target="_blank" rel="noopener noreferrer"
+           class="hover:text-blue-400 transition-colors text-lg"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/5541985154041" target="_blank" rel="noopener noreferrer"
+           class="hover:text-green-400 transition-colors text-lg"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:scandelari.guilherme@hotmail.com"
+           class="hover:text-white transition-colors text-lg"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formação & Habilidades | Guilherme Scandelari</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#3B82F6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn .6s ease both',
+            'slide-up': 'slideUp .6s ease both',
+          },
+          keyframes: {
+            fadeIn: { from: { opacity: 0 }, to: { opacity: 1 } },
+            slideUp: { from: { opacity: 0, transform: 'translateY(24px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(59,130,246,.15);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #3B82F6;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Fixed background logo */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 800px;
+      height: 80%;
+      background-image: url('logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ensure content is above background */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans antialiased">
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-gray-950/80 backdrop-blur border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-semibold tracking-tight text-white hover:text-blue-400 transition-colors">
+        GScandelari
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
+        <a href="index.html#sobre" class="nav-link hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#servicos" class="nav-link hover:text-white transition-colors">Serviços</a>
+        <a href="carreira.html" class="nav-link hover:text-white transition-colors">Carreira</a>
+        <a href="formacao.html" class="nav-link hover:text-white transition-colors text-white">Formação</a>
+        <a href="index.html#projetos" class="nav-link hover:text-white transition-colors">Projetos</a>
+        <a href="index.html#contato" class="nav-link hover:text-white transition-colors">Contato</a>
+      </div>
+      <a href="index.html#contato"
+         class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium">
+        Fale comigo
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <section class="pt-32 pb-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-4">
+        <span class="inline-block text-xs font-semibold tracking-widest text-blue-400 uppercase mb-4">
+          Educação & Competências
+        </span>
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+          Formação & <span class="gradient-text">Habilidades</span>
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Formação acadêmica sólida com 4 pós-graduações e bacharelado em Sistemas de Informação,
+          complementada por mais de 50 habilidades técnicas desenvolvidas ao longo de 14 anos de carreira.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FORMAÇÃO ACADÊMICA ─────────────────────────────────── -->
+  <section class="py-12">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8">Formação <span class="gradient-text">Acadêmica</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+
+        <!-- Pós-Graduação 1 -->
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-graduation-cap text-purple-400 text-xl"></i>
+            </div>
+            <div class="flex-1">
+              <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium mb-2 inline-block">
+                Concluído
+              </span>
+              <h3 class="font-semibold text-white text-lg mb-1">Pós-Graduação</h3>
+              <p class="text-blue-400 text-sm font-medium mb-1">Compliance e Governança Corporativa</p>
+              <p class="text-gray-500 text-sm">Universidade Federal do Paraná (UFPR)</p>
+              <p class="text-gray-600 text-xs mt-2">Janeiro 2022 - 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pós-Graduação 2 -->
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-graduation-cap text-blue-400 text-xl"></i>
+            </div>
+            <div class="flex-1">
+              <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium mb-2 inline-block">
+                Concluído
+              </span>
+              <h3 class="font-semibold text-white text-lg mb-1">Especialização</h3>
+              <p class="text-blue-400 text-sm font-medium mb-1">Gestão e Gerenciamento de Projetos</p>
+              <p class="text-gray-500 text-sm">Universidade Positivo</p>
+              <p class="text-gray-600 text-xs mt-2">Concluído em Dezembro 2019</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pós-Graduação 3 -->
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-graduation-cap text-cyan-400 text-xl"></i>
+            </div>
+            <div class="flex-1">
+              <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium mb-2 inline-block">
+                Concluído
+              </span>
+              <h3 class="font-semibold text-white text-lg mb-1">Especialização</h3>
+              <p class="text-blue-400 text-sm font-medium mb-1">Desenvolvimento de Jogos Digitais</p>
+              <p class="text-gray-500 text-sm">Universidade Positivo</p>
+              <p class="text-gray-600 text-xs mt-2">Concluído em Junho 2016</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bacharelado -->
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-university text-orange-400 text-xl"></i>
+            </div>
+            <div class="flex-1">
+              <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium mb-2 inline-block">
+                Concluído
+              </span>
+              <h3 class="font-semibold text-white text-lg mb-1">Bacharelado</h3>
+              <p class="text-blue-400 text-sm font-medium mb-1">Sistemas de Informação</p>
+              <p class="text-gray-500 text-sm">Unidade de Ensino Superior Expoente (UNIEXP)</p>
+              <p class="text-gray-600 text-xs mt-2">2008 - 2013</p>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-white/5">
+            <p class="text-gray-400 text-sm leading-relaxed">
+              <i class="fas fa-award text-yellow-400 mr-2"></i>
+              Projeto de Empresa Junior focado em Robótica Educacional e Sustentabilidade
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICAÇÕES ──────────────────────────────────────── -->
+  <section class="py-12 border-t border-white/5 mt-12" style="display:none">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8">Certificações</h2>
+
+      <div class="bg-white/3 border border-white/8 rounded-2xl p-6">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-certificate text-yellow-400 text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white text-lg mb-1">JAVA - Algoritmos</h3>
+            <p class="text-gray-400 text-sm mb-2">BrasilmaisTI</p>
+            <p class="text-gray-500 text-xs">Certificado por: Ministério da Educação</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HABILIDADES TÉCNICAS ───────────────────────────────── -->
+  <section class="py-12 border-t border-white/5 mt-12">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-3">Habilidades <span class="gradient-text">Técnicas</span></h2>
+      <p class="text-gray-500 mb-8 text-sm">Competências desenvolvidas ao longo de 14 anos de experiência</p>
+
+      <!-- Linguagens & Tecnologias -->
+      <div class="mb-10">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-code text-blue-400"></i>
+          Linguagens & Tecnologias
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-sm text-yellow-400 font-medium">Python</span>
+          <span class="px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm text-blue-400 font-medium">SQL</span>
+          <span class="px-3 py-2 bg-orange-500/10 border border-orange-500/20 rounded-lg text-sm text-orange-400 font-medium">JavaScript</span>
+          <span class="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-sm text-purple-400 font-medium">Java</span>
+          <span class="px-3 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-sm text-cyan-400 font-medium">C#</span>
+          <span class="px-3 py-2 bg-green-500/10 border border-green-500/20 rounded-lg text-sm text-green-400 font-medium">C++</span>
+          <span class="px-3 py-2 bg-red-500/10 border border-red-500/20 rounded-lg text-sm text-red-400 font-medium">HTML5</span>
+        </div>
+      </div>
+
+      <!-- Bancos de Dados -->
+      <div class="mb-10">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-database text-cyan-400"></i>
+          Bancos de Dados
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm text-blue-400 font-medium">SQL Server</span>
+          <span class="px-3 py-2 bg-green-500/10 border border-green-500/20 rounded-lg text-sm text-green-400 font-medium">MongoDB</span>
+          <span class="px-3 py-2 bg-orange-500/10 border border-orange-500/20 rounded-lg text-sm text-orange-400 font-medium">PostgreSQL</span>
+          <span class="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-sm text-purple-400 font-medium">MySQL</span>
+          <span class="px-3 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-sm text-cyan-400 font-medium">AccessDB</span>
+        </div>
+      </div>
+
+      <!-- Ferramentas & Plataformas -->
+      <div class="mb-10">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-tools text-purple-400"></i>
+          Ferramentas & Plataformas
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-sm text-purple-400 font-medium">Jira</span>
+          <span class="px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm text-blue-400 font-medium">Confluence</span>
+          <span class="px-3 py-2 bg-green-500/10 border border-green-500/20 rounded-lg text-sm text-green-400 font-medium">Zendesk</span>
+          <span class="px-3 py-2 bg-orange-500/10 border border-orange-500/20 rounded-lg text-sm text-orange-400 font-medium">SalesForce</span>
+          <span class="px-3 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-sm text-cyan-400 font-medium">Kibana</span>
+          <span class="px-3 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-sm text-yellow-400 font-medium">Postman</span>
+          <span class="px-3 py-2 bg-red-500/10 border border-red-500/20 rounded-lg text-sm text-red-400 font-medium">Power BI</span>
+          <span class="px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm text-blue-400 font-medium">Jira Service Management</span>
+          <span class="px-3 py-2 bg-pink-500/10 border border-pink-500/20 rounded-lg text-sm text-pink-400 font-medium">Trello</span>
+        </div>
+      </div>
+
+      <!-- Sistemas & Frameworks -->
+      <div class="mb-10">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-layer-group text-green-400"></i>
+          Sistemas & Frameworks
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-2 bg-orange-500/10 border border-orange-500/20 rounded-lg text-sm text-orange-400 font-medium">Firebase</span>
+          <span class="px-3 py-2 bg-green-500/10 border border-green-500/20 rounded-lg text-sm text-green-400 font-medium">Node.js</span>
+          <span class="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-sm text-purple-400 font-medium">Unity3D</span>
+          <span class="px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm text-blue-400 font-medium">Django</span>
+          <span class="px-3 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-sm text-cyan-400 font-medium">.NET</span>
+          <span class="px-3 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-sm text-yellow-400 font-medium">SAP</span>
+          <span class="px-3 py-2 bg-green-500/10 border border-green-500/20 rounded-lg text-sm text-green-400 font-medium">Arduino</span>
+          <span class="px-3 py-2 bg-orange-500/10 border border-orange-500/20 rounded-lg text-sm text-orange-400 font-medium">WMS</span>
+          <span class="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-sm text-purple-400 font-medium">TMS</span>
+        </div>
+      </div>
+
+      <!-- Metodologias -->
+      <div class="mb-10">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-project-diagram text-orange-400"></i>
+          Metodologias & Gestão
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm text-blue-400 font-medium">SCRUM</span>
+          <span class="px-3 py-2 bg-green-500/10 border border-green-500/20 rounded-lg text-sm text-green-400 font-medium">Agile</span>
+          <span class="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-sm text-purple-400 font-medium">Kanban</span>
+          <span class="px-3 py-2 bg-orange-500/10 border border-orange-500/20 rounded-lg text-sm text-orange-400 font-medium">Waterfall</span>
+          <span class="px-3 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-sm text-cyan-400 font-medium">PMBoK 6</span>
+          <span class="px-3 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-sm text-yellow-400 font-medium">PMI</span>
+          <span class="px-3 py-2 bg-red-500/10 border border-red-500/20 rounded-lg text-sm text-red-400 font-medium">SLA Management</span>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-users text-pink-400"></i>
+          Soft Skills
+        </h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
+            <i class="fas fa-user-tie text-blue-400 mt-1"></i>
+            <div>
+              <h4 class="text-white font-medium text-sm mb-1">Liderança de Equipe</h4>
+              <p class="text-gray-500 text-xs">Gestão e mentoria</p>
+            </div>
+          </div>
+
+          <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
+            <i class="fas fa-comments text-green-400 mt-1"></i>
+            <div>
+              <h4 class="text-white font-medium text-sm mb-1">Comunicação</h4>
+              <p class="text-gray-500 text-xs">Técnica e interpessoal</p>
+            </div>
+          </div>
+
+          <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
+            <i class="fas fa-search text-purple-400 mt-1"></i>
+            <div>
+              <h4 class="text-white font-medium text-sm mb-1">Troubleshooting</h4>
+              <p class="text-gray-500 text-xs">Análise avançada</p>
+            </div>
+          </div>
+
+          <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
+            <i class="fas fa-lightbulb text-yellow-400 mt-1"></i>
+            <div>
+              <h4 class="text-white font-medium text-sm mb-1">Resolução de Problemas</h4>
+              <p class="text-gray-500 text-xs">Pensamento crítico</p>
+            </div>
+          </div>
+
+          <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
+            <i class="fas fa-smile text-orange-400 mt-1"></i>
+            <div>
+              <h4 class="text-white font-medium text-sm mb-1">Customer Success</h4>
+              <p class="text-gray-500 text-xs">Foco no cliente</p>
+            </div>
+          </div>
+
+          <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
+            <i class="fas fa-chalkboard-teacher text-cyan-400 mt-1"></i>
+            <div>
+              <h4 class="text-white font-medium text-sm mb-1">Treinamento</h4>
+              <p class="text-gray-500 text-xs">Docência e capacitação</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── IDIOMAS ────────────────────────────────────────────── -->
+  <section class="py-12 border-t border-white/5 mt-12">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8">Idiomas</h2>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6">
+          <div class="flex items-center gap-4 mb-3">
+            <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center">
+              <i class="fas fa-globe text-green-400 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-white text-lg">Português</h3>
+              <p class="text-gray-400 text-sm">Nativo</p>
+            </div>
+          </div>
+          <div class="flex gap-1">
+            <div class="h-2 flex-1 bg-green-500 rounded-full"></div>
+            <div class="h-2 flex-1 bg-green-500 rounded-full"></div>
+            <div class="h-2 flex-1 bg-green-500 rounded-full"></div>
+            <div class="h-2 flex-1 bg-green-500 rounded-full"></div>
+            <div class="h-2 flex-1 bg-green-500 rounded-full"></div>
+          </div>
+        </div>
+
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6">
+          <div class="flex items-center gap-4 mb-3">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center">
+              <i class="fas fa-globe-americas text-blue-400 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-white text-lg">Inglês</h3>
+              <p class="text-gray-400 text-sm">Profissional</p>
+            </div>
+          </div>
+          <div class="flex gap-1">
+            <div class="h-2 flex-1 bg-blue-500 rounded-full"></div>
+            <div class="h-2 flex-1 bg-blue-500 rounded-full"></div>
+            <div class="h-2 flex-1 bg-blue-500 rounded-full"></div>
+            <div class="h-2 flex-1 bg-blue-500 rounded-full"></div>
+            <div class="h-2 flex-1 bg-white/10 rounded-full"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="border-t border-white/5 py-8 mt-12">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-gray-600 text-sm">
+        © 2025 Guilherme Scandelari. Todos os direitos reservados.
+      </span>
+      <div class="flex items-center gap-5 text-gray-600">
+        <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+           class="hover:text-white transition-colors text-lg"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/guilherme-stanke-scandelari/?locale=pt-BR" target="_blank" rel="noopener noreferrer"
+           class="hover:text-blue-400 transition-colors text-lg"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/5541985154041" target="_blank" rel="noopener noreferrer"
+           class="hover:text-green-400 transition-colors text-lg"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:scandelari.guilherme@hotmail.com"
+           class="hover:text-white transition-colors text-lg"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": ".",
+    "public": "GScandelari",
     "ignore": [
       "firebase.json",
       ".firebaserc",

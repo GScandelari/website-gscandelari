@@ -8,7 +8,21 @@
       "WebSearch",
       "WebFetch(domain:www.doctoralia.com.br)",
       "Bash(firebase --version:*)",
-      "Bash(firebase deploy:*)"
+      "Bash(firebase deploy:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:deepwiki.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(dir)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(python:*)",
+      "Bash(mkdir -p \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Templates\")",
+      "Bash(mv \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/templates-jiujitsu-athlete\" \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Templates/\")",
+      "Bash(mv \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/templates-site-dentista-estetica\" \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Templates/\")",
+      "Bash(mkdir \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Clientes\")",
+      "Bash(mv \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Dr. Douglas de Siqueira\" \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Clientes/\")",
+      "Bash(mv \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Dra. Linda Mello\" \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Clientes/\")"
     ]
   }
 }
