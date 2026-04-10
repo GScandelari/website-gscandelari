@@ -9,46 +9,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/tailwind.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          animation: {
-            'fade-in':   'fadeIn .7s ease both',
-            'slide-up':  'slideUp .7s ease both',
-            'float':     'float 4s ease-in-out infinite',
-            'glitch':    'glitch 2.5s infinite',
-            'blink':     'blink 1s step-end infinite',
-          },
-          keyframes: {
-            fadeIn:  { from: { opacity: 0 }, to: { opacity: 1 } },
-            slideUp: { from: { opacity: 0, transform: 'translateY(28px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
-            float:   {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%':      { transform: 'translateY(-14px)' },
-            },
-            glitch: {
-              '0%, 90%, 100%': { transform: 'translate(0)' },
-              '92%':           { transform: 'translate(-3px, 1px)' },
-              '94%':           { transform: 'translate(3px, -1px)' },
-              '96%':           { transform: 'translate(-2px, 2px)' },
-              '98%':           { transform: 'translate(2px, -2px)' },
-            },
-            blink: {
-              '0%, 100%': { opacity: 1 },
-              '50%':      { opacity: 0 },
-            },
-          }
-        }
-      }
-    }
-  </script>
 
   <style>
     html { scroll-behavior: smooth; }

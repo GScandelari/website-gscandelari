@@ -17,6 +17,10 @@ firebase-config.js
 # Build outputs
 **/dist/
 
+# Node
+node_modules/
+package-lock.json
+
 # Sistema operacional
 .DS_Store
 Thumbs.db
