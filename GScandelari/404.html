@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — P&aacute;gina n&atilde;o encontrada | GScandelari</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          animation: {
+            'fade-in':   'fadeIn .7s ease both',
+            'slide-up':  'slideUp .7s ease both',
+            'float':     'float 4s ease-in-out infinite',
+            'glitch':    'glitch 2.5s infinite',
+            'blink':     'blink 1s step-end infinite',
+          },
+          keyframes: {
+            fadeIn:  { from: { opacity: 0 }, to: { opacity: 1 } },
+            slideUp: { from: { opacity: 0, transform: 'translateY(28px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+            float:   {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%':      { transform: 'translateY(-14px)' },
+            },
+            glitch: {
+              '0%, 90%, 100%': { transform: 'translate(0)' },
+              '92%':           { transform: 'translate(-3px, 1px)' },
+              '94%':           { transform: 'translate(3px, -1px)' },
+              '96%':           { transform: 'translate(-2px, 2px)' },
+              '98%':           { transform: 'translate(2px, -2px)' },
+            },
+            blink: {
+              '0%, 100%': { opacity: 1 },
+              '50%':      { opacity: 0 },
+            },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%; max-width: 800px; height: 80%;
+      background-image: url('/logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body > * { position: relative; z-index: 1; }
+
+    .terminal {
+      background: #0d1117;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      font-family: 'Courier New', monospace;
+    }
+    .terminal-bar {
+      background: #161b22;
+      border-bottom: 1px solid #21262d;
+      border-radius: 12px 12px 0 0;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+
+    .delay-1 { animation-delay: .15s; }
+    .delay-2 { animation-delay: .30s; }
+    .delay-3 { animation-delay: .45s; }
+    .delay-4 { animation-delay: .60s; }
+    .delay-5 { animation-delay: .75s; }
+  </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen font-sans antialiased flex flex-col items-center justify-center px-6 py-20">
+
+  <!-- 404 gigante flutuando -->
+  <div class="animate-float mb-2 select-none" aria-hidden="true">
+    <span class="text-[120px] md:text-[180px] font-bold leading-none animate-glitch"
+          style="background: linear-gradient(135deg,#3B82F6,#8B5CF6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
+      404
+    </span>
+  </div>
+
+  <!-- Mensagem principal -->
+  <div class="text-center mb-10 animate-slide-up delay-1">
+    <h1 class="text-2xl md:text-3xl font-bold mb-3">
+      Ops. <span class="gradient-text">Esta p&aacute;gina se perdeu no deploy.</span>
+    </h1>
+    <p class="text-gray-400 text-sm md:text-base max-w-md mx-auto leading-relaxed">
+      Ou voc&ecirc; digitou algo errado, ou eu deletei sem querer.<br/>
+      De qualquer forma, a culpa &eacute; do <code class="text-blue-400 bg-blue-500/10 px-1 rounded">git push</code> &mdash; sempre &eacute;.
+    </p>
+  </div>
+
+  <!-- Terminal fake -->
+  <div class="terminal w-full max-w-lg mb-10 animate-slide-up delay-2">
+    <div class="terminal-bar">
+      <div class="dot" style="background:#ff5f57"></div>
+      <div class="dot" style="background:#febc2e"></div>
+      <div class="dot" style="background:#28c840"></div>
+      <span class="text-gray-500 text-xs ml-2">bash &mdash; gscandelari.com.br</span>
+    </div>
+    <div class="p-5 text-sm space-y-1.5 text-gray-300">
+      <p><span class="text-blue-400">~</span> <span class="text-green-400">$</span> curl <span class="text-yellow-300" id="currentUrl"></span></p>
+      <p class="text-red-400">Error: 404 Not Found</p>
+      <p><span class="text-blue-400">~</span> <span class="text-green-400">$</span> find / -name "essa-pagina" 2&gt;/dev/null</p>
+      <p class="text-gray-500 italic">&#35; nenhum resultado encontrado</p>
+      <p><span class="text-blue-400">~</span> <span class="text-green-400">$</span> git blame <span class="text-yellow-300">ninguem</span></p>
+      <p class="text-purple-400">fatal: not a git object &mdash; mas provavelmente foi voc&ecirc;.</p>
+      <p><span class="text-blue-400">~</span> <span class="text-green-400">$</span> <span class="animate-blink">&#9646;</span></p>
+    </div>
+  </div>
+
+  <!-- Botões -->
+  <div class="flex flex-col sm:flex-row gap-3 animate-slide-up delay-3">
+    <a href="/"
+       class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition-colors font-medium text-sm">
+      <i class="fa-solid fa-house"></i> Voltar para o in&iacute;cio
+    </a>
+    <a href="/dev-sites"
+       class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all text-sm text-gray-300">
+      <i class="fa-solid fa-folder-tree"></i> Ir para Dev Sites
+    </a>
+    <button onclick="history.back()"
+       class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all text-sm text-gray-300">
+      <i class="fa-solid fa-arrow-left"></i> Voltar
+    </button>
+  </div>
+
+  <!-- Rodapé -->
+  <p class="mt-16 text-xs text-gray-700 animate-fade-in delay-5">
+    &copy; 2026 GScandelari &mdash; A p&aacute;gina que voc&ecirc; procura est&aacute; em outra dimens&atilde;o.
+  </p>
+
+  <script>
+    // Mostra a URL atual no terminal
+    const el = document.getElementById('currentUrl');
+    if (el) el.textContent = window.location.pathname;
+  </script>
+
+</body>
+</html>
