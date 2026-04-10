@@ -9,6 +9,11 @@ firebase-config.js
 # Firebase cache
 .firebase/
 
+# Ferramentas de desenvolvimento
+.claude/
+.kiro/
+.vscode/
+
 # Sistema operacional
 .DS_Store
 Thumbs.db
