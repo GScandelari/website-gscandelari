@@ -660,11 +660,6 @@
 <script src="/__/firebase/init.js"></script>
 <script>
   const db = firebase.firestore();
-  db.enablePersistence({ synchronizeTabs: true }).catch(function(err) {
-    if (err.code !== 'failed-precondition' && err.code !== 'unimplemented') {
-      console.warn('Firestore persistence não disponível:', err.code);
-    }
-  });
 </script>
 <script>
   // Auto-preencher data da visita com hoje
