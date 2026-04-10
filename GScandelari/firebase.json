@@ -37,6 +37,11 @@
     "trailingSlash": false,
     "redirects": [
       {
+        "source": "/favicon.ico",
+        "destination": "/favicon/favicon.ico",
+        "type": 301
+      },
+      {
         "source": "/Clientes/:rest*",
         "destination": "/dev-sites/Clientes/:rest*",
         "type": 301
