@@ -22,7 +22,10 @@
       "Bash(mv \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/templates-site-dentista-estetica\" \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Templates/\")",
       "Bash(mkdir \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Clientes\")",
       "Bash(mv \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Dr. Douglas de Siqueira\" \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Clientes/\")",
-      "Bash(mv \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Dra. Linda Mello\" \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Clientes/\")"
+      "Bash(mv \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Dra. Linda Mello\" \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/Clientes/\")",
+      "Bash(sed -i '/fa-folder-tree.*Dev Sites/d' \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/GScandelari/404.html\")",
+      "Bash(sed -i '/href=\"\\\\/dev-sites\"/d' \"C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/GScandelari/404.html\")",
+      "Bash(find 'C:/Users/scand/OneDrive/Área de Trabalho/Dev Sites/GScandelari' -name '*.html' -exec sed -i 's/© 2025/© 2026/g; s/\\\\&copy; 2025/\\\\&copy; 2026/g' '{}' ';')"
     ]
   }
 }
