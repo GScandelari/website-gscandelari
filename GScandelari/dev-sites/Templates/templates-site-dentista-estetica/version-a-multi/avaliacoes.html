@@ -5,18 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avaliações | [NOME DO DENTISTA]</title>
   <meta name="description" content="Veja o que nossos pacientes dizem sobre os tratamentos de Harmonização Orofacial com [NOME DO DENTISTA]. Nota 4.9/5 no Google." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/css/tailwind.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
     html { scroll-behavior: smooth; }
@@ -31,43 +20,43 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 md:h-20">
         <a href="index.html" class="flex items-center gap-2">
-          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+          <i class="fa-solid fa-tooth text-blue-600 text-2xl"></i>
           <span class="text-xl font-bold text-gray-900">[NOME DO DENTISTA]</span>
         </a>
         <button class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
           <i class="fa-solid fa-bars text-xl text-gray-700"></i>
         </button>
         <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">In&iacute;cio</a>
-          <a href="sobre.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
-          <a href="servicos.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Servi&ccedil;os</a>
-          <a href="avaliacoes.html" class="text-sm font-medium text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
-          <a href="contato.html" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Sobre</a>
+          <a href="servicos.html" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="text-sm font-medium text-blue-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-5 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-600/25">Agendar Consulta</a>
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
         <div class="flex flex-col gap-2 pt-3">
-          <a href="index.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">In&iacute;cio</a>
-          <a href="sobre.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Sobre</a>
-          <a href="servicos.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Servi&ccedil;os</a>
-          <a href="avaliacoes.html" class="px-3 py-2 rounded-lg text-primary-600 bg-primary-50 font-medium">Avalia&ccedil;&otilde;es</a>
-          <a href="contato.html" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition">Agendar Consulta</a>
+          <a href="index.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition">Sobre</a>
+          <a href="servicos.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="px-3 py-2 rounded-lg text-blue-600 bg-blue-50 font-medium">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-3 py-2 bg-blue-600 text-white text-center rounded-lg font-semibold hover:bg-blue-700 transition">Agendar Consulta</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- HEADER DA PÁGINA -->
-  <section class="bg-gradient-to-br from-primary-600 to-primary-800 pt-32 pb-20">
+  <section class="bg-gradient-to-br from-blue-600 to-blue-800 pt-32 pb-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Avalia&ccedil;&otilde;es dos Pacientes</h1>
-      <p class="text-primary-200 text-lg max-w-2xl mx-auto">Veja o que nossos pacientes dizem sobre a experi&ecirc;ncia e os resultados dos procedimentos.</p>
+      <p class="text-blue-200 text-lg max-w-2xl mx-auto">Veja o que nossos pacientes dizem sobre a experi&ecirc;ncia e os resultados dos procedimentos.</p>
       <div class="flex items-center justify-center gap-3 mt-6">
         <div class="flex text-yellow-400 text-xl">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
         <span class="text-white text-lg font-semibold">4.9/5</span>
-        <span class="text-primary-200">([XXX] avalia&ccedil;&otilde;es no Google)</span>
+        <span class="text-blue-200">([XXX] avalia&ccedil;&otilde;es no Google)</span>
       </div>
     </div>
   </section>
@@ -126,9 +115,9 @@
       </div>
       <!-- Widget Placeholder -->
       <div class="mt-6 text-center">
-        <div class="inline-flex items-center gap-2 bg-primary-50 px-6 py-3 rounded-full">
-          <i class="fa-solid fa-code text-primary-600"></i>
-          <span class="text-sm text-primary-700">Aqui voc&ecirc; pode inserir o widget do <strong>Elfsight</strong>, <strong>Google Reviews Widget</strong> ou embed direto &mdash; <a href="#" class="underline">[INSERIR C&Oacute;DIGO DO WIDGET]</a></span>
+        <div class="inline-flex items-center gap-2 bg-blue-50 px-6 py-3 rounded-full">
+          <i class="fa-solid fa-code text-blue-600"></i>
+          <span class="text-sm text-blue-700">Aqui voc&ecirc; pode inserir o widget do <strong>Elfsight</strong>, <strong>Google Reviews Widget</strong> ou embed direto &mdash; <a href="#" class="underline">[INSERIR C&Oacute;DIGO DO WIDGET]</a></span>
         </div>
       </div>
     </div>
@@ -138,7 +127,7 @@
   <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14">
-        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
+        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Hist&oacute;rias Reais de Transforma&ccedil;&atilde;o</h2>
       </div>
       <div class="grid sm:grid-cols-2 gap-8">
@@ -220,11 +209,11 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-20 bg-primary-600">
+  <section class="py-20 bg-blue-600">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Quer fazer parte dessas hist&oacute;rias?</h2>
-      <p class="text-primary-100 text-lg mb-8">Agende sua avalia&ccedil;&atilde;o e comece sua transforma&ccedil;&atilde;o.</p>
-      <a href="contato.html" class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl inline-block">
+      <p class="text-blue-100 text-lg mb-8">Agende sua avalia&ccedil;&atilde;o e comece sua transforma&ccedil;&atilde;o.</p>
+      <a href="contato.html" class="px-8 py-4 bg-white text-blue-700 font-bold rounded-full hover:bg-blue-50 transition shadow-xl inline-block">
         <i class="fa-solid fa-calendar-check mr-2"></i>Agendar Avalia&ccedil;&atilde;o
       </a>
     </div>
@@ -236,7 +225,7 @@
       <div class="grid md:grid-cols-4 gap-8">
         <div>
           <div class="flex items-center gap-2 mb-4">
-            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <i class="fa-solid fa-tooth text-blue-400 text-xl"></i>
             <span class="text-lg font-bold">[NOME DO DENTISTA]</span>
           </div>
           <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmoniza&ccedil;&atilde;o Orofacial.<br/>CRO-SP [XXXXX]</p>
@@ -263,8 +252,8 @@
         <div>
           <h4 class="font-semibold mb-4">Redes Sociais</h4>
           <div class="flex gap-3">
-            <a href="https://www.instagram.com/[INSTAGRAM]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/[FACEBOOK]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/[INSTAGRAM]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/[FACEBOOK]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://wa.me/55[WHATSAPP]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>

@@ -5,24 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>[NOME DO DENTISTA] | Harmonização Orofacial</title>
   <meta name="description" content="[NOME DO DENTISTA] - Especialista em Harmonização Orofacial. Botox, Preenchimento, Bioestimuladores e mais. Agende sua avaliação!" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/css/tailwind.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
     /* === GLOBAL === */
     :root {
       --color-primary: #2563eb;
-      --color-primary-dark: #1d4ed8;
+      --color-blue-dark: #1d4ed8;
       --hero-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1920&q=80');
       --hero-overlay-start: rgba(30,58,138,0.85);
       --hero-overlay-end: rgba(37,99,235,0.75);
@@ -137,7 +126,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16 md:h-20">
           <a href="#hero" class="flex items-center gap-2">
-            <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+            <i class="fa-solid fa-tooth text-blue-600 text-2xl"></i>
             <span class="text-xl font-bold text-gray-900">[NOME DO DENTISTA]</span>
           </a>
           <!-- Mobile menu button -->
@@ -146,21 +135,21 @@
           </button>
           <!-- Desktop menu -->
           <div class="hidden md:flex items-center gap-8">
-            <a href="#sobre" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
-            <a href="#servicos" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Serviços</a>
-            <a href="#avaliacoes" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avaliações</a>
-            <a href="#localizacao" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Localização</a>
-            <a href="#contato" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+            <a href="#sobre" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Sobre</a>
+            <a href="#servicos" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Serviços</a>
+            <a href="#avaliacoes" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Avaliações</a>
+            <a href="#localizacao" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Localização</a>
+            <a href="#contato" class="px-5 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-600/25">Agendar Consulta</a>
           </div>
         </div>
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
           <div class="flex flex-col gap-2 pt-3">
-            <a href="#sobre" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Sobre</a>
-            <a href="#servicos" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Serviços</a>
-            <a href="#avaliacoes" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Avaliações</a>
-            <a href="#localizacao" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Localização</a>
-            <a href="#contato" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition">Agendar Consulta</a>
+            <a href="#sobre" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition">Sobre</a>
+            <a href="#servicos" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition">Serviços</a>
+            <a href="#avaliacoes" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition">Avaliações</a>
+            <a href="#localizacao" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition">Localização</a>
+            <a href="#contato" class="px-3 py-2 bg-blue-600 text-white text-center rounded-lg font-semibold hover:bg-blue-700 transition">Agendar Consulta</a>
           </div>
         </div>
       </div>
@@ -176,13 +165,13 @@
           <span class="text-white/90 text-sm font-medium"><i class="fa-solid fa-award mr-2"></i>Especialista em Harmonização Orofacial</span>
         </div>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-          Realce sua <span class="text-primary-300">beleza natural</span> com segurança e excelência
+          Realce sua <span class="text-blue-300">beleza natural</span> com segurança e excelência
         </h1>
         <p class="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
           Procedimentos estéticos faciais realizados por [NOME DO DENTISTA] — [CRO-SP XXXXX]. Resultados naturais que valorizam o que você tem de melhor.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl text-center">
+          <a href="https://wa.me/55[WHATSAPP]?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="px-8 py-4 bg-white text-blue-700 font-bold rounded-full hover:bg-blue-50 transition shadow-xl text-center">
             <i class="fa-brands fa-whatsapp mr-2"></i>Agendar Avaliação
           </a>
           <a href="#servicos" class="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition text-center">
@@ -213,13 +202,13 @@
       <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div class="relative">
           <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="[NOME DO DENTISTA]" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"/>
-          <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-2xl shadow-xl hidden md:block">
+          <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl hidden md:block">
             <p class="text-3xl font-bold">[X]+</p>
-            <p class="text-sm text-primary-100">Anos de Experiência</p>
+            <p class="text-sm text-blue-100">Anos de Experiência</p>
           </div>
         </div>
         <div>
-          <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Sobre o Profissional</span>
+          <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Sobre o Profissional</span>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Dr(a). [NOME DO DENTISTA]</h2>
           <p class="text-gray-600 leading-relaxed mb-4">
             [Breve descrição pessoal do dentista. Exemplo: Formado(a) pela [UNIVERSIDADE], com especialização em Harmonização Orofacial. Atuo há [X] anos transformando sorrisos e devolvendo a autoestima dos meus pacientes.]
@@ -230,8 +219,8 @@
           <!-- Certificações -->
           <div class="space-y-3 mb-8">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                <i class="fa-solid fa-graduation-cap text-primary-600"></i>
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-graduation-cap text-blue-600"></i>
               </div>
               <div>
                 <p class="font-semibold text-gray-900">[UNIVERSIDADE]</p>
@@ -239,8 +228,8 @@
               </div>
             </div>
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                <i class="fa-solid fa-certificate text-primary-600"></i>
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-certificate text-blue-600"></i>
               </div>
               <div>
                 <p class="font-semibold text-gray-900">[INSTITUIÇÃO PÓS]</p>
@@ -248,8 +237,8 @@
               </div>
             </div>
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                <i class="fa-solid fa-id-card text-primary-600"></i>
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-id-card text-blue-600"></i>
               </div>
               <div>
                 <p class="font-semibold text-gray-900">CRO-SP [XXXXX]</p>
@@ -257,7 +246,7 @@
               </div>
             </div>
           </div>
-          <a href="#contato" class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">
+          <a href="#contato" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-600/25">
             <i class="fa-solid fa-calendar-check"></i> Agendar Avaliação
           </a>
         </div>
@@ -269,71 +258,71 @@
   <section id="servicos" class="py-20 md:py-28 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Tratamentos</span>
+        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Tratamentos</span>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Nossos Serviços</h2>
         <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Procedimentos estéticos de referência, realizados com técnicas avançadas e produtos de marcas mundialmente reconhecidas.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Serviço 1 -->
         <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
-            <i class="fa-solid fa-syringe text-xl text-primary-600 group-hover:text-white transition"></i>
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition">
+            <i class="fa-solid fa-syringe text-xl text-blue-600 group-hover:text-white transition"></i>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Toxina Botulínica</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Suaviza rugas e linhas de expressão com resultado natural e rejuvenescedor.</p>
         </div>
         <!-- Serviço 2 -->
         <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
-            <i class="fa-solid fa-sparkles text-xl text-primary-600 group-hover:text-white transition"></i>
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition">
+            <i class="fa-solid fa-sparkles text-xl text-blue-600 group-hover:text-white transition"></i>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Bioestimuladores</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Radiesse, Sculptra e Ellansé para estimular colágeno e rejuvenescer a pele.</p>
         </div>
         <!-- Serviço 3 -->
         <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
-            <i class="fa-solid fa-lips text-xl text-primary-600 group-hover:text-white transition"></i>
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition">
+            <i class="fa-solid fa-lips text-xl text-blue-600 group-hover:text-white transition"></i>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Preenchimento Labial</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Volume e definição labial com ácido hialurônico de alta qualidade.</p>
         </div>
         <!-- Serviço 4 -->
         <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
-            <i class="fa-solid fa-nose text-xl text-primary-600 group-hover:text-white transition"></i>
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition">
+            <i class="fa-solid fa-nose text-xl text-blue-600 group-hover:text-white transition"></i>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Rinomodelação</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Correção do perfil nasal sem cirurgia, com resultado imediato.</p>
         </div>
         <!-- Serviço 5 -->
         <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
-            <i class="fa-solid fa-face-smile-beam text-xl text-primary-600 group-hover:text-white transition"></i>
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition">
+            <i class="fa-solid fa-face-smile-beam text-xl text-blue-600 group-hover:text-white transition"></i>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Harmonização Completa</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Planejamento facial completo para equilíbrio e harmonia do rosto.</p>
         </div>
         <!-- Serviço 6 -->
         <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
-            <i class="fa-solid fa-arrows-up-to-line text-xl text-primary-600 group-hover:text-white transition"></i>
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition">
+            <i class="fa-solid fa-arrows-up-to-line text-xl text-blue-600 group-hover:text-white transition"></i>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Fios de PDO</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Lifting facial não-cirúrgico com fios absorvíveis para sustentação da pele.</p>
         </div>
         <!-- Serviço 7 -->
         <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
-            <i class="fa-solid fa-droplet text-xl text-primary-600 group-hover:text-white transition"></i>
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition">
+            <i class="fa-solid fa-droplet text-xl text-blue-600 group-hover:text-white transition"></i>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Skinbooster</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Hidratação profunda e luminosidade com Profhilo e Skinbooster.</p>
         </div>
         <!-- Serviço 8 -->
         <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition">
-            <i class="fa-solid fa-teeth-open text-xl text-primary-600 group-hover:text-white transition"></i>
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition">
+            <i class="fa-solid fa-teeth-open text-xl text-blue-600 group-hover:text-white transition"></i>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Sorriso Gengival</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Tratamento de sorriso gengival e bruxismo com toxina botulínica.</p>
@@ -346,7 +335,7 @@
   <section id="avaliacoes" class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
+        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">O que nossos pacientes dizem</h2>
         <div class="flex items-center justify-center gap-2 mt-4">
           <div class="flex text-yellow-400">
@@ -405,7 +394,7 @@
       <div class="mt-10 text-center">
         <div class="inline-flex items-center gap-2 bg-gray-100 px-6 py-3 rounded-full">
           <i class="fa-brands fa-google text-xl"></i>
-          <span class="text-sm text-gray-600">Widget do Google Reviews — <a href="#" class="text-primary-600 underline">[INSERIR LINK DO ELFSIGHT OU WIDGET]</a></span>
+          <span class="text-sm text-gray-600">Widget do Google Reviews — <a href="#" class="text-blue-600 underline">[INSERIR LINK DO ELFSIGHT OU WIDGET]</a></span>
         </div>
       </div>
     </div>
@@ -415,15 +404,15 @@
   <section id="localizacao" class="py-20 md:py-28 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Localização</span>
+        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Localização</span>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Onde estamos</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-8 items-start">
         <div class="bg-white rounded-2xl p-8 shadow-sm">
           <div class="space-y-5">
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
-                <i class="fa-solid fa-location-dot text-primary-600"></i>
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-location-dot text-blue-600"></i>
               </div>
               <div>
                 <p class="font-semibold text-gray-900">Endereço</p>
@@ -431,8 +420,8 @@
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
-                <i class="fa-solid fa-clock text-primary-600"></i>
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-clock text-blue-600"></i>
               </div>
               <div>
                 <p class="font-semibold text-gray-900">Horário de Atendimento</p>
@@ -440,8 +429,8 @@
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
-                <i class="fa-solid fa-phone text-primary-600"></i>
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-phone text-blue-600"></i>
               </div>
               <div>
                 <p class="font-semibold text-gray-900">Telefone / WhatsApp</p>
@@ -449,8 +438,8 @@
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
-                <i class="fa-solid fa-envelope text-primary-600"></i>
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i class="fa-solid fa-envelope text-blue-600"></i>
               </div>
               <div>
                 <p class="font-semibold text-gray-900">E-mail</p>
@@ -568,7 +557,7 @@
   <section id="influenciadores" class="py-20 md:py-28 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Confiança de quem é referência</span>
+        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Confiança de quem é referência</span>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Influenciadores que já atendemos</h2>
         <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Profissionais reconhecidos nas redes sociais confiam no nosso trabalho para cuidar da sua estética facial.</p>
       </div>
@@ -580,10 +569,10 @@
               <img src="https://i.pravatar.cc/80?img=47" width="80" height="80" alt="[INFLUENCIADOR_1]" class="w-full h-full object-cover"/>
             </div>
           </div>
-          <p class="font-bold text-gray-900 group-hover:text-primary-600 transition">@[INFLUENCIADOR_1]</p>
+          <p class="font-bold text-gray-900 group-hover:text-blue-600 transition">@[INFLUENCIADOR_1]</p>
           <p class="text-sm text-gray-400 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>[XXX]K seguidores</p>
           <div class="mt-3">
-            <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
           </div>
         </a>
         <!-- Influenciador 2 -->
@@ -593,10 +582,10 @@
               <img src="https://i.pravatar.cc/80?img=38" width="80" height="80" alt="[INFLUENCIADOR_2]" class="w-full h-full object-cover"/>
             </div>
           </div>
-          <p class="font-bold text-gray-900 group-hover:text-primary-600 transition">@[INFLUENCIADOR_2]</p>
+          <p class="font-bold text-gray-900 group-hover:text-blue-600 transition">@[INFLUENCIADOR_2]</p>
           <p class="text-sm text-gray-400 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>[XXX]K seguidores</p>
           <div class="mt-3">
-            <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
           </div>
         </a>
         <!-- Influenciador 3 -->
@@ -606,10 +595,10 @@
               <img src="https://i.pravatar.cc/80?img=26" width="80" height="80" alt="[INFLUENCIADOR_3]" class="w-full h-full object-cover"/>
             </div>
           </div>
-          <p class="font-bold text-gray-900 group-hover:text-primary-600 transition">@[INFLUENCIADOR_3]</p>
+          <p class="font-bold text-gray-900 group-hover:text-blue-600 transition">@[INFLUENCIADOR_3]</p>
           <p class="text-sm text-gray-400 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>[XXX]K seguidores</p>
           <div class="mt-3">
-            <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
           </div>
         </a>
         <!-- Influenciador 4 -->
@@ -619,10 +608,10 @@
               <img src="https://i.pravatar.cc/80?img=15" width="80" height="80" alt="[INFLUENCIADOR_4]" class="w-full h-full object-cover"/>
             </div>
           </div>
-          <p class="font-bold text-gray-900 group-hover:text-primary-600 transition">@[INFLUENCIADOR_4]</p>
+          <p class="font-bold text-gray-900 group-hover:text-blue-600 transition">@[INFLUENCIADOR_4]</p>
           <p class="text-sm text-gray-400 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>[XXX]K seguidores</p>
           <div class="mt-3">
-            <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-medium"><i class="fa-brands fa-instagram mr-1"></i>Ver perfil</span>
           </div>
         </a>
       </div>
@@ -634,7 +623,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 items-start">
         <div>
-          <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Contato</span>
+          <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Contato</span>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Agende sua avaliação</h2>
           <p class="text-gray-500 leading-relaxed mb-8">Preencha o formulário abaixo ou entre em contato pelo WhatsApp. Responderemos o mais breve possível.</p>
           <div class="flex flex-col gap-4">
@@ -662,15 +651,15 @@
             <input type="hidden" name="_next" value="https://[SEU-DOMINIO]/obrigado" />
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1.5">Nome completo</label>
-              <input type="text" name="nome" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="Seu nome completo" />
+              <input type="text" name="nome" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" placeholder="Seu nome completo" />
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1.5">WhatsApp</label>
-              <input type="tel" name="whatsapp" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="(XX) XXXXX-XXXX" />
+              <input type="tel" name="whatsapp" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" placeholder="(XX) XXXXX-XXXX" />
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1.5">Procedimento de interesse</label>
-              <select name="procedimento" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-gray-500">
+              <select name="procedimento" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition text-gray-500">
                 <option value="">Selecione um procedimento</option>
                 <option>Toxina Botulínica (Botox)</option>
                 <option>Bioestimuladores de Colágeno</option>
@@ -685,9 +674,9 @@
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1.5">Mensagem (opcional)</label>
-              <textarea name="mensagem" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition resize-none" placeholder="Conte-nos mais sobre o que você procura..."></textarea>
+              <textarea name="mensagem" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none" placeholder="Conte-nos mais sobre o que você procura..."></textarea>
             </div>
-            <button type="submit" class="w-full py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">
+            <button type="submit" class="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-600/25">
               <i class="fa-solid fa-paper-plane mr-2"></i>Enviar Mensagem
             </button>
             <p class="text-xs text-gray-400 text-center">Ao enviar, você concorda com nossa política de privacidade.</p>
@@ -703,7 +692,7 @@
       <div class="grid md:grid-cols-4 gap-8">
         <div>
           <div class="flex items-center gap-2 mb-4">
-            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <i class="fa-solid fa-tooth text-blue-400 text-xl"></i>
             <span class="text-lg font-bold">[NOME DO DENTISTA]</span>
           </div>
           <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmonização Orofacial.<br/>CRO-SP [XXXXX]</p>
@@ -729,10 +718,10 @@
         <div>
           <h4 class="font-semibold mb-4">Redes Sociais</h4>
           <div class="flex gap-3">
-            <a href="https://www.instagram.com/[INSTAGRAM]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition">
+            <a href="https://www.instagram.com/[INSTAGRAM]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/[FACEBOOK]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition">
+            <a href="https://www.facebook.com/[FACEBOOK]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
             <a href="https://wa.me/55[WHATSAPP]" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition">

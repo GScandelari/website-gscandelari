@@ -6,18 +6,7 @@
   <base href="/dev-sites/Clientes/dr-douglas-de-siqueira/version-c/" />
   <title>Serviços | Dr. Douglas de Siqueira</title>
   <meta name="description" content="Conheça todos os tratamentos de Harmonização Orofacial e Odontologia Estética oferecidos por Dr. Douglas de Siqueira em Santos/SP." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { 50:'#f5f3ff',100:'#ede9fe',200:'#ddd6fe',300:'#c4b5fd',400:'#a78bfa',500:'#8b5cf6',600:'#7c3aed',700:'#6d28d9',800:'#5b21b6',900:'#4c1d95' }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/css/tailwind.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
     html { scroll-behavior: smooth; }
@@ -32,37 +21,37 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 md:h-20">
         <a href="index.html" class="flex items-center gap-2">
-          <i class="fa-solid fa-tooth text-primary-600 text-2xl"></i>
+          <i class="fa-solid fa-tooth text-violet-600 text-2xl"></i>
           <span class="text-xl font-bold text-gray-900">Dr. Douglas de Siqueira</span>
         </a>
         <button class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
           <i class="fa-solid fa-bars text-xl text-gray-700"></i>
         </button>
         <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">In&iacute;cio</a>
-          <a href="sobre.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Sobre</a>
-          <a href="servicos.html" class="text-sm font-medium text-primary-600 transition">Servi&ccedil;os</a>
-          <a href="avaliacoes.html" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
-          <a href="contato.html" class="px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/25">Agendar Consulta</a>
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-violet-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="text-sm font-medium text-gray-600 hover:text-violet-600 transition">Sobre</a>
+          <a href="servicos.html" class="text-sm font-medium text-violet-600 transition">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="text-sm font-medium text-gray-600 hover:text-violet-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-5 py-2.5 bg-violet-600 text-white text-sm font-semibold rounded-full hover:bg-violet-700 transition shadow-lg shadow-violet-600/25">Agendar Consulta</a>
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
         <div class="flex flex-col gap-2 pt-3">
-          <a href="index.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">In&iacute;cio</a>
-          <a href="sobre.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Sobre</a>
-          <a href="servicos.html" class="px-3 py-2 rounded-lg text-primary-600 bg-primary-50 font-medium">Servi&ccedil;os</a>
-          <a href="avaliacoes.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition">Avalia&ccedil;&otilde;es</a>
-          <a href="contato.html" class="px-3 py-2 bg-primary-600 text-white text-center rounded-lg font-semibold hover:bg-primary-700 transition">Agendar Consulta</a>
+          <a href="index.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-violet-50 hover:text-violet-600 transition">In&iacute;cio</a>
+          <a href="sobre.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-violet-50 hover:text-violet-600 transition">Sobre</a>
+          <a href="servicos.html" class="px-3 py-2 rounded-lg text-violet-600 bg-violet-50 font-medium">Servi&ccedil;os</a>
+          <a href="avaliacoes.html" class="px-3 py-2 rounded-lg text-gray-600 hover:bg-violet-50 hover:text-violet-600 transition">Avalia&ccedil;&otilde;es</a>
+          <a href="contato.html" class="px-3 py-2 bg-violet-600 text-white text-center rounded-lg font-semibold hover:bg-violet-700 transition">Agendar Consulta</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- HEADER DA PÁGINA -->
-  <section class="bg-gradient-to-br from-primary-600 to-primary-800 pt-32 pb-20">
+  <section class="bg-gradient-to-br from-violet-600 to-violet-800 pt-32 pb-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Nossos Servi&ccedil;os</h1>
-      <p class="text-primary-200 text-lg max-w-2xl mx-auto">Procedimentos est&eacute;ticos faciais e odontol&oacute;gicos realizados com as melhores t&eacute;cnicas e produtos do mercado mundial.</p>
+      <p class="text-violet-200 text-lg max-w-2xl mx-auto">Procedimentos est&eacute;ticos faciais e odontol&oacute;gicos realizados com as melhores t&eacute;cnicas e produtos do mercado mundial.</p>
     </div>
   </section>
 
@@ -71,15 +60,15 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
       <!-- 1. Harmonização Facial -->
-      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 ring-2 ring-primary-200" id="harmonizacao">
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 ring-2 ring-violet-200" id="harmonizacao">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center shrink-0">
+          <div class="w-16 h-16 bg-violet-600 rounded-2xl flex items-center justify-center shrink-0">
             <i class="fa-solid fa-face-smile-beam text-2xl text-white"></i>
           </div>
           <div class="flex-1">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
-                <span class="text-xs bg-primary-600 text-white px-2 py-0.5 rounded-full uppercase font-bold tracking-wider mb-2 inline-block">Mais Procurado</span>
+                <span class="text-xs bg-violet-600 text-white px-2 py-0.5 rounded-full uppercase font-bold tracking-wider mb-2 inline-block">Mais Procurado</span>
                 <h3 class="text-2xl font-bold text-gray-900">Harmoniza&ccedil;&atilde;o Facial</h3>
               </div>
             </div>
@@ -90,10 +79,10 @@
               Cada protocolo &eacute; 100% personalizado, levando em considera&ccedil;&atilde;o a anatomia facial, os desejos e as necessidades de cada paciente. O resultado &eacute; um rosto mais harmonioso, jovem e natural.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Personalizado</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Multi-t&eacute;cnicas</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Simetria facial</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Resultado completo</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Personalizado</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Multi-t&eacute;cnicas</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Simetria facial</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Resultado completo</span>
             </div>
           </div>
         </div>
@@ -102,8 +91,8 @@
       <!-- 2. Preenchimento Facial e Labial -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="preenchimento">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-heart text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-heart text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Preenchimento Facial e Labial</h3>
@@ -114,10 +103,10 @@
               Tamb&eacute;m &eacute; aplicado em malar (ma&ccedil;&atilde;s do rosto), mand&iacute;bula, queixo e sulco nasogeniano. Utilizamos apenas produtos de marcas premium. Dura&ccedil;&atilde;o m&eacute;dia: 8 a 18 meses.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">L&aacute;bios</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Malar</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Mand&iacute;bula</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">&Aacute;cido Hialur&ocirc;nico</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">L&aacute;bios</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Malar</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Mand&iacute;bula</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">&Aacute;cido Hialur&ocirc;nico</span>
             </div>
           </div>
         </div>
@@ -126,8 +115,8 @@
       <!-- 3. Contorno Facial -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="contorno">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-diamond text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-diamond text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Contorno Facial</h3>
@@ -138,10 +127,10 @@
               O procedimento &eacute; personalizado para cada paciente, respeitando a anatomia individual e buscando propor&ccedil;&otilde;es faciais equilibradas.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Mento</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Mand&iacute;bula</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Malar</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Propor&ccedil;&atilde;o facial</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Mento</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Mand&iacute;bula</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Malar</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Propor&ccedil;&atilde;o facial</span>
             </div>
           </div>
         </div>
@@ -150,8 +139,8 @@
       <!-- 4. Botox -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="botox">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-syringe text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-syringe text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Botox (Toxina Botul&iacute;nica)</h3>
@@ -162,10 +151,10 @@
               O resultado &eacute; uma apar&ecirc;ncia rejuvenescida e descansada, mantendo a naturalidade das express&otilde;es faciais. O efeito come&ccedil;a entre 3 a 7 dias e dura de 4 a 6 meses.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Rugas din&acirc;micas</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Testa</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Glabela</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Resultado natural</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Rugas din&acirc;micas</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Testa</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Glabela</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Resultado natural</span>
             </div>
           </div>
         </div>
@@ -174,8 +163,8 @@
       <!-- 5. Fios de Colágeno -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="fios">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-arrows-up-to-line text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-arrows-up-to-line text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Fios de Col&aacute;geno</h3>
@@ -186,10 +175,10 @@
               Indicados para flacidez de face, pesco&ccedil;o e papada. O procedimento tem recupera&ccedil;&atilde;o r&aacute;pida e resultados que duram de 12 a 18 meses.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Lifting sem cirurgia</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Fios absorv&iacute;veis</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Sustenta&ccedil;&atilde;o</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Col&aacute;geno</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Lifting sem cirurgia</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Fios absorv&iacute;veis</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Sustenta&ccedil;&atilde;o</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Col&aacute;geno</span>
             </div>
           </div>
         </div>
@@ -198,8 +187,8 @@
       <!-- 6. Bioestimuladores -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="bioestimuladores">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-sparkles text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-sparkles text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Bioestimuladores de Col&aacute;geno</h3>
@@ -210,10 +199,10 @@
               O resultado &eacute; gradual e pode durar de 1 a 4 anos, dependendo do produto. O tratamento &eacute; personalizado, podendo ser aplicado em rosto, pesco&ccedil;o, colo e m&atilde;os.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Radiesse</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Sculptra</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Ellans&eacute;</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Rejuvenescimento</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Radiesse</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Sculptra</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Ellans&eacute;</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Rejuvenescimento</span>
             </div>
           </div>
         </div>
@@ -222,8 +211,8 @@
       <!-- 7. Ultrassom Microfocado -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="ultrassom">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-wave-square text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-wave-square text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Ultrassom Microfocado</h3>
@@ -234,10 +223,10 @@
               Indicado para flacidez facial e corporal, papada e rejuvenescimento. Os resultados s&atilde;o progressivos e podem durar at&eacute; 2 anos.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Lifting n&atilde;o cir&uacute;rgico</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Tecnologia</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Col&aacute;geno</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Firmeza</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Lifting n&atilde;o cir&uacute;rgico</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Tecnologia</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Col&aacute;geno</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Firmeza</span>
             </div>
           </div>
         </div>
@@ -246,8 +235,8 @@
       <!-- 8. Lentes de Porcelana -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="lentes">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-teeth text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-teeth text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Lentes de Porcelana</h3>
@@ -258,10 +247,10 @@
               O procedimento &eacute; minimamente invasivo e os resultados s&atilde;o duradouros, podendo durar mais de 10 anos com os cuidados adequados.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Sorriso perfeito</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Porcelana</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Minimamente invasivo</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Durabilidade</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Sorriso perfeito</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Porcelana</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Minimamente invasivo</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Durabilidade</span>
             </div>
           </div>
         </div>
@@ -270,8 +259,8 @@
       <!-- 9. Implantes Dentários -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="implantes">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-tooth text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-tooth text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Implantes Dent&aacute;rios</h3>
@@ -282,10 +271,10 @@
               Procedimento seguro e com alta taxa de sucesso. Devolvemos fun&ccedil;&atilde;o mastigat&oacute;ria e est&eacute;tica com resultados que duram por toda a vida.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Reabilita&ccedil;&atilde;o oral</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">&Uacute;ltima gera&ccedil;&atilde;o</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Durabilidade</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Seguran&ccedil;a</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Reabilita&ccedil;&atilde;o oral</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">&Uacute;ltima gera&ccedil;&atilde;o</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Durabilidade</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Seguran&ccedil;a</span>
             </div>
           </div>
         </div>
@@ -294,8 +283,8 @@
       <!-- 10. Cirurgia de Siso -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="siso">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-notes-medical text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-notes-medical text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Cirurgia de Siso</h3>
@@ -306,10 +295,10 @@
               Utilizamos t&eacute;cnicas modernas para minimizar o desconforto p&oacute;s-operat&oacute;rio e acelerar a cicatriza&ccedil;&atilde;o.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Extra&ccedil;&atilde;o</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Sisos inclusos</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Recupera&ccedil;&atilde;o r&aacute;pida</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Conforto</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Extra&ccedil;&atilde;o</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Sisos inclusos</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Recupera&ccedil;&atilde;o r&aacute;pida</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Conforto</span>
             </div>
           </div>
         </div>
@@ -318,8 +307,8 @@
       <!-- 11. Clareamento Dental -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="clareamento">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-sun text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-sun text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Clareamento Dental</h3>
@@ -330,10 +319,10 @@
               Resultados vis&iacute;veis j&aacute; na primeira sess&atilde;o, com at&eacute; 8 tons mais claro. Procedimento seguro que preserva a sa&uacute;de do esmalte dent&aacute;rio.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Laser</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Moldeiras</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Resultado r&aacute;pido</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Seguro</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Laser</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Moldeiras</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Resultado r&aacute;pido</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Seguro</span>
             </div>
           </div>
         </div>
@@ -342,8 +331,8 @@
       <!-- 12. Skinbooster -->
       <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300" id="skinbooster">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-droplet text-2xl text-primary-600"></i>
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-droplet text-2xl text-violet-600"></i>
           </div>
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Skinbooster</h3>
@@ -354,10 +343,10 @@
               Diferente do preenchimento, n&atilde;o adiciona volume &mdash; atua na qualidade da pele, devolvendo vi&ccedil;o e elasticidade. Indicado para face, pesco&ccedil;o, colo e m&atilde;os.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Hidrata&ccedil;&atilde;o profunda</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Luminosidade</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Qualidade da pele</span>
-              <span class="text-xs bg-primary-50 text-primary-700 px-3 py-1 rounded-full">Vi&ccedil;o</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Hidrata&ccedil;&atilde;o profunda</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Luminosidade</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Qualidade da pele</span>
+              <span class="text-xs bg-violet-50 text-violet-700 px-3 py-1 rounded-full">Vi&ccedil;o</span>
             </div>
           </div>
         </div>
@@ -367,12 +356,12 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-20 bg-primary-600">
+  <section class="py-20 bg-violet-600">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ficou com alguma d&uacute;vida?</h2>
-      <p class="text-primary-100 text-lg mb-8">Agende sua avalia&ccedil;&atilde;o e descubra qual procedimento &eacute; ideal para voc&ecirc;.</p>
+      <p class="text-violet-100 text-lg mb-8">Agende sua avalia&ccedil;&atilde;o e descubra qual procedimento &eacute; ideal para voc&ecirc;.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos." class="px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition shadow-xl">
+        <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos." class="px-8 py-4 bg-white text-violet-700 font-bold rounded-full hover:bg-violet-50 transition shadow-xl">
           <i class="fa-brands fa-whatsapp mr-2"></i>Falar no WhatsApp
         </a>
         <a href="contato.html" class="px-8 py-4 border-2 border-white/40 text-white font-semibold rounded-full hover:bg-white/10 transition">
@@ -388,7 +377,7 @@
       <div class="grid md:grid-cols-4 gap-8">
         <div>
           <div class="flex items-center gap-2 mb-4">
-            <i class="fa-solid fa-tooth text-primary-400 text-xl"></i>
+            <i class="fa-solid fa-tooth text-violet-400 text-xl"></i>
             <span class="text-lg font-bold">Dr. Douglas de Siqueira</span>
           </div>
           <p class="text-gray-400 text-sm leading-relaxed">Especialista em Harmoniza&ccedil;&atilde;o Orofacial.<br/>CRO-SP 83786</p>
@@ -415,8 +404,8 @@
         <div>
           <h4 class="font-semibold mb-4">Redes Sociais</h4>
           <div class="flex gap-3">
-            <a href="https://www.instagram.com/drdouglasdesiqueira" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/drdouglasdesiqueira" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/drdouglasdesiqueira" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-violet-600 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/drdouglasdesiqueira" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-violet-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://wa.me/5513988169625" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>

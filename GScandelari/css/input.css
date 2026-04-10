@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
-@source "../index.html";
-@source "../carreira.html";
-@source "../formacao.html";
-@source "../404.html";
+@source "../**/*.html";
 
 @theme {
   --color-brand: #3B82F6;
