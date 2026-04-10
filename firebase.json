@@ -31,6 +31,18 @@
       }
     ],
     "cleanUrls": true,
-    "trailingSlash": false
+    "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/Clientes/:rest*",
+        "destination": "/dev-sites/Clientes/:rest*",
+        "type": 301
+      },
+      {
+        "source": "/Templates/:rest*",
+        "destination": "/dev-sites/Templates/:rest*",
+        "type": 301
+      }
+    ]
   }
 }
