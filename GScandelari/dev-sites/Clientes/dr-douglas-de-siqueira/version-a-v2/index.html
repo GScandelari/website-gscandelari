@@ -35,19 +35,7 @@
     @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
     .float { animation: float 3s ease-in-out infinite; }
 
-    /* === MARCAS CAROUSEL === */
-    @keyframes carousel-scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .brands-carousel {
-      display: flex;
-      animation: carousel-scroll 20s linear infinite;
-      width: max-content;
-    }
-    .brands-carousel:hover {
-      animation-play-state: paused;
-    }
+    /* === MARCAS === */
     .brand-card {
       flex-shrink: 0;
       width: 240px;
@@ -210,8 +198,17 @@
                 <i class="fa-solid fa-certificate text-blue-600"></i>
               </div>
               <div>
-                <p class="font-semibold text-gray-900">[Instituição da Pós] <!-- SUBSTITUIR QUANDO INFORMADO --></p>
-                <p class="text-sm text-gray-500">Pós-graduação em Harmonização Orofacial</p>
+                <p class="font-semibold text-gray-900">São Leopoldo Mandic</p>
+                <p class="text-sm text-gray-500">Pós-graduação em Implantodontia</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-certificate text-blue-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">FACOP</p>
+                <p class="text-sm text-gray-500">Pós-graduação em Harmonização Orofacial (HOF)</p>
               </div>
             </div>
             <div class="flex items-center gap-3">
@@ -372,6 +369,7 @@
               <div>
                 <p class="font-semibold text-gray-900">Endereço</p>
                 <p class="text-gray-500 text-sm">R. Barão de Paranapiacaba, 233 - Sala 703 - Encruzilhada<br/>Santos - SP, CEP 11050-251<br/><span class="text-gray-400">Barão Office Santos</span></p>
+                <p class="text-xs text-blue-600 mt-1.5"><i class="fa-solid fa-square-parking mr-1"></i>Há estacionamento no prédio Barão Office Santos.</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
@@ -411,41 +409,10 @@
   </section>
 
   <!-- MARCAS PARCEIRAS -->
-  <section class="py-16 bg-white border-y border-gray-100 overflow-hidden">
+  <section class="py-16 bg-white border-y border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-center text-sm text-gray-400 uppercase tracking-wider font-semibold mb-10">Marcas que trabalhamos</p>
-    </div>
-    <div class="overflow-hidden">
-      <div class="brands-carousel">
-        <!-- Set 1 (original) -->
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Allergan.png" alt="Allergan"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">ALLERGAN</span>
-          <span class="brand-label">Botox® & Juvéderm®</span>
-        </div>
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Galderma.png" alt="Galderma"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">GALDERMA</span>
-          <span class="brand-label">Restylane® & Sculptra®</span>
-        </div>
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Merz.png" alt="Merz"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">MERZ</span>
-          <span class="brand-label">Xeomin® & Radiesse®</span>
-        </div>
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Sinclair.png" alt="Sinclair"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">SINCLAIR</span>
-          <span class="brand-label">Ellansé®</span>
-        </div>
+      <div class="flex justify-center gap-6 flex-wrap">
         <div class="brand-card">
           <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Rennova.png" alt="Rennova"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
@@ -454,126 +421,37 @@
           <span class="brand-label">Bioestimuladores</span>
         </div>
         <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Rennova%20Care.png" alt="Rennova Care"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">RENNOVA CARE</span>
-          <span class="brand-label">Skincare Profissional</span>
-        </div>
-        <!-- Set 2 (duplicate for infinite loop) -->
-        <div class="brand-card">
           <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Allergan.png" alt="Allergan"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
                class="brand-logo"/>
           <span class="brand-fallback" style="display:none">ALLERGAN</span>
           <span class="brand-label">Botox® & Juvéderm®</span>
-        </div>
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Galderma.png" alt="Galderma"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">GALDERMA</span>
-          <span class="brand-label">Restylane® & Sculptra®</span>
-        </div>
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Merz.png" alt="Merz"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">MERZ</span>
-          <span class="brand-label">Xeomin® & Radiesse®</span>
-        </div>
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Sinclair.png" alt="Sinclair"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">SINCLAIR</span>
-          <span class="brand-label">Ellansé®</span>
-        </div>
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Rennova.png" alt="Rennova"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">RENNOVA</span>
-          <span class="brand-label">Bioestimuladores</span>
-        </div>
-        <div class="brand-card">
-          <img src="/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/Rennova%20Care.png" alt="Rennova Care"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               class="brand-logo"/>
-          <span class="brand-fallback" style="display:none">RENNOVA CARE</span>
-          <span class="brand-label">Skincare Profissional</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTATO / FORMULÁRIO -->
+  <!-- CONTATO -->
   <section id="contato" class="py-20 md:py-28 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <div>
-          <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Contato</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Agende sua avaliação</h2>
-          <p class="text-gray-500 leading-relaxed mb-8">Preencha o formulário abaixo ou entre em contato pelo WhatsApp. Responderemos o mais breve possível.</p>
-          <div class="flex flex-col gap-4">
-            <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="inline-flex items-center gap-3 px-6 py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition shadow-lg shadow-green-500/25">
-              <i class="fa-brands fa-whatsapp text-2xl"></i>
-              <div>
-                <p class="text-sm opacity-80">WhatsApp</p>
-                <p>(13) 98816-9625</p>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/drdouglasdesiqueira" target="_blank" class="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:opacity-90 transition shadow-lg">
-              <i class="fa-brands fa-instagram text-2xl"></i>
-              <div>
-                <p class="text-sm opacity-80">Instagram</p>
-                <p>@drdouglasdesiqueira</p>
-              </div>
-            </a>
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Contato</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Agende sua avaliação</h2>
+      <p class="text-gray-500 leading-relaxed mb-8">Entre em contato pelo WhatsApp e responderemos o mais breve possível.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/5513988169625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="inline-flex items-center gap-3 px-8 py-5 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition shadow-lg shadow-green-500/25 justify-center">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+          <div class="text-left">
+            <p class="text-sm opacity-80">WhatsApp</p>
+            <p>(13) 98816-9625</p>
           </div>
-        </div>
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <form action="https://formsubmit.co/drdouglasdesiqueira@gmail.com" method="POST" class="space-y-5">
-            <input type="hidden" name="_subject" value="Nova mensagem do site" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://drdouglasdesiqueira.com.br/obrigado" />
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">Nome completo</label>
-              <input type="text" name="nome" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" placeholder="Seu nome completo" />
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">WhatsApp</label>
-              <input type="tel" name="whatsapp" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" placeholder="(XX) XXXXX-XXXX" />
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">Procedimento de interesse</label>
-              <select name="procedimento" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition text-gray-500">
-                <option value="">Selecione um procedimento</option>
-                <option>Harmonização Facial</option>
-                <option>Preenchimento Facial e Labial</option>
-                <option>Contorno (Mento, Mandíbula, Malar)</option>
-                <option>Botox</option>
-                <option>Fios de Colágeno</option>
-                <option>Bioestimuladores</option>
-                <option>Ultrassom Microfocado</option>
-                <option>Lentes de Contato de Porcelana</option>
-                <option>Implantes Dentários</option>
-                <option>Cirurgia de Siso</option>
-                <option>Clareamento Dental</option>
-                <option>Skinbooster</option>
-                <option>Outro</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">Mensagem (opcional)</label>
-              <textarea name="mensagem" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none" placeholder="Conte-nos mais sobre o que você procura..."></textarea>
-            </div>
-            <button type="submit" class="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-600/25">
-              <i class="fa-solid fa-paper-plane mr-2"></i>Enviar Mensagem
-            </button>
-            <p class="text-xs text-gray-400 text-center">Ao enviar, você concorda com nossa política de privacidade.</p>
-          </form>
-        </div>
+        </a>
+        <a href="https://www.instagram.com/drdouglasdesiqueira" target="_blank" class="inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:opacity-90 transition shadow-lg justify-center">
+          <i class="fa-brands fa-instagram text-2xl"></i>
+          <div class="text-left">
+            <p class="text-sm opacity-80">Instagram</p>
+            <p>@drdouglasdesiqueira</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>

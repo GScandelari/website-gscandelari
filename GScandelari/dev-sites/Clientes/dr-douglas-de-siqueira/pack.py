@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-pack.py — Empacota o version-a_v2 para deploy no Firebase Hosting.
+pack.py — Empacota o version-a-v2 para deploy no Firebase Hosting.
 
 Uso:
     python3 pack.py
@@ -21,20 +21,16 @@ import shutil
 # ── Caminhos base ─────────────────────────────────────────────────────────────
 
 BASE      = os.path.dirname(os.path.abspath(__file__))
-SRC_HTML  = os.path.join(BASE, "version-a_v2", "index.html")
+SRC_HTML  = os.path.join(BASE, "version-a-v2", "index.html")
 DIST      = os.path.join(BASE, "dist")
 ASSETS    = os.path.join(DIST, "assets")
 
 FOTO_SRC  = os.path.join(BASE, "foto_perfil.png")
-LOGOS_SRC = os.path.join(BASE, "..", "templates-site-dentista-estetica", "Marcas Logo")
+LOGOS_SRC = os.path.join(BASE, "..", "..", "Templates", "templates-site-dentista-estetica", "marcas-logo")
 
 LOGOS = [
     "Allergan.png",
-    "Galderma.png",
-    "Merz.png",
-    "Sinclair.png",
     "Rennova.png",
-    "Rennova Care.png",
 ]
 
 # ── 1. Limpar / criar dist/ ───────────────────────────────────────────────────
@@ -51,7 +47,7 @@ print("  📁  dist/ e dist/assets/ criadas")
 with open(SRC_HTML, "r", encoding="utf-8") as f:
     html = f.read()
 
-# 2a. Remover o bloco BANNER TEMPLATE (da abertura do div até o comentário <!-- NAVBAR -->)
+# 2a. Remover o bloco BANNER TEMPLATE
 banner_pattern = re.compile(
     r'\s*<!-- BANNER TEMPLATE -->\s*'
     r'<div[^>]*>.*?GSCANDELARI.*?</div>\s*',
@@ -61,14 +57,14 @@ html, n = banner_pattern.subn("", html)
 print(f"  🚫  Banner template removido ({n} ocorrência{'s' if n != 1 else ''})")
 
 # 2b. Substituir caminho da foto do dentista
-html = html.replace("/Dr.%20Douglas%20de%20Siqueira/foto_perfil.png", "foto_perfil.png")
+html = html.replace("/dev-sites/Clientes/dr-douglas-de-siqueira/foto_perfil.png", "foto_perfil.png")
 print("  🔗  Caminho de foto_perfil.png corrigido")
 
 # 2c. Substituir caminhos dos logos de marcas
-# De: ../../templates-site-dentista-estetica/Marcas%20Logo/NOME.png
+# De: /dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/NOME.png
 # Para: assets/NOME.png
 html = re.sub(
-    r'\.\./\.\./templates-site-dentista-estetica/Marcas%20Logo/([^"]+)',
+    r'/dev-sites/Templates/templates-site-dentista-estetica/marcas-logo/([^"]+)',
     r'assets/\1',
     html
 )
@@ -93,7 +89,6 @@ else:
 
 for logo in LOGOS:
     src = os.path.join(LOGOS_SRC, logo)
-    # Nome do arquivo destino (preserva espaços — o HTML usa %20 mas o arquivo pode ter espaço)
     dst = os.path.join(ASSETS, logo)
     if os.path.exists(src):
         shutil.copy2(src, dst)
@@ -135,14 +130,14 @@ print("  ✅  firebase.json gerado")
 
 firebaserc = """{
   "projects": {
-    "default": "SUBSTITUIR-PELO-PROJECT-ID"
+    "default": "website-scandelari"
   }
 }
 """
 
 with open(os.path.join(DIST, ".firebaserc"), "w", encoding="utf-8") as f:
     f.write(firebaserc)
-print("  ✅  .firebaserc gerado")
+print("  ✅  .firebaserc gerado (projeto: website-scandelari)")
 
 # ── Resumo ───────────────────────────────────────────────────────────────────
 
@@ -152,15 +147,13 @@ print("  PACKING CONCLUÍDO")
 print("═" * 55)
 print()
 
-# Listar arquivos gerados
 for root, dirs, files in os.walk(DIST):
     level = root.replace(DIST, "").count(os.sep)
     indent = "  " + "  " * level
-    folder = os.path.basename(root)
     if level == 0:
         print(f"  dist/")
     else:
-        print(f"{indent}{folder}/")
+        print(f"{indent}{os.path.basename(root)}/")
     sub = "  " + "  " * (level + 1)
     for fname in files:
         fpath = os.path.join(root, fname)
@@ -170,6 +163,5 @@ for root, dirs, files in os.walk(DIST):
 print()
 print("  PRÓXIMO PASSO:")
 print("  1. Abra dist/index.html no navegador e valide visualmente")
-print("  2. Edite dist/.firebaserc com o Project ID correto")
-print("  3. cd dist && firebase deploy --only hosting")
+print("  2. cd dist && firebase deploy --only hosting")
 print()
