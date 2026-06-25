@@ -2,7 +2,7 @@
 
 Site pessoal e portfólio de **Guilherme Stanke Scandelari**, Engenheiro de Suporte de Software com mais de 14 anos de experiência em TI.
 
-**Acesse:** [website-scandelari.web.app](https://website-scandelari.web.app)
+**Acesse:** [gscandelari.com.br](https://gscandelari.com.br)
 
 ## Sobre
 
