@@ -20,6 +20,8 @@ jobs:
         run: |
           echo "$SERVICE_ACCOUNT_KEY" > /tmp/sa-key.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa-key.json" >> $GITHUB_ENV
+          echo "File size: $(wc -c < /tmp/sa-key.json) bytes"
+          python3 -c "import json,sys; d=json.load(open('/tmp/sa-key.json')); print('JSON OK - type:', d.get('type'), '| project:', d.get('project_id'), '| key_id:', d.get('private_key_id','?')[:8])"
 
       - name: Deploy to Firebase Hosting
         run: firebase deploy --only hosting --project website-scandelari
