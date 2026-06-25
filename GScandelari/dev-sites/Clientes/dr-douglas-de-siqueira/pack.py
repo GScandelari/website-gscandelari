@@ -130,7 +130,7 @@ print("  ✅  firebase.json gerado")
 
 firebaserc = """{
   "projects": {
-    "default": "website-scandelari"
+    "default": "drdouglasdesiqueira-13eb7"
   }
 }
 """

@@ -24,3 +24,6 @@ package-lock.json
 # Sistema operacional
 .DS_Store
 Thumbs.db
+
+# Clientes
+**/Clientes
