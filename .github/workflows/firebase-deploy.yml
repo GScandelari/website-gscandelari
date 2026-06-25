@@ -15,6 +15,6 @@ jobs:
         run: npm install -g firebase-tools
 
       - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting --project website-scandelari
+        run: firebase deploy --only hosting --project website-scandelari --debug 2>&1 | tee /tmp/firebase-debug.log; cat /tmp/firebase-debug.log | grep -A5 "Error\|error\|hosting" | tail -50
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
