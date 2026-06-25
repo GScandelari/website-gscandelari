@@ -1,0 +1,17 @@
+{
+  "name": "gscandelari",
+  "version": "1.0.0",
+  "description": "Site pessoal de Guilherme Stanke Scandelari, hospedado em [gscandelari.com.br](https://gscandelari.com.br).",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}

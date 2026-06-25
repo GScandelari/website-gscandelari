@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carreira | Guilherme Scandelari</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="/css/tailwind.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(59,130,246,.15);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #3B82F6;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Fixed background logo */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 800px;
+      height: 80%;
+      background-image: url('imgs/logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ensure content is above background */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Timeline styles */
+    .timeline-item {
+      position: relative;
+      padding-left: 2.5rem;
+      padding-bottom: 3rem;
+    }
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: -3rem;
+      width: 2px;
+      background: linear-gradient(180deg, #3B82F6 0%, rgba(59,130,246,0.1) 100%);
+    }
+    .timeline-item:last-child::before {
+      background: linear-gradient(180deg, #3B82F6 0%, transparent 100%);
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -6px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #3B82F6;
+      box-shadow: 0 0 0 4px rgba(59,130,246,0.1);
+      z-index: 1;
+    }
+    .timeline-dot.current {
+      animation: pulse 2s infinite;
+      background: #10b981;
+      box-shadow: 0 0 0 4px rgba(16,185,129,0.2);
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(16,185,129,0.2); }
+      50% { box-shadow: 0 0 0 8px rgba(16,185,129,0.1); }
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans antialiased">
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-gray-950/80 backdrop-blur border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-semibold tracking-tight text-white hover:text-blue-400 transition-colors">
+        GScandelari
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
+        <a href="index.html#sobre" class="nav-link hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#servicos" class="nav-link hover:text-white transition-colors">Serviços</a>
+        <a href="carreira.html" class="nav-link hover:text-white transition-colors text-white">Carreira</a>
+        <a href="formacao.html" class="nav-link hover:text-white transition-colors">Formação</a>
+        <a href="index.html#projetos" class="nav-link hover:text-white transition-colors">Projetos</a>
+        <a href="index.html#contato" class="nav-link hover:text-white transition-colors">Contato</a>
+      </div>
+      <a href="index.html#contato"
+         class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium">
+        Fale comigo
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <section class="pt-32 pb-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-4">
+        <span class="inline-block text-xs font-semibold tracking-widest text-blue-400 uppercase mb-4">
+          Trajetória Profissional
+        </span>
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+          Minha <span class="gradient-text">Carreira</span>
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Mais de 14 anos de experiência em TI, passando por 8 empresas diferentes,
+          atuando em suporte técnico, análise de sistemas e gestão de projetos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TIMELINE ───────────────────────────────────────────── -->
+  <section class="py-12">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <!-- Wiley -->
+      <div class="timeline-item">
+        <div class="timeline-dot current"></div>
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-1">Engenheiro de Suporte de Software</h3>
+              <p class="text-blue-400 font-medium">Wiley</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs px-3 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium">
+                <i class="fas fa-circle text-[6px] mr-1"></i> Atual
+              </span>
+              <span class="text-gray-500 text-sm">Jul 2024 - Presente</span>
+            </div>
+          </div>
+
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Atuando como Engenheiro de Suporte de Software com foco em suporte técnico para aplicações empresariais,
+            garantindo estabilidade, confiabilidade e continuidade operacional de plataformas internas de publicação,
+            licenciamento e pagamento.
+          </p>
+
+          <div class="mb-4">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-2">Principais responsabilidades</p>
+            <ul class="text-sm text-gray-400 space-y-1.5">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-blue-400 text-xs mt-1"></i>
+                <span>Suporte L2 para aplicações web e sistemas distribuídos em produção</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-blue-400 text-xs mt-1"></i>
+                <span>Análise e troubleshooting usando logs, Kibana, SQL queries e dados operacionais</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-blue-400 text-xs mt-1"></i>
+                <span>Gestão de incidentes via Jira Service Management com foco em SLA e documentação</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-blue-400 text-xs mt-1"></i>
+                <span>Produção de análises de causa raiz (RCA) e identificação de melhorias sistêmicas</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">SQL</span>
+            <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">Kibana</span>
+            <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">Jira Service Management</span>
+            <span class="text-xs px-2.5 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">Troubleshooting</span>
+            <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">Production Support</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Venturus / Ingenico -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-1">Senior Development Analyst</h3>
+              <p class="text-blue-400 font-medium">Venturus (alocado na Ingenico)</p>
+            </div>
+            <span class="text-gray-500 text-sm">Jun 2023 - Jul 2024</span>
+          </div>
+
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Suporte técnico para todas as soluções criadas pela Ingenico, orientando desenvolvedores terceiros
+            e parceiros baseado em documentação de desenvolvimento, certificações e hardware. Responsável por
+            melhorias contínuas na documentação técnica.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">Technical Support</span>
+            <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">Documentation</span>
+            <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">Developer Relations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anheuser-Busch InBev -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-1">Senior Operations Analyst</h3>
+              <p class="text-blue-400 font-medium">Anheuser-Busch InBev (BEES Care)</p>
+            </div>
+            <span class="text-gray-500 text-sm">Out 2021 - Mar 2023</span>
+          </div>
+
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Líder técnico de equipe que cresceu de 3 para 9 pessoas. Responsável por suporte técnico,
+            levantamento de requisitos, treinamento de agentes e gestão de operações globais (México,
+            África do Sul, Tanzânia, Uganda e posteriormente todos os países do BEES Care).
+          </p>
+
+          <div class="mb-4">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-2">Destaques</p>
+            <ul class="text-sm text-gray-400 space-y-1.5">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-star text-yellow-400 text-xs mt-1"></i>
+                <span>Liderança técnica de equipe com crescimento de 200% (3 para 9 pessoas)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-star text-yellow-400 text-xs mt-1"></i>
+                <span>Operações globais em 5+ países</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-yellow-500/10 text-yellow-400 rounded-full border border-yellow-500/20">Python</span>
+            <span class="text-xs px-2.5 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">Java</span>
+            <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">SQL Server</span>
+            <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">Zendesk</span>
+            <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">Team Leadership</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CrossKnowledge -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-1">Senior Support Analyst</h3>
+              <p class="text-blue-400 font-medium">CrossKnowledge do Brasil</p>
+            </div>
+            <span class="text-gray-500 text-sm">Ago 2015 - Out 2021 <span class="text-gray-600">· 6 anos</span></span>
+          </div>
+
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Líder técnico de equipe de suporte com 3 pessoas, atuando em casos complexos dentro dos SLAs estabelecidos.
+            Ponte entre equipes técnicas (Produto, Desenvolvedores, QA, Integração) e Customer Success, com foco em
+            clientes de alta demanda.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">CKLS</span>
+            <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">SalesForce</span>
+            <span class="text-xs px-2.5 py-1 bg-yellow-500/10 text-yellow-400 rounded-full border border-yellow-500/20">Python</span>
+            <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">MongoDB</span>
+            <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grupo Educacional Expoente -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-1">Senior IT Consultant</h3>
+              <p class="text-blue-400 font-medium">Grupo Educacional Expoente</p>
+            </div>
+            <span class="text-gray-500 text-sm">Set 2014 - Abr 2015</span>
+          </div>
+
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Organização e desenvolvimento de planos lúdicos com professores e alunos usando robótica educacional.
+            Criação de projetos educacionais com Arduino e materiais recicláveis. Suporte a sistemas educacionais
+            (EUREKA, SGA) e reformulação de materiais de Robótica Educacional.
+          </p>
+
+          <div class="mb-4">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-2">Projeto Destaque</p>
+            <div class="bg-green-500/5 border border-green-500/10 rounded-lg p-3">
+              <p class="text-sm text-gray-300">
+                <i class="fas fa-robot text-green-400 mr-2"></i>
+                Desenvolvimento do projeto de <strong>Robótica Educacional</strong> usando Arduino e S4A,
+                implementado na rede pública de ensino de Itanhaém-SP
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">Arduino</span>
+            <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">Educational Tech</span>
+            <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">EUREKA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stefanini / Schincariol -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-1">Support Analyst</h3>
+              <p class="text-blue-400 font-medium">Stefanini (alocado na Schincariol)</p>
+            </div>
+            <span class="text-gray-500 text-sm">Abr 2012 - Ago 2014</span>
+          </div>
+
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Responsável pela infraestrutura de TI do PoD (Point of Distribution) Curitiba. Administração local,
+            projetos de melhoria e prevenção de problemas. Gestão de equipamentos PDA de vendas e impressoras
+            de nota fiscal, com relatórios semanais para a sede.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">SAP</span>
+            <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">WMS</span>
+            <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">TMS</span>
+            <span class="text-xs px-2.5 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">Infrastructure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ICI -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-1">Technical Support Specialist</h3>
+              <p class="text-blue-400 font-medium">ICI - Instituto Curitiba de Informática</p>
+            </div>
+            <span class="text-gray-500 text-sm">Jan 2010 - Jan 2012</span>
+          </div>
+
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Suporte em 4 localizações diferentes (Edifício Delta, Prefeitura, Sede ICI, Rua da Cidadania).
+            Suporte a usuários de equipamentos aprovados pela Prefeitura de Curitiba. Promovido a Instrutor Técnico
+            após 4 meses para treinar novos membros.
+          </p>
+
+          <div class="mb-3">
+            <span class="inline-flex items-center gap-2 text-xs px-3 py-1.5 bg-yellow-500/10 text-yellow-400 rounded-full border border-yellow-500/20">
+              <i class="fas fa-award"></i>
+              Promovido a Instrutor Técnico em 4 meses
+            </span>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">Windows</span>
+            <span class="text-xs px-2.5 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">Linux</span>
+            <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">SQL</span>
+            <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">Infrastructure</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── RECOMENDAÇÕES ──────────────────────────────────────── -->
+  <section class="py-24 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-3">Recomendações <span class="gradient-text">profissionais</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">O que dizem sobre mim</p>
+
+      <div class="grid gap-6">
+
+        <!-- Recomendação 1 -->
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-user text-blue-400 text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white">Jeffrey Baumann</h4>
+              <p class="text-sm text-gray-400">Principal Solution Consultant, Cornerstone OnDemand</p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed italic">
+            "Guilherme is a master of customer and client success. He is highly responsive and a great collaborator.
+            There have been many times that I needed last minute assistance on a problem and Guilherme stepped in
+            to find creative solutions. Guilherme is one of the best teammates that I have ever worked with!"
+          </p>
+        </div>
+
+        <!-- Recomendação 2 -->
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-user text-purple-400 text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white">Renata Aguilar</h4>
+              <p class="text-sm text-gray-400">Technical Program Manager, SpruceID</p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed italic">
+            "Working with Guilherme has been great. He was always very supportive when it came to troubleshoot
+            and identify unexpected behaviors. He is such a positive team player and always has the best attitude
+            no matter the situation. He has a maturity in Emotional Intelligence and is curious about innovation
+            and entrepreneurship."
+          </p>
+        </div>
+
+        <!-- Recomendação 3 -->
+        <div class="bg-white/3 border border-white/8 rounded-2xl p-6">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-user text-green-400 text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white">Gislene Oliveira</h4>
+              <p class="text-sm text-gray-400">Service Director, CrossKnowledge</p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed italic">
+            "Guilherme sempre foi muito profissional, no trato com os clientes (internos e externos), sempre muito
+            proativo e sem problemas em aceitar responsabilidades. Muito detalhista para ser o mais assertivo possível
+            e tinha resolução de problemas e tomada de decisão como pontos fortes. Além da cordialidade."
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-gray-600 text-sm">
+        © 2026 Guilherme Scandelari. Todos os direitos reservados.
+      </span>
+      <div class="flex items-center gap-5 text-gray-600">
+        <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+           class="hover:text-white transition-colors text-lg"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/guilherme-stanke-scandelari/?locale=pt-BR" target="_blank" rel="noopener noreferrer"
+           class="hover:text-blue-400 transition-colors text-lg"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/5541985154041" target="_blank" rel="noopener noreferrer"
+           class="hover:text-green-400 transition-colors text-lg"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:scandelari.guilherme@hotmail.com"
+           class="hover:text-white transition-colors text-lg"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
