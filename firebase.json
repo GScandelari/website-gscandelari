@@ -4,9 +4,8 @@
     "ignore": [
       "firebase.json",
       ".firebaserc",
-      ".claude/**",
       ".firebase/**",
-      ".kiro/**",
+      ".github/**",
       ".vscode/**",
       "**/.*",
       "**/node_modules/**",
@@ -40,16 +39,6 @@
       {
         "source": "/favicon.ico",
         "destination": "/favicon/favicon.ico",
-        "type": 301
-      },
-      {
-        "source": "/Clientes/:rest*",
-        "destination": "/dev-sites/Clientes/:rest*",
-        "type": 301
-      },
-      {
-        "source": "/Templates/:rest*",
-        "destination": "/dev-sites/Templates/:rest*",
         "type": 301
       }
     ]
