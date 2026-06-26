@@ -14,9 +14,21 @@ jobs:
       - name: Write version marker
         run: echo '{"sha":"${{ github.sha }}","run":${{ github.run_id }}}' > version.json
 
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - id: auth
+        uses: google-github-actions/auth@v2
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_WEBSITE_SCANDELARI }}
-          projectId: website-scandelari
-          channelId: live
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_WEBSITE_SCANDELARI }}
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Deploy to Firebase Hosting
+        shell: bash
+        run: |
+          firebase deploy --only hosting --project website-scandelari 2>&1 | tee /tmp/firebase.log
+          EXIT=${PIPESTATUS[0]}
+          if [ $EXIT -ne 0 ] && grep -q "current active version" /tmp/firebase.log; then
+            echo "Version already live (retry after premature close) — deploy succeeded."
+            exit 0
+          fi
+          exit $EXIT
