@@ -25,10 +25,11 @@ jobs:
       - name: Deploy to Firebase Hosting
         shell: bash
         run: |
-          firebase deploy --only hosting --project website-scandelari 2>&1 | tee /tmp/firebase.log
-          EXIT=${PIPESTATUS[0]}
-          if [ $EXIT -ne 0 ] && grep -q "current active version" /tmp/firebase.log; then
-            echo "Version already live (retry after premature close) — deploy succeeded."
+          firebase deploy --only hosting --project website-scandelari > /tmp/firebase.log 2>&1 || EXIT=$?
+          EXIT=${EXIT:-0}
+          cat /tmp/firebase.log
+          if [ "$EXIT" -ne 0 ] && grep -q "current active version" /tmp/firebase.log; then
+            echo "Version already live — deploy succeeded."
             exit 0
           fi
-          exit $EXIT
+          exit "$EXIT"
