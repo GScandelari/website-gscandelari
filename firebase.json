@@ -6,6 +6,7 @@
       "firebase.json",
       ".firebaserc",
       ".firebase/**",
+      ".git/**",
       ".github/**",
       ".vscode/**",
       "**/.*",
