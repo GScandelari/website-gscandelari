@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guilherme Scandelari | Desenvolvedor</title>
+  <title data-i18n="page.index.title">Guilherme Scandelari | Desenvolvedor</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
@@ -88,17 +88,21 @@
     <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
       <span class="font-semibold tracking-tight text-white">GScandelari</span>
       <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
-        <a href="#sobre"    class="nav-link hover:text-white transition-colors">Sobre</a>
-        <a href="#servicos" class="nav-link hover:text-white transition-colors">Serviços</a>
-        <a href="carreira.html" class="nav-link hover:text-white transition-colors">Carreira</a>
-        <a href="formacao.html" class="nav-link hover:text-white transition-colors">Formação</a>
-        <a href="#projetos" class="nav-link hover:text-white transition-colors">Projetos</a>
-        <a href="#contato"  class="nav-link hover:text-white transition-colors">Contato</a>
+        <a href="#sobre"    class="nav-link hover:text-white transition-colors" data-i18n="nav.about">Sobre</a>
+        <a href="#servicos" class="nav-link hover:text-white transition-colors" data-i18n="nav.services">Serviços</a>
+        <a href="carreira.html" class="nav-link hover:text-white transition-colors" data-i18n="nav.career">Carreira</a>
+        <a href="formacao.html" class="nav-link hover:text-white transition-colors" data-i18n="nav.education">Formação</a>
+        <a href="#projetos" class="nav-link hover:text-white transition-colors" data-i18n="nav.projects">Projetos</a>
+        <a href="#contato"  class="nav-link hover:text-white transition-colors" data-i18n="nav.contact">Contato</a>
       </div>
-      <a href="#contato"
-         class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium">
-        Fale comigo
-      </a>
+      <div class="flex items-center gap-3">
+        <button id="lang-toggle" class="text-xs font-semibold text-gray-400 hover:text-white transition-colors border border-white/10 hover:border-white/20 px-2.5 py-1 rounded-md">EN</button>
+        <a href="#contato"
+           class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium"
+           data-i18n="nav.cta">
+          Fale comigo
+        </a>
+      </div>
     </div>
   </nav>
 
@@ -109,14 +113,14 @@
 
         <!-- Text -->
         <div class="flex-1 animate-slide-up">
-          <span class="inline-block text-xs font-semibold tracking-widest text-blue-400 uppercase mb-4">
+          <span class="inline-block text-xs font-semibold tracking-widest text-blue-400 uppercase mb-4" data-i18n="hero.eyebrow">
             Engenheiro de Suporte de Software
           </span>
           <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
             Guilherme<br/>
             <span class="gradient-text">Scandelari</span>
           </h1>
-          <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
+          <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl" data-i18n="hero.bio">
             Profissional com mais de 14 anos de experiência em TI, especializado em análise de sistemas,
             suporte técnico e gestão de projetos. Atuando em ambientes corporativos globais com foco em
             troubleshooting, resolução de incidentes e otimização de processos.
@@ -164,22 +168,22 @@
   <!-- ── SOBRE ─────────────────────────────────────────────── -->
   <section id="sobre" class="py-24 border-t border-white/5">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-3">Sobre <span class="gradient-text">mim</span></h2>
-      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">Quem sou eu</p>
+      <h2 class="text-3xl font-bold mb-3"><span data-i18n="about.heading.before">Sobre </span><span class="gradient-text" data-i18n="about.heading.gradient">mim</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest" data-i18n="about.subtitle">Quem sou eu</p>
 
       <div class="grid lg:grid-cols-2 gap-12 items-start">
         <div class="space-y-4 text-gray-400 leading-relaxed">
-          <p>
+          <p data-i18n-html="about.p1">
             Atualmente trabalho como <strong class="text-white">Engenheiro de Suporte de Software na Wiley</strong>,
             focado em suporte técnico para aplicações empresariais, garantindo a estabilidade e continuidade
             operacional de plataformas críticas de negócio.
           </p>
-          <p>
+          <p data-i18n-html="about.p2">
             Minha trajetória profissional inclui passagens por empresas globais como <strong class="text-white">Anheuser-Busch InBev</strong>,
             <strong class="text-white">CrossKnowledge</strong> e <strong class="text-white">Venturus (Ingenico)</strong>,
             onde desenvolvi expertise em análise de incidentes complexos, troubleshooting avançado e liderança de equipes técnicas.
           </p>
-          <p>
+          <p data-i18n-html="about.p3">
             Apaixonado por tecnologia e educação, desenvolvi projetos inovadores como a solução de
             <strong class="text-white">Robótica Educacional</strong> usando Arduino e S4A, implementada em escolas públicas,
             e sistemas de automação para o setor de saúde.
@@ -190,19 +194,19 @@
         <div class="grid grid-cols-2 gap-4">
           <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
             <div class="text-4xl font-bold gradient-text mb-1">14+</div>
-            <div class="text-gray-400 text-sm">Anos de experiência</div>
+            <div class="text-gray-400 text-sm" data-i18n="about.stat.years">Anos de experiência</div>
           </div>
           <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
             <div class="text-4xl font-bold gradient-text mb-1">8</div>
-            <div class="text-gray-400 text-sm">Empresas globais</div>
+            <div class="text-gray-400 text-sm" data-i18n="about.stat.companies">Empresas globais</div>
           </div>
           <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
             <div class="text-4xl font-bold gradient-text mb-1">4</div>
-            <div class="text-gray-400 text-sm">Pós-graduações</div>
+            <div class="text-gray-400 text-sm" data-i18n="about.stat.degrees">Pós-graduações</div>
           </div>
           <div class="bg-white/3 border border-white/8 rounded-2xl p-6 card-hover">
             <div class="text-4xl font-bold gradient-text mb-1">50+</div>
-            <div class="text-gray-400 text-sm">Habilidades técnicas</div>
+            <div class="text-gray-400 text-sm" data-i18n="about.stat.skills">Habilidades técnicas</div>
           </div>
         </div>
       </div>
@@ -212,8 +216,8 @@
   <!-- ── SERVIÇOS ───────────────────────────────────────────── -->
   <section id="servicos" class="py-24 border-t border-white/5">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-3">Meus <span class="gradient-text">serviços</span></h2>
-      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">O que eu faço</p>
+      <h2 class="text-3xl font-bold mb-3"><span data-i18n="services.heading.before">Meus </span><span class="gradient-text" data-i18n="services.heading.gradient">serviços</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest" data-i18n="services.subtitle">O que eu faço</p>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -221,8 +225,8 @@
           <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
             <i class="fas fa-globe text-blue-400 text-xl"></i>
           </div>
-          <h3 class="font-semibold text-white mb-2">Dev Sites — Sites para HOF</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
+          <h3 class="font-semibold text-white mb-2" data-i18n="service1.title">Dev Sites — Sites para HOF</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="service1.desc">
             Desenvolvimento de sites profissionais para especialistas de alta performance,
             com uso de IA para agilizar entregas sem abrir mão da qualidade.
           </p>
@@ -232,8 +236,8 @@
           <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4">
             <i class="fas fa-fire text-orange-400 text-xl"></i>
           </div>
-          <h3 class="font-semibold text-white mb-2">Firebase & Backend</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
+          <h3 class="font-semibold text-white mb-2" data-i18n="service2.title">Firebase & Backend</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="service2.desc">
             Configuração e integração de soluções serverless, Firestore,
             autenticação e Cloud Functions.
           </p>
@@ -243,8 +247,8 @@
           <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-4">
             <i class="fas fa-server text-green-400 text-xl"></i>
           </div>
-          <h3 class="font-semibold text-white mb-2">APIs & Node.js</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
+          <h3 class="font-semibold text-white mb-2" data-i18n="service3.title">APIs & Node.js</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="service3.desc">
             Desenvolvimento de APIs REST robustas, integrações e microsserviços com
             Node.js e Express.
           </p>
@@ -254,8 +258,8 @@
           <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
             <i class="fab fa-python text-blue-300 text-xl"></i>
           </div>
-          <h3 class="font-semibold text-white mb-2">Automação & Python</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
+          <h3 class="font-semibold text-white mb-2" data-i18n="service4.title">Automação & Python</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="service4.desc">
             Scripts de automação, webscraping, processamento de dados e integrações
             com ferramentas de produtividade.
           </p>
@@ -265,8 +269,8 @@
           <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4">
             <i class="fas fa-mobile-alt text-purple-400 text-xl"></i>
           </div>
-          <h3 class="font-semibold text-white mb-2">Landing Pages</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
+          <h3 class="font-semibold text-white mb-2" data-i18n="service5.title">Landing Pages</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="service5.desc">
             Páginas de alta conversão, responsivas e otimizadas para SEO, com design
             moderno e carregamento rápido.
           </p>
@@ -276,8 +280,8 @@
           <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4">
             <i class="fas fa-database text-cyan-400 text-xl"></i>
           </div>
-          <h3 class="font-semibold text-white mb-2">Banco de Dados</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
+          <h3 class="font-semibold text-white mb-2" data-i18n="service6.title">Banco de Dados</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="service6.desc">
             Modelagem e administração de bancos relacionais e NoSQL. Firestore,
             PostgreSQL e MySQL.
           </p>
@@ -290,8 +294,8 @@
   <!-- ── PROJETOS ───────────────────────────────────────────── -->
   <section id="projetos" class="py-24 border-t border-white/5">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-3">Projetos <span class="gradient-text">recentes</span></h2>
-      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">Meu portfólio</p>
+      <h2 class="text-3xl font-bold mb-3"><span data-i18n="projects.heading.before">Projetos </span><span class="gradient-text" data-i18n="projects.heading.gradient">recentes</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest" data-i18n="projects.subtitle">Meu portfólio</p>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -308,7 +312,7 @@
               <span class="text-xs px-2 py-0.5 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">IA</span>
             </div>
             <h3 class="font-semibold text-white mb-2">Curva Mestra</h3>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            <p class="text-gray-400 text-sm leading-relaxed mb-4" data-i18n="project.curvamestra.desc">
               SaaS para gestão de inventário de clínicas de harmonização facial e corporal,
               desenvolvido com uso de IA. Sistema em fase de MVP.
             </p>
@@ -332,13 +336,13 @@
               <span class="text-xs px-2 py-0.5 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">IA</span>
             </div>
             <h3 class="font-semibold text-white mb-2">Dev Sites</h3>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            <p class="text-gray-400 text-sm leading-relaxed mb-4" data-i18n="project.devsites.desc">
               Desenvolvimento de sites para especialistas HOF, com uso de IA para
               agilizar entregas e elevar a qualidade do produto final.
             </p>
             <a href="https://github.com/GScandelari/website-gscandelari" target="_blank" rel="noopener noreferrer"
                class="text-xs text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
-              <i class="fab fa-github"></i> Ver no GitHub
+              <i class="fab fa-github"></i> <span data-i18n="project.devsites.github">Ver no GitHub</span>
             </a>
           </div>
         </div>
@@ -354,7 +358,7 @@
               <span class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">S4A</span>
             </div>
             <h3 class="font-semibold text-white mb-2">Robótica Educacional</h3>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            <p class="text-gray-400 text-sm leading-relaxed mb-4" data-i18n="project.robotica.desc">
               Projeto educacional usando Arduino e S4A para criar maquetes robotizadas.
               Implementado na rede pública de ensino de Itanhaém-SP.
             </p>
@@ -367,7 +371,7 @@
       <div class="text-center mt-10">
         <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 transition-all px-6 py-3 rounded-xl">
-          <i class="fab fa-github"></i> Ver todos os projetos no GitHub
+          <i class="fab fa-github"></i> <span data-i18n="projects.viewall">Ver todos os projetos no GitHub</span>
         </a>
       </div>
     </div>
@@ -376,14 +380,14 @@
   <!-- ── CONTATO ────────────────────────────────────────────── -->
   <section id="contato" class="py-24 border-t border-white/5">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-3">Entre em <span class="gradient-text">contato</span></h2>
-      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest">Vamos conversar</p>
+      <h2 class="text-3xl font-bold mb-3"><span data-i18n="contact.heading.before">Entre em </span><span class="gradient-text" data-i18n="contact.heading.gradient">contato</span></h2>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest" data-i18n="contact.subtitle">Vamos conversar</p>
 
       <div class="grid lg:grid-cols-2 gap-12">
 
         <!-- Left: CTA text -->
         <div>
-          <p class="text-gray-400 leading-relaxed mb-8">
+          <p class="text-gray-400 leading-relaxed mb-8" data-i18n="contact.p">
             Tem um projeto em mente ou quer conversar sobre oportunidades? Estou disponível
             para consultoria técnica, projetos freelance e oportunidades full-time.
             Vamos conversar sobre como posso ajudar seu negócio.
@@ -409,7 +413,7 @@
                 <i class="fas fa-envelope text-blue-400 text-xl"></i>
               </div>
               <div>
-                <div class="text-xs text-gray-500 mb-0.5">E-mail pessoal</div>
+                <div class="text-xs text-gray-500 mb-0.5" data-i18n="contact.email.personal">E-mail pessoal</div>
                 <div class="text-white font-medium text-sm">scandelari.guilherme@hotmail.com</div>
               </div>
               <i class="fas fa-arrow-right text-gray-600 group-hover:text-blue-400 transition-colors ml-auto text-sm"></i>
@@ -421,7 +425,7 @@
                 <i class="fas fa-briefcase text-purple-400 text-xl"></i>
               </div>
               <div>
-                <div class="text-xs text-gray-500 mb-0.5">E-mail profissional</div>
+                <div class="text-xs text-gray-500 mb-0.5" data-i18n="contact.email.professional">E-mail profissional</div>
                 <div class="text-white font-medium text-sm">scandelari.guilherme@curvamestra.com</div>
               </div>
               <i class="fas fa-arrow-right text-gray-600 group-hover:text-purple-400 transition-colors ml-auto text-sm"></i>
@@ -458,13 +462,13 @@
           </a>
 
           <div class="bg-white/3 border border-white/8 rounded-2xl p-6 mt-2">
-            <p class="text-gray-500 text-sm leading-relaxed">
+            <p class="text-gray-500 text-sm leading-relaxed" data-i18n="contact.available.text">
               Disponível para projetos freelance, consultoria e oportunidades full-time.
               Respondo em até 24 horas.
             </p>
             <div class="flex items-center gap-2 mt-4">
               <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span class="text-green-400 text-xs font-medium">Disponível para novos projetos</span>
+              <span class="text-green-400 text-xs font-medium" data-i18n="contact.available.badge">Disponível para novos projetos</span>
             </div>
           </div>
 
@@ -476,7 +480,7 @@
   <!-- ── FOOTER ─────────────────────────────────────────────── -->
   <footer class="border-t border-white/5 py-8">
     <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <span class="text-gray-600 text-sm">
+      <span class="text-gray-600 text-sm" data-i18n="footer.rights">
         © 2026 Guilherme Scandelari. Todos os direitos reservados. · OSS
       </span>
       <div class="flex items-center gap-5 text-gray-600">
@@ -492,5 +496,6 @@
     </div>
   </footer>
 
+  <script src="/js/i18n.js" defer></script>
 </body>
 </html>

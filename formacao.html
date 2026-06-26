@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formação & Habilidades | Guilherme Scandelari</title>
+  <title data-i18n="page.education.title">Formação & Habilidades | Guilherme Scandelari</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
@@ -87,17 +87,21 @@
         GScandelari
       </a>
       <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
-        <a href="index.html#sobre" class="nav-link hover:text-white transition-colors">Sobre</a>
-        <a href="index.html#servicos" class="nav-link hover:text-white transition-colors">Serviços</a>
-        <a href="carreira.html" class="nav-link hover:text-white transition-colors">Carreira</a>
-        <a href="formacao.html" class="nav-link hover:text-white transition-colors text-white">Formação</a>
-        <a href="index.html#projetos" class="nav-link hover:text-white transition-colors">Projetos</a>
-        <a href="index.html#contato" class="nav-link hover:text-white transition-colors">Contato</a>
+        <a href="index.html#sobre" class="nav-link hover:text-white transition-colors" data-i18n="nav.about">Sobre</a>
+        <a href="index.html#servicos" class="nav-link hover:text-white transition-colors" data-i18n="nav.services">Serviços</a>
+        <a href="carreira.html" class="nav-link hover:text-white transition-colors" data-i18n="nav.career">Carreira</a>
+        <a href="formacao.html" class="nav-link hover:text-white transition-colors text-white" data-i18n="nav.education">Formação</a>
+        <a href="index.html#projetos" class="nav-link hover:text-white transition-colors" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html#contato" class="nav-link hover:text-white transition-colors" data-i18n="nav.contact">Contato</a>
       </div>
-      <a href="index.html#contato"
-         class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium">
-        Fale comigo
-      </a>
+      <div class="flex items-center gap-3">
+        <button id="lang-toggle" class="text-xs font-semibold text-gray-400 hover:text-white transition-colors border border-white/10 hover:border-white/20 px-2.5 py-1 rounded-md">EN</button>
+        <a href="index.html#contato"
+           class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium"
+           data-i18n="nav.cta">
+          Fale comigo
+        </a>
+      </div>
     </div>
   </nav>
 
@@ -105,13 +109,13 @@
   <section class="pt-32 pb-16">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest text-blue-400 uppercase mb-4">
+        <span class="inline-block text-xs font-semibold tracking-widest text-blue-400 uppercase mb-4" data-i18n="education.hero.eyebrow">
           Educação & Competências
         </span>
         <h1 class="text-4xl lg:text-5xl font-bold mb-6">
-          Formação & <span class="gradient-text">Habilidades</span>
+          <span data-i18n="education.hero.heading.before">Formação & </span><span class="gradient-text" data-i18n="education.hero.heading.gradient">Habilidades</span>
         </h1>
-        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-i18n="education.hero.desc">
           Formação acadêmica sólida com 4 pós-graduações e bacharelado em Sistemas de Informação,
           complementada por mais de 50 habilidades técnicas desenvolvidas ao longo de 14 anos de carreira.
         </p>
@@ -122,7 +126,7 @@
   <!-- ── FORMAÇÃO ACADÊMICA ─────────────────────────────────── -->
   <section class="py-12">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-8">Formação <span class="gradient-text">Acadêmica</span></h2>
+      <h2 class="text-2xl font-bold mb-8"><span data-i18n="education.academic.heading.before">Formação </span><span class="gradient-text" data-i18n="education.academic.heading.gradient">Acadêmica</span></h2>
 
       <div class="grid lg:grid-cols-2 gap-6">
 
@@ -136,8 +140,8 @@
               <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium mb-2 inline-block">
                 Concluído
               </span>
-              <h3 class="font-semibold text-white text-lg mb-1">Pós-Graduação</h3>
-              <p class="text-blue-400 text-sm font-medium mb-1">Compliance e Governança Corporativa</p>
+              <h3 class="font-semibold text-white text-lg mb-1" data-i18n="education.degree1.type">Pós-Graduação</h3>
+              <p class="text-blue-400 text-sm font-medium mb-1" data-i18n="education.degree1.field">Compliance e Governança Corporativa</p>
               <p class="text-gray-500 text-sm">Universidade Federal do Paraná (UFPR)</p>
               <p class="text-gray-600 text-xs mt-2">Janeiro 2022 - 2025</p>
             </div>
@@ -154,10 +158,10 @@
               <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium mb-2 inline-block">
                 Concluído
               </span>
-              <h3 class="font-semibold text-white text-lg mb-1">Especialização</h3>
-              <p class="text-blue-400 text-sm font-medium mb-1">Gestão e Gerenciamento de Projetos</p>
+              <h3 class="font-semibold text-white text-lg mb-1" data-i18n="education.degree2.type">Especialização</h3>
+              <p class="text-blue-400 text-sm font-medium mb-1" data-i18n="education.degree2.field">Gestão e Gerenciamento de Projetos</p>
               <p class="text-gray-500 text-sm">Universidade Positivo</p>
-              <p class="text-gray-600 text-xs mt-2">Concluído em Dezembro 2019</p>
+              <p class="text-gray-600 text-xs mt-2" data-i18n="education.degree2.date">Concluído em Dezembro 2019</p>
             </div>
           </div>
         </div>
@@ -172,10 +176,10 @@
               <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium mb-2 inline-block">
                 Concluído
               </span>
-              <h3 class="font-semibold text-white text-lg mb-1">Especialização</h3>
-              <p class="text-blue-400 text-sm font-medium mb-1">Desenvolvimento de Jogos Digitais</p>
+              <h3 class="font-semibold text-white text-lg mb-1" data-i18n="education.degree3.type">Especialização</h3>
+              <p class="text-blue-400 text-sm font-medium mb-1" data-i18n="education.degree3.field">Desenvolvimento de Jogos Digitais</p>
               <p class="text-gray-500 text-sm">Universidade Positivo</p>
-              <p class="text-gray-600 text-xs mt-2">Concluído em Junho 2016</p>
+              <p class="text-gray-600 text-xs mt-2" data-i18n="education.degree3.date">Concluído em Junho 2016</p>
             </div>
           </div>
         </div>
@@ -190,8 +194,8 @@
               <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 font-medium mb-2 inline-block">
                 Concluído
               </span>
-              <h3 class="font-semibold text-white text-lg mb-1">Bacharelado</h3>
-              <p class="text-blue-400 text-sm font-medium mb-1">Sistemas de Informação</p>
+              <h3 class="font-semibold text-white text-lg mb-1" data-i18n="education.degree4.type">Bacharelado</h3>
+              <p class="text-blue-400 text-sm font-medium mb-1" data-i18n="education.degree4.field">Sistemas de Informação</p>
               <p class="text-gray-500 text-sm">Unidade de Ensino Superior Expoente (UNIEXP)</p>
               <p class="text-gray-600 text-xs mt-2">2008 - 2013</p>
             </div>
@@ -199,7 +203,7 @@
           <div class="mt-4 pt-4 border-t border-white/5">
             <p class="text-gray-400 text-sm leading-relaxed">
               <i class="fas fa-award text-yellow-400 mr-2"></i>
-              Projeto de Empresa Junior focado em Robótica Educacional e Sustentabilidade
+              <span data-i18n="education.junior.note">Projeto de Empresa Junior focado em Robótica Educacional e Sustentabilidade</span>
             </p>
           </div>
         </div>
@@ -231,14 +235,14 @@
   <!-- ── HABILIDADES TÉCNICAS ───────────────────────────────── -->
   <section class="py-12 border-t border-white/5 mt-12">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-3">Habilidades <span class="gradient-text">Técnicas</span></h2>
-      <p class="text-gray-500 mb-8 text-sm">Competências desenvolvidas ao longo de 14 anos de experiência</p>
+      <h2 class="text-2xl font-bold mb-3"><span data-i18n="skills.heading.before">Habilidades </span><span class="gradient-text" data-i18n="skills.heading.gradient">Técnicas</span></h2>
+      <p class="text-gray-500 mb-8 text-sm" data-i18n="skills.subtitle">Competências desenvolvidas ao longo de 14 anos de experiência</p>
 
       <!-- Linguagens & Tecnologias -->
       <div class="mb-10">
         <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
           <i class="fas fa-code text-blue-400"></i>
-          Linguagens & Tecnologias
+          <span data-i18n="skills.category.languages">Linguagens & Tecnologias</span>
         </h3>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-sm text-yellow-400 font-medium">Python</span>
@@ -255,7 +259,7 @@
       <div class="mb-10">
         <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
           <i class="fas fa-database text-cyan-400"></i>
-          Bancos de Dados
+          <span data-i18n="skills.category.databases">Bancos de Dados</span>
         </h3>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm text-blue-400 font-medium">SQL Server</span>
@@ -270,7 +274,7 @@
       <div class="mb-10">
         <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
           <i class="fas fa-tools text-purple-400"></i>
-          Ferramentas & Plataformas
+          <span data-i18n="skills.category.tools">Ferramentas & Plataformas</span>
         </h3>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-sm text-purple-400 font-medium">Jira</span>
@@ -289,7 +293,7 @@
       <div class="mb-10">
         <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
           <i class="fas fa-layer-group text-green-400"></i>
-          Sistemas & Frameworks
+          <span data-i18n="skills.category.systems">Sistemas & Frameworks</span>
         </h3>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-2 bg-orange-500/10 border border-orange-500/20 rounded-lg text-sm text-orange-400 font-medium">Firebase</span>
@@ -308,7 +312,7 @@
       <div class="mb-10">
         <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
           <i class="fas fa-project-diagram text-orange-400"></i>
-          Metodologias & Gestão
+          <span data-i18n="skills.category.methodologies">Metodologias & Gestão</span>
         </h3>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm text-blue-400 font-medium">SCRUM</span>
@@ -332,48 +336,48 @@
           <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
             <i class="fas fa-user-tie text-blue-400 mt-1"></i>
             <div>
-              <h4 class="text-white font-medium text-sm mb-1">Liderança de Equipe</h4>
-              <p class="text-gray-500 text-xs">Gestão e mentoria</p>
+              <h4 class="text-white font-medium text-sm mb-1" data-i18n="softskill1.title">Liderança de Equipe</h4>
+              <p class="text-gray-500 text-xs" data-i18n="softskill1.desc">Gestão e mentoria</p>
             </div>
           </div>
 
           <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
             <i class="fas fa-comments text-green-400 mt-1"></i>
             <div>
-              <h4 class="text-white font-medium text-sm mb-1">Comunicação</h4>
-              <p class="text-gray-500 text-xs">Técnica e interpessoal</p>
+              <h4 class="text-white font-medium text-sm mb-1" data-i18n="softskill2.title">Comunicação</h4>
+              <p class="text-gray-500 text-xs" data-i18n="softskill2.desc">Técnica e interpessoal</p>
             </div>
           </div>
 
           <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
             <i class="fas fa-search text-purple-400 mt-1"></i>
             <div>
-              <h4 class="text-white font-medium text-sm mb-1">Troubleshooting</h4>
-              <p class="text-gray-500 text-xs">Análise avançada</p>
+              <h4 class="text-white font-medium text-sm mb-1" data-i18n="softskill3.title">Troubleshooting</h4>
+              <p class="text-gray-500 text-xs" data-i18n="softskill3.desc">Análise avançada</p>
             </div>
           </div>
 
           <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
             <i class="fas fa-lightbulb text-yellow-400 mt-1"></i>
             <div>
-              <h4 class="text-white font-medium text-sm mb-1">Resolução de Problemas</h4>
-              <p class="text-gray-500 text-xs">Pensamento crítico</p>
+              <h4 class="text-white font-medium text-sm mb-1" data-i18n="softskill4.title">Resolução de Problemas</h4>
+              <p class="text-gray-500 text-xs" data-i18n="softskill4.desc">Pensamento crítico</p>
             </div>
           </div>
 
           <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
             <i class="fas fa-smile text-orange-400 mt-1"></i>
             <div>
-              <h4 class="text-white font-medium text-sm mb-1">Customer Success</h4>
-              <p class="text-gray-500 text-xs">Foco no cliente</p>
+              <h4 class="text-white font-medium text-sm mb-1" data-i18n="softskill5.title">Customer Success</h4>
+              <p class="text-gray-500 text-xs" data-i18n="softskill5.desc">Foco no cliente</p>
             </div>
           </div>
 
           <div class="bg-white/3 border border-white/8 rounded-xl p-4 flex items-start gap-3">
             <i class="fas fa-chalkboard-teacher text-cyan-400 mt-1"></i>
             <div>
-              <h4 class="text-white font-medium text-sm mb-1">Treinamento</h4>
-              <p class="text-gray-500 text-xs">Docência e capacitação</p>
+              <h4 class="text-white font-medium text-sm mb-1" data-i18n="softskill6.title">Treinamento</h4>
+              <p class="text-gray-500 text-xs" data-i18n="softskill6.desc">Docência e capacitação</p>
             </div>
           </div>
 
@@ -386,7 +390,7 @@
   <!-- ── IDIOMAS ────────────────────────────────────────────── -->
   <section class="py-12 border-t border-white/5 mt-12">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-8">Idiomas</h2>
+      <h2 class="text-2xl font-bold mb-8" data-i18n="languages.title">Idiomas</h2>
 
       <div class="grid sm:grid-cols-2 gap-6">
 
@@ -397,7 +401,7 @@
             </div>
             <div>
               <h3 class="font-semibold text-white text-lg">Português</h3>
-              <p class="text-gray-400 text-sm">Nativo</p>
+              <p class="text-gray-400 text-sm" data-i18n="languages.portuguese.level">Nativo</p>
             </div>
           </div>
           <div class="flex gap-1">
@@ -416,7 +420,7 @@
             </div>
             <div>
               <h3 class="font-semibold text-white text-lg">Inglês</h3>
-              <p class="text-gray-400 text-sm">Profissional</p>
+              <p class="text-gray-400 text-sm" data-i18n="languages.english.level">Profissional</p>
             </div>
           </div>
           <div class="flex gap-1">
@@ -435,7 +439,7 @@
   <!-- ── FOOTER ─────────────────────────────────────────────── -->
   <footer class="border-t border-white/5 py-8 mt-12">
     <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <span class="text-gray-600 text-sm">
+      <span class="text-gray-600 text-sm" data-i18n="footer.rights.short">
         © 2026 Guilherme Scandelari. Todos os direitos reservados.
       </span>
       <div class="flex items-center gap-5 text-gray-600">
@@ -451,5 +455,6 @@
     </div>
   </footer>
 
+  <script src="/js/i18n.js" defer></script>
 </body>
 </html>
