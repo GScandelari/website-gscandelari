@@ -2,6 +2,7 @@
   "page.index.title": "Guilherme Scandelari | Developer",
   "page.career.title": "Career | Guilherme Scandelari",
   "page.education.title": "Education & Skills | Guilherme Scandelari",
+  "page.devsites.title": "Developed Websites | Guilherme Scandelari",
 
   "nav.about": "About",
   "nav.services": "Services",
@@ -57,6 +58,7 @@
   "project.curvamestra.desc": "SaaS for inventory management of facial and body harmonization clinics, developed with AI. System in MVP phase.",
   "project.devsites.desc": "Website development for HOF specialists, using AI to speed up delivery and raise the quality of the final product.",
   "project.devsites.github": "View on GitHub",
+  "project.devsites.viewsites": "View developed sites",
   "project.robotica.desc": "Educational project using Arduino and S4A to create robotic models. Implemented in the public school network of Itanhaém-SP.",
   "projects.viewall": "View all projects on GitHub",
 
@@ -135,5 +137,31 @@
 
   "languages.title": "Languages",
   "languages.portuguese.level": "Native",
-  "languages.english.level": "Professional"
+  "languages.english.level": "Professional",
+
+  "devsites.hero.eyebrow": "Client Portfolio",
+  "devsites.hero.heading.before": "Developed ",
+  "devsites.hero.heading.gradient": "Websites",
+  "devsites.hero.desc": "Professional websites developed for high-performance specialists, using AI to speed up delivery without compromising quality.",
+  "devsites.visit": "Visit site",
+  "devsites.label.type": "Website type",
+  "devsites.label.area": "Field of work",
+  "devsites.label.tech": "Technology",
+  "devsites.label.features": "Features",
+
+  "devsites.client1.type": "Institutional landing page",
+  "devsites.client1.area": "Facial Aesthetics — Botox, lip filler, non-surgical rhinoplasty and biostimulators",
+  "devsites.client1.tech": "HTML5, Tailwind CSS, Font Awesome, and a JotForm-powered booking form",
+  "devsites.client1.feature1": "WhatsApp booking",
+  "devsites.client1.feature2": "Patient reviews",
+  "devsites.client1.feature3": "Integrated location",
+  "devsites.client1.feature4": "Responsive design",
+
+  "devsites.client2.type": "Personal & institutional landing page",
+  "devsites.client2.area": "Business Specialist for the Facial and Body Harmonization market",
+  "devsites.client2.tech": "Astro, with gradient animations and responsive design",
+  "devsites.client2.feature1": "Career timeline",
+  "devsites.client2.feature2": "Cases and recognitions",
+  "devsites.client2.feature3": "LinkedIn CTA",
+  "devsites.client2.feature4": "Elegant, responsive design"
 }
