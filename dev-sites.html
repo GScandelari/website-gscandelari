@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page.devsites.title">Sites Desenvolvidos | Guilherme Scandelari</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="/css/tailwind.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(59,130,246,.15);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #3B82F6;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Fixed background logo */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 800px;
+      height: 80%;
+      background-image: url('imgs/logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ensure content is above background */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans antialiased">
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-gray-950/80 backdrop-blur border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-semibold tracking-tight text-white hover:text-blue-400 transition-colors">
+        GScandelari
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
+        <a href="index.html#sobre" class="nav-link hover:text-white transition-colors" data-i18n="nav.about">Sobre</a>
+        <a href="index.html#servicos" class="nav-link hover:text-white transition-colors" data-i18n="nav.services">Serviços</a>
+        <a href="carreira.html" class="nav-link hover:text-white transition-colors" data-i18n="nav.career">Carreira</a>
+        <a href="formacao.html" class="nav-link hover:text-white transition-colors" data-i18n="nav.education">Formação</a>
+        <a href="index.html#projetos" class="nav-link hover:text-white transition-colors" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html#contato" class="nav-link hover:text-white transition-colors" data-i18n="nav.contact">Contato</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="lang-toggle" class="text-xs font-semibold text-gray-400 hover:text-white transition-colors border border-white/10 hover:border-white/20 px-2.5 py-1 rounded-md">EN</button>
+        <a href="index.html#contato"
+           class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium"
+           data-i18n="nav.cta">
+          Fale comigo
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <section class="pt-32 pb-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-4">
+        <span class="inline-block text-xs font-semibold tracking-widest text-blue-400 uppercase mb-4" data-i18n="devsites.hero.eyebrow">
+          Portfólio de Clientes
+        </span>
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+          <span data-i18n="devsites.hero.heading.before">Sites </span><span class="gradient-text" data-i18n="devsites.hero.heading.gradient">Desenvolvidos</span>
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-i18n="devsites.hero.desc">
+          Sites profissionais desenvolvidos para especialistas de alta performance,
+          com uso de IA para agilizar entregas sem abrir mão da qualidade.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLIENTES ───────────────────────────────────────────── -->
+  <section class="py-12">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col gap-8">
+
+        <!-- Dr. Douglas de Siqueira -->
+        <div class="grid md:grid-cols-2 bg-white/3 border border-white/8 rounded-2xl overflow-hidden card-hover">
+          <div class="relative min-h-[280px] flex items-center justify-center p-6 bg-gray-950/40">
+            <img src="imgs/dev-sites-douglas.jpg" alt="Dr. Douglas de Siqueira" class="w-full h-full object-contain rounded-lg ring-1 ring-white/10 shadow-lg" />
+          </div>
+          <div class="p-8 flex flex-col justify-center gap-5">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-1">Dr. Douglas de Siqueira</h3>
+              <a href="https://drdouglasdesiqueira.com.br/" target="_blank" rel="noopener noreferrer"
+                 class="text-sm text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1">
+                drdouglasdesiqueira.com.br <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1" data-i18n="devsites.label.type">Tipo de site</p>
+                <p class="text-gray-300" data-i18n="devsites.client1.type">Landing page institucional</p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1" data-i18n="devsites.label.area">Área de atuação</p>
+                <p class="text-gray-300" data-i18n="devsites.client1.area">Harmonização Orofacial — Botox, preenchimento labial, rinomodelação e bioestimuladores</p>
+              </div>
+              <div class="sm:col-span-2">
+                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1" data-i18n="devsites.label.tech">Tecnologia</p>
+                <p class="text-gray-300" data-i18n="devsites.client1.tech">HTML5, Tailwind CSS, Font Awesome e formulário de agendamento via JotForm</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xs text-gray-500 uppercase tracking-wider mb-2" data-i18n="devsites.label.features">Features</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20" data-i18n="devsites.client1.feature1">Agendamento via WhatsApp</span>
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20" data-i18n="devsites.client1.feature2">Avaliações de pacientes</span>
+                <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20" data-i18n="devsites.client1.feature3">Localização integrada</span>
+                <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20" data-i18n="devsites.client1.feature4">Design responsivo</span>
+              </div>
+            </div>
+
+            <a href="https://drdouglasdesiqueira.com.br/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium w-fit">
+              <span data-i18n="devsites.visit">Visitar site</span> <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Amanda Giraldi Scandelari -->
+        <div class="grid md:grid-cols-2 bg-white/3 border border-white/8 rounded-2xl overflow-hidden card-hover">
+          <div class="relative min-h-[280px] flex items-center justify-center p-6 bg-gray-950/40 md:order-2">
+            <img src="imgs/dev-sites-amanda.jpg" alt="Amanda Giraldi Scandelari" class="w-full h-full object-contain rounded-lg ring-1 ring-white/10 shadow-lg" />
+          </div>
+          <div class="p-8 flex flex-col justify-center gap-5 md:order-1">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-1">Amanda Giraldi Scandelari</h3>
+              <a href="https://amandagiraldi.com.br/" target="_blank" rel="noopener noreferrer"
+                 class="text-sm text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-1">
+                amandagiraldi.com.br <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1" data-i18n="devsites.label.type">Tipo de site</p>
+                <p class="text-gray-300" data-i18n="devsites.client2.type">Landing page pessoal e institucional</p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1" data-i18n="devsites.label.area">Área de atuação</p>
+                <p class="text-gray-300" data-i18n="devsites.client2.area">Especialista de Negócios para o mercado de Harmonização Facial e Corporal</p>
+              </div>
+              <div class="sm:col-span-2">
+                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1" data-i18n="devsites.label.tech">Tecnologia</p>
+                <p class="text-gray-300" data-i18n="devsites.client2.tech">Astro, com animações de gradiente e design responsivo</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xs text-gray-500 uppercase tracking-wider mb-2" data-i18n="devsites.label.features">Features</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2.5 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20" data-i18n="devsites.client2.feature1">Timeline de trajetória</span>
+                <span class="text-xs px-2.5 py-1 bg-yellow-500/10 text-yellow-400 rounded-full border border-yellow-500/20" data-i18n="devsites.client2.feature2">Cases e reconhecimentos</span>
+                <span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20" data-i18n="devsites.client2.feature3">CTA para LinkedIn</span>
+                <span class="text-xs px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20" data-i18n="devsites.client2.feature4">Design elegante e responsivo</span>
+              </div>
+            </div>
+
+            <a href="https://amandagiraldi.com.br/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm bg-purple-600 hover:bg-purple-500 transition-colors px-4 py-2 rounded-lg font-medium w-fit">
+              <span data-i18n="devsites.visit">Visitar site</span> <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-gray-600 text-sm" data-i18n="footer.rights.short">
+        © 2026 Guilherme Scandelari. Todos os direitos reservados.
+      </span>
+      <div class="flex items-center gap-5 text-gray-600">
+        <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+           class="hover:text-white transition-colors text-lg"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/guilherme-stanke-scandelari/?locale=pt-BR" target="_blank" rel="noopener noreferrer"
+           class="hover:text-blue-400 transition-colors text-lg"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/5541985154041" target="_blank" rel="noopener noreferrer"
+           class="hover:text-green-400 transition-colors text-lg"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:scandelari.guilherme@hotmail.com"
+           class="hover:text-white transition-colors text-lg"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js" defer></script>
+</body>
+</html>

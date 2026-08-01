@@ -2,6 +2,7 @@
   "page.index.title": "Guilherme Scandelari | Desenvolvedor",
   "page.career.title": "Carreira | Guilherme Scandelari",
   "page.education.title": "Formação & Habilidades | Guilherme Scandelari",
+  "page.devsites.title": "Sites Desenvolvidos | Guilherme Scandelari",
 
   "nav.about": "Sobre",
   "nav.services": "Serviços",
@@ -57,6 +58,7 @@
   "project.curvamestra.desc": "SaaS para gestão de inventário de clínicas de harmonização facial e corporal, desenvolvido com uso de IA. Sistema em fase de MVP.",
   "project.devsites.desc": "Desenvolvimento de sites para especialistas HOF, com uso de IA para agilizar entregas e elevar a qualidade do produto final.",
   "project.devsites.github": "Ver no GitHub",
+  "project.devsites.viewsites": "Ver sites criados",
   "project.robotica.desc": "Projeto educacional usando Arduino e S4A para criar maquetes robotizadas. Implementado na rede pública de ensino de Itanhaém-SP.",
   "projects.viewall": "Ver todos os projetos no GitHub",
 
@@ -135,5 +137,31 @@
 
   "languages.title": "Idiomas",
   "languages.portuguese.level": "Nativo",
-  "languages.english.level": "Profissional"
+  "languages.english.level": "Profissional",
+
+  "devsites.hero.eyebrow": "Portfólio de Clientes",
+  "devsites.hero.heading.before": "Sites ",
+  "devsites.hero.heading.gradient": "Desenvolvidos",
+  "devsites.hero.desc": "Sites profissionais desenvolvidos para especialistas de alta performance, com uso de IA para agilizar entregas sem abrir mão da qualidade.",
+  "devsites.visit": "Visitar site",
+  "devsites.label.type": "Tipo de site",
+  "devsites.label.area": "Área de atuação",
+  "devsites.label.tech": "Tecnologia",
+  "devsites.label.features": "Features",
+
+  "devsites.client1.type": "Landing page institucional",
+  "devsites.client1.area": "Harmonização Orofacial — Botox, preenchimento labial, rinomodelação e bioestimuladores",
+  "devsites.client1.tech": "HTML5, Tailwind CSS, Font Awesome e formulário de agendamento via JotForm",
+  "devsites.client1.feature1": "Agendamento via WhatsApp",
+  "devsites.client1.feature2": "Avaliações de pacientes",
+  "devsites.client1.feature3": "Localização integrada",
+  "devsites.client1.feature4": "Design responsivo",
+
+  "devsites.client2.type": "Landing page pessoal e institucional",
+  "devsites.client2.area": "Especialista de Negócios para o mercado de Harmonização Facial e Corporal",
+  "devsites.client2.tech": "Astro, com animações de gradiente e design responsivo",
+  "devsites.client2.feature1": "Timeline de trajetória",
+  "devsites.client2.feature2": "Cases e reconhecimentos",
+  "devsites.client2.feature3": "CTA para LinkedIn",
+  "devsites.client2.feature4": "Design elegante e responsivo"
 }

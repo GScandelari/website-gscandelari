@@ -4,6 +4,7 @@ module.exports = {
     './index.html',
     './carreira.html',
     './formacao.html',
+    './dev-sites.html',
     './404.html',
   ],
   theme: {
