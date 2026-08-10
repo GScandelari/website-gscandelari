@@ -60,6 +60,9 @@
   "project.devsites.github": "Ver no GitHub",
   "project.devsites.viewsites": "Ver sites criados",
   "project.robotica.desc": "Projeto educacional usando Arduino e S4A para criar maquetes robotizadas. Implementado na rede pública de ensino de Itanhaém-SP.",
+  "project.ecommerceapi.desc": "API REST de e-commerce em produção real, arquitetura de microsserviços (Orders/Payments/Notifications), com pagamento real via Stripe em modo teste, cancelamento/reembolso e testes automatizados.",
+  "project.ecommerceapi.github": "Ver no GitHub",
+  "project.ecommerceapi.demo": "Ver projeto no ar",
   "projects.viewall": "Ver todos os projetos no GitHub",
 
   "contact.heading.before": "Entre em ",
