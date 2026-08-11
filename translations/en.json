@@ -60,7 +60,7 @@
   "project.devsites.github": "View on GitHub",
   "project.devsites.viewsites": "View developed sites",
   "project.robotica.desc": "Educational project using Arduino and S4A to create robotic models. Implemented in the public school network of Itanhaém-SP.",
-  "project.ecommerceapi.desc": "REST e-commerce API in real production, microservices architecture (Orders/Payments/Notifications), with real Stripe payments in test mode, cancellation/refund and automated tests.",
+  "project.ecommerceapi.desc": "E-commerce API in real production, split into three microservices (Orders, Payments, Notifications). Charges real cards through Stripe, always in test mode, handles cancellation and refunds, and has automated tests covering the business rules.",
   "project.ecommerceapi.github": "View on GitHub",
   "project.ecommerceapi.demo": "View live project",
   "projects.viewall": "View all projects on GitHub",
