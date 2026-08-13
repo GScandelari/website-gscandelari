@@ -4,6 +4,15 @@
   "page.education.title": "Formação & Habilidades | Guilherme Scandelari",
   "page.devsites.title": "Sites Desenvolvidos | Guilherme Scandelari",
 
+  "meta.index.description": "Guilherme Scandelari, desenvolvedor freelance: sites profissionais, Firebase, Node.js e automação com IA para clínicas, especialistas e negócios em todo o Brasil.",
+  "meta.index.keywords": "desenvolvedor freelance, criação de sites, Firebase, Node.js, automação com IA, APIs REST, landing pages, desenvolvedor Curitiba",
+  "meta.career.description": "Trajetória profissional de Guilherme Scandelari: mais de 14 anos em TI, suporte técnico, análise de sistemas e liderança em empresas como AB InBev, CrossKnowledge e Wiley.",
+  "meta.career.keywords": "carreira TI, engenheiro de suporte, análise de sistemas, liderança técnica, troubleshooting, gestão de incidentes",
+  "meta.education.description": "Formação acadêmica e habilidades técnicas de Guilherme Scandelari: pós-graduações, graduação em Sistemas de Informação e mais de 50 competências técnicas.",
+  "meta.education.keywords": "formação acadêmica, pós-graduação, Sistemas de Informação, habilidades técnicas, certificações",
+  "meta.devsites.description": "Sites profissionais desenvolvidos por Guilherme Scandelari para especialistas de alta performance, com uso de IA para agilizar entregas sem abrir mão da qualidade.",
+  "meta.devsites.keywords": "desenvolvimento de sites, sites para clínicas, landing page profissional, Tailwind CSS, sites com IA",
+
   "nav.about": "Sobre",
   "nav.services": "Serviços",
   "nav.career": "Carreira",

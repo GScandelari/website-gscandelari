@@ -26,6 +26,11 @@ async function applyLang(lang) {
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
 
+  document.querySelectorAll('[data-i18n-content]').forEach(el => {
+    const key = el.dataset.i18nContent;
+    if (t[key] !== undefined) el.setAttribute('content', t[key]);
+  });
+
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
   localStorage.setItem('lang', lang);
   updateToggleButton(lang);
