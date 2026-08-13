@@ -1,0 +1,16 @@
+# Guilherme Scandelari
+
+> Desenvolvedor freelance especializado em sites profissionais, Firebase, Node.js, APIs e automação com IA. Mais de 14 anos de experiência em TI, suporte técnico e liderança de equipes em empresas globais.
+
+## Páginas
+
+- [Início](https://gscandelari.com.br/): Apresentação, serviços, projetos e contato de Guilherme Scandelari.
+- [Carreira](https://gscandelari.com.br/carreira): Trajetória profissional completa — empresas, cargos e responsabilidades ao longo de mais de 14 anos.
+- [Formação](https://gscandelari.com.br/formacao): Formação acadêmica (pós-graduações e graduação em Sistemas de Informação) e habilidades técnicas.
+- [Sites Desenvolvidos](https://gscandelari.com.br/dev-sites): Portfólio de sites desenvolvidos para clientes, com tecnologia e funcionalidades de cada projeto.
+
+## Contato
+
+- LinkedIn: https://www.linkedin.com/in/guilherme-stanke-scandelari/
+- GitHub: https://github.com/GScandelari
+- Email: scandelari.guilherme@hotmail.com

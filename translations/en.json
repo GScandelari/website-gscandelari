@@ -4,6 +4,15 @@
   "page.education.title": "Education & Skills | Guilherme Scandelari",
   "page.devsites.title": "Developed Websites | Guilherme Scandelari",
 
+  "meta.index.description": "Guilherme Scandelari, freelance developer: professional websites, Firebase, Node.js, and AI-powered automation for clinics, specialists, and businesses across Brazil.",
+  "meta.index.keywords": "freelance developer, website development, Firebase, Node.js, AI automation, REST APIs, landing pages, Curitiba developer",
+  "meta.career.description": "Guilherme Scandelari's professional journey: over 14 years in IT, technical support, systems analysis, and leadership at companies like AB InBev, CrossKnowledge, and Wiley.",
+  "meta.career.keywords": "IT career, support engineer, systems analysis, technical leadership, troubleshooting, incident management",
+  "meta.education.description": "Guilherme Scandelari's academic background and technical skills: postgraduate degrees, a bachelor's in Information Systems, and over 50 technical competencies.",
+  "meta.education.keywords": "academic background, postgraduate degree, Information Systems, technical skills, certifications",
+  "meta.devsites.description": "Professional websites developed by Guilherme Scandelari for high-performance specialists, using AI to speed up delivery without compromising quality.",
+  "meta.devsites.keywords": "website development, websites for clinics, professional landing page, Tailwind CSS, AI-built websites",
+
   "nav.about": "About",
   "nav.services": "Services",
   "nav.career": "Career",
