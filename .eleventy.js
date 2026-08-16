@@ -31,18 +31,25 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("scripts/**");
   eleventyConfig.ignores.add("node_modules/**");
 
-  eleventyConfig.addFilter("dateDisplay", (date) => {
-    return new Date(date).toLocaleDateString("pt-BR", {
+  eleventyConfig.addFilter("dateDisplay", (date, locale = "pt-BR") => {
+    return new Date(date).toLocaleDateString(locale, {
       year: "numeric",
       month: "long",
       day: "numeric",
+      timeZone: "UTC",
     });
   });
 
-  eleventyConfig.addFilter("readingTime", (content) => {
+  eleventyConfig.addFilter("readingMinutes", (content) => {
     const words = String(content || "").split(/\s+/).filter(Boolean).length;
-    const minutes = Math.max(1, Math.ceil(words / 200));
-    return `${minutes} min de leitura`;
+    return Math.max(1, Math.ceil(words / 200));
+  });
+
+  eleventyConfig.addFilter("filterByTag", (posts, tag) => {
+    if (!tag) return posts || [];
+    return (posts || []).filter((post) =>
+      (post.data.tags || []).includes(tag)
+    );
   });
 
   eleventyConfig.addFilter("excerpt", (description, limit = 160) => {

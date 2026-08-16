@@ -1,0 +1,12 @@
+---
+layout: blog-index.njk
+pagination:
+  data: collections.postTags
+  size: 1
+  alias: tag
+permalink: /blog/tags/{{ tag }}/
+eleventyComputed:
+  title: "Blog — {{ tag }}"
+  description: "Artigos com a tag {{ tag }}."
+  filterTag: "{{ tag }}"
+---

@@ -24,7 +24,7 @@ pageType: post
       <div class="flex items-center gap-2 mb-4 flex-wrap">
         {% for tag in tags %}
           {% if tag != 'posts' %}
-          <span class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">{{ tag }}</span>
+          <a href="/blog/tags/{{ tag }}/" class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 hover:border-blue-500/40 transition-colors">{{ tag }}</a>
           {% endif %}
         {% endfor %}
       </div>
@@ -33,9 +33,12 @@ pageType: post
       <h1 class="text-3xl lg:text-4xl font-bold leading-tight mb-4">{{ title }}</h1>
 
       <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-        <time datetime="{{ page.date | isoDate }}">{{ page.date | dateDisplay }}</time>
+        <time datetime="{{ page.date | isoDate }}" data-i18n-date>{{ page.date | dateDisplay }}</time>
         <span aria-hidden="true">·</span>
-        <span>{{ content | readingTime }}</span>
+        <span>
+          <span data-reading-minutes>{{ content | readingMinutes }}</span>
+          <span data-i18n="blog.reading.time.label">min de leitura</span>
+        </span>
       </div>
     </header>
 
@@ -101,12 +104,20 @@ pageType: post
     const btn = document.getElementById('copy-link');
     if (!btn) return;
     const label = btn.querySelector('[data-i18n="blog.share.copy"]') || btn;
-    const original = label.textContent;
+
     btn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(window.location.href);
-        label.textContent = document.documentElement.lang === 'en' ? 'Link copied!' : 'Link copiado!';
-        setTimeout(() => { label.textContent = original; }, 2000);
+        const copied = window.i18n
+          ? await window.i18n.t('blog.share.copied')
+          : (document.documentElement.lang || '').startsWith('en') ? 'Link copied!' : 'Link copiado!';
+        label.textContent = copied || 'Link copiado!';
+        setTimeout(async () => {
+          const restore = window.i18n
+            ? await window.i18n.t('blog.share.copy')
+            : (document.documentElement.lang || '').startsWith('en') ? 'Copy link' : 'Copiar link';
+          label.textContent = restore || 'Copiar link';
+        }, 2000);
       } catch (_) {}
     });
   });

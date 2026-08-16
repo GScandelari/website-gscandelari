@@ -22,9 +22,12 @@ layout: base.njk
   <div class="max-w-5xl mx-auto px-6">
     <div class="flex flex-wrap items-center gap-2">
       <span class="text-xs text-gray-500 uppercase tracking-widest mr-2" data-i18n="blog.tags.filter">Filtrar por tag</span>
-      <button type="button" class="tag-filter-btn active text-xs px-3 py-1 rounded-full border border-white/10 text-gray-300 hover:border-white/20 transition-colors" data-tag="all" data-i18n="blog.tags.all">Todos</button>
+      <a href="/blog/"
+         class="tag-filter-btn text-xs px-3 py-1 rounded-full border border-white/10 text-gray-300 hover:border-white/20 transition-colors{% if not filterTag %} active{% endif %}"
+         data-i18n="blog.tags.all">Todos</a>
       {% for tag in collections.postTags %}
-      <button type="button" class="tag-filter-btn text-xs px-3 py-1 rounded-full border border-white/10 text-gray-300 hover:border-white/20 transition-colors" data-tag="{{ tag }}">{{ tag }}</button>
+      <a href="/blog/tags/{{ tag }}/"
+         class="tag-filter-btn text-xs px-3 py-1 rounded-full border border-white/10 text-gray-300 hover:border-white/20 transition-colors{% if filterTag == tag %} active{% endif %}">{{ tag }}</a>
       {% endfor %}
     </div>
   </div>
@@ -33,18 +36,31 @@ layout: base.njk
 
 <section class="pb-24">
   <div class="max-w-5xl mx-auto px-6">
+    {% if filterTag %}
+    <p class="text-sm text-gray-500 mb-6">
+      <span data-i18n="blog.tags.filter">Filtrar por tag</span>:
+      <span class="text-blue-400">{{ filterTag }}</span>
+    </p>
+    {% endif %}
+
+    {% if filterTag %}
+      {% set postList = collections.posts | filterByTag(filterTag) %}
+    {% else %}
+      {% set postList = posts %}
+    {% endif %}
+
     <div id="posts-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {% for post in posts %}
-      <article class="post-card group bg-white/3 border border-white/8 rounded-2xl overflow-hidden card-hover" data-tags="{{ (post.data.tags or []) | join(',') }}">
+      {% for post in postList %}
+      <article class="post-card group bg-white/3 border border-white/8 rounded-2xl overflow-hidden card-hover">
         <div class="p-5 flex flex-col h-full">
           <div class="flex items-center gap-2 mb-3 flex-wrap">
             {% for tag in post.data.tags %}
               {% if tag != 'posts' %}
-              <span class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">{{ tag }}</span>
+              <a href="/blog/tags/{{ tag }}/" class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 hover:border-blue-500/40 transition-colors">{{ tag }}</a>
               {% endif %}
             {% endfor %}
           </div>
-          <time class="text-xs text-gray-500 mb-2" datetime="{{ post.date | isoDate }}">{{ post.date | dateDisplay }}</time>
+          <time class="text-xs text-gray-500 mb-2" datetime="{{ post.date | isoDate }}" data-i18n-date>{{ post.date | dateDisplay("pt-BR") }}</time>
           <h2 class="font-semibold text-white mb-2 text-lg leading-snug">
             <a href="{{ post.url }}" class="hover:text-blue-400 transition-colors">{{ post.data.title }}</a>
           </h2>
@@ -61,7 +77,7 @@ layout: base.njk
       {% endfor %}
     </div>
 
-    {% if pagination and pagination.pages.length > 1 %}
+    {% if pagination and pagination.pages.length > 1 and not filterTag %}
     <nav class="flex items-center justify-center gap-4 mt-12" aria-label="Paginação">
       {% if pagination.href.previous %}
       <a href="{{ pagination.href.previous }}" class="text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 transition-all px-4 py-2 rounded-xl">← Anterior</a>
@@ -74,23 +90,3 @@ layout: base.njk
     {% endif %}
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.tag-filter-btn');
-    const cards = document.querySelectorAll('.post-card');
-    if (!buttons.length) return;
-
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const tag = btn.dataset.tag;
-        buttons.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        cards.forEach((card) => {
-          const tags = (card.dataset.tags || '').split(',').filter(Boolean);
-          card.hidden = !(tag === 'all' || tags.includes(tag));
-        });
-      });
-    });
-  });
-</script>

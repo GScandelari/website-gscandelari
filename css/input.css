@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
+/* Templates do blog precisam entrar no scan: build:css roda antes do Eleventy. */
 @source "../**/*.html";
+@source "../_includes/**/*.njk";
+@source "../blog/**/*.{njk,md}";
 
 @theme {
   --color-brand: #3B82F6;

@@ -17,6 +17,39 @@ function slugify(text) {
     .replace(/^-+|-+$/g, "");
 }
 
+function normalizePermalink(value) {
+  return String(value || "")
+    .trim()
+    .replace(/^['"]|['"]$/g, "")
+    .replace(/\/+$/, "")
+    .toLowerCase();
+}
+
+function findPermalinkConflict(postsDir, slug) {
+  if (!fs.existsSync(postsDir)) return null;
+
+  const target = normalizePermalink(`/blog/${slug}`);
+  const files = fs.readdirSync(postsDir).filter((f) => f.endsWith(".md"));
+
+  for (const file of files) {
+    const full = path.join(postsDir, file);
+    const text = fs.readFileSync(full, "utf8");
+    const match = text.match(/^permalink:\s*(.+)$/m);
+    if (match && normalizePermalink(match[1]) === target) {
+      return file;
+    }
+
+    // Também bloqueia arquivos cujo slug (após a data) já coincide
+    const base = file.replace(/\.md$/, "");
+    const withoutDate = base.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+    if (withoutDate === slug) {
+      return file;
+    }
+  }
+
+  return null;
+}
+
 const now = new Date();
 const yyyy = now.getFullYear();
 const mm = String(now.getMonth() + 1).padStart(2, "0");
@@ -33,6 +66,14 @@ if (!fs.existsSync(postsDir)) {
 
 if (fs.existsSync(filepath)) {
   console.error(`Arquivo já existe: ${filepath}`);
+  process.exit(1);
+}
+
+const conflict = findPermalinkConflict(postsDir, slug);
+if (conflict) {
+  console.error(
+    `Permalink /blog/${slug}/ já está em uso por ${conflict}. Escolha outro título ou ajuste o permalink manualmente.`
+  );
   process.exit(1);
 }
 
