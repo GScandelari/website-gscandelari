@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://gscandelari.com.br/sitemap.xml
+
+# RSS Feed
+# https://gscandelari.com.br/blog/feed.xml

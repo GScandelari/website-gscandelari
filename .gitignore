@@ -1,5 +1,6 @@
 node_modules/
 .firebase/
 dist/
+_site/
 *.env
 *.local

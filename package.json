@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
-    "watch:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
+    "watch:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch",
+    "build:site": "eleventy",
+    "build": "npm run build:css && npm run build:site",
+    "serve": "eleventy --serve",
+    "new:post": "node scripts/new-post.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@tailwindcss/cli": "^4.2.2",
     "tailwindcss": "^4.2.2"
   }

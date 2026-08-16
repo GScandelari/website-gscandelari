@@ -1,0 +1,10 @@
+---
+layout: blog-index.njk
+title: Blog
+description: Artigos, estudos e materiais sobre desenvolvimento, TI e tecnologia.
+pagination:
+  data: collections.posts
+  size: 10
+  alias: posts
+permalink: /blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}
+---

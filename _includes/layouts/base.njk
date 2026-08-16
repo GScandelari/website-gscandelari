@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} | Guilherme Scandelari</title>
+  <meta name="description" content="{{ description or site.description }}" />
+  {% if keywords %}<meta name="keywords" content="{{ keywords }}" />{% endif %}
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }} | Guilherme Scandelari" />
+  <meta property="og:description" content="{{ description or site.description }}" />
+  <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}" />
+  <meta property="og:type" content="{% if pageType == 'post' %}article{% else %}website{% endif %}" />
+  <meta property="og:image" content="{{ ogImage or (site.url + '/imgs/logo.png') }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G1Q9SPLJQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1G1Q9SPLJQ');
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Blog" href="/blog/feed.xml">
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="/css/tailwind.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(59,130,246,.15);
+    }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #3B82F6;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 800px;
+      height: 80%;
+      background-image: url('/imgs/logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+    body > * { position: relative; z-index: 1; }
+
+    .post-content {
+      color: #9ca3af;
+      line-height: 1.8;
+      font-size: 1.0625rem;
+    }
+    .post-content h2 {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+    }
+    .post-content h3 {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 2rem 0 0.75rem;
+    }
+    .post-content p { margin-bottom: 1.25rem; }
+    .post-content a {
+      color: #60a5fa;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .post-content a:hover { color: #93c5fd; }
+    .post-content ul, .post-content ol { margin: 0 0 1.25rem 1.25rem; }
+    .post-content li { margin-bottom: 0.5rem; }
+    .post-content ul { list-style: disc; }
+    .post-content ol { list-style: decimal; }
+    .post-content blockquote {
+      border-left: 3px solid #3B82F6;
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      color: #d1d5db;
+      font-style: italic;
+    }
+    .post-content pre {
+      margin: 1.5rem 0;
+      border-radius: 0.75rem;
+      overflow-x: auto;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .post-content code { font-size: 0.875em; }
+    .post-content :not(pre) > code {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 0.375rem;
+      padding: 0.125rem 0.375rem;
+      color: #e5e7eb;
+    }
+    .post-content img {
+      border-radius: 0.75rem;
+      margin: 1.5rem 0;
+      max-width: 100%;
+    }
+    .post-content hr {
+      border: 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 2.5rem 0;
+    }
+    .tag-filter-btn.active {
+      background: rgba(59,130,246,0.2);
+      border-color: rgba(59,130,246,0.4);
+      color: #60a5fa;
+    }
+    .post-card[hidden] { display: none !important; }
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans antialiased">
+
+  <nav class="fixed top-0 inset-x-0 z-50 bg-gray-950/80 backdrop-blur border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="font-semibold tracking-tight text-white hover:text-blue-400 transition-colors">
+        GScandelari
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-gray-400">
+        <a href="/#sobre" class="nav-link hover:text-white transition-colors" data-i18n="nav.about">Sobre</a>
+        <a href="/#servicos" class="nav-link hover:text-white transition-colors" data-i18n="nav.services">Serviços</a>
+        <a href="/carreira" class="nav-link hover:text-white transition-colors" data-i18n="nav.career">Carreira</a>
+        <a href="/formacao" class="nav-link hover:text-white transition-colors" data-i18n="nav.education">Formação</a>
+        <a href="/#projetos" class="nav-link hover:text-white transition-colors" data-i18n="nav.projects">Projetos</a>
+        <a href="/blog/" class="nav-link hover:text-white transition-colors{% if page.url and '/blog' in page.url %} text-white{% endif %}" data-i18n="nav.blog">Blog</a>
+        <a href="/#contato" class="nav-link hover:text-white transition-colors" data-i18n="nav.contact">Contato</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="lang-toggle" class="text-xs font-semibold text-gray-400 hover:text-white transition-colors border border-white/10 hover:border-white/20 px-2.5 py-1 rounded-md">EN</button>
+        <a href="/#contato"
+           class="text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-4 py-2 rounded-lg font-medium"
+           data-i18n="nav.cta">
+          Fale comigo
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  {{ content | safe }}
+
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-gray-600 text-sm" data-i18n="footer.rights.short">
+        © 2026 Guilherme Scandelari. Todos os direitos reservados.
+      </span>
+      <div class="flex items-center gap-5 text-gray-600">
+        <a href="https://github.com/GScandelari" target="_blank" rel="noopener noreferrer"
+           class="hover:text-white transition-colors text-lg"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/guilherme-stanke-scandelari/?locale=pt-BR" target="_blank" rel="noopener noreferrer"
+           class="hover:text-blue-400 transition-colors text-lg"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/5541985154041" target="_blank" rel="noopener noreferrer"
+           class="hover:text-green-400 transition-colors text-lg"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:scandelari.guilherme@hotmail.com"
+           class="hover:text-white transition-colors text-lg"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js" defer></script>
+</body>
+</html>

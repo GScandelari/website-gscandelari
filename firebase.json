@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "website-scandelari",
-    "public": ".",
+    "public": "_site",
     "ignore": [
       "firebase.json",
       ".firebaserc",

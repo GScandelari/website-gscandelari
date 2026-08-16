@@ -1,0 +1,113 @@
+---
+layout: base.njk
+pageType: post
+---
+{# Com posts ordenados do mais recente ao mais antigo:
+   getNextCollectionItem = artigo mais antigo (anterior na timeline)
+   getPreviousCollectionItem = artigo mais novo #}
+{% set olderPost = collections.posts | getNextCollectionItem %}
+{% set newerPost = collections.posts | getPreviousCollectionItem %}
+
+<article class="pt-28 pb-24">
+  <div class="max-w-3xl mx-auto px-6">
+
+    <nav class="text-sm text-gray-500 mb-8 flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-gray-400">{{ title }}</span>
+    </nav>
+
+    <header class="mb-10">
+      {% if tags and tags.length %}
+      <div class="flex items-center gap-2 mb-4 flex-wrap">
+        {% for tag in tags %}
+          {% if tag != 'posts' %}
+          <span class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">{{ tag }}</span>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <h1 class="text-3xl lg:text-4xl font-bold leading-tight mb-4">{{ title }}</h1>
+
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+        <time datetime="{{ page.date | isoDate }}">{{ page.date | dateDisplay }}</time>
+        <span aria-hidden="true">·</span>
+        <span>{{ content | readingTime }}</span>
+      </div>
+    </header>
+
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-white/5">
+      <p class="text-sm text-gray-500 mb-4" data-i18n="blog.share">Compartilhar</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absoluteUrl(site.url) | urlencode }}"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-sm bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 hover:border-blue-500/40 transition-all px-4 py-2 rounded-xl text-blue-400">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://twitter.com/intent/tweet?url={{ page.url | absoluteUrl(site.url) | urlencode }}&text={{ title | urlencode }}"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all px-4 py-2 rounded-xl">
+          <i class="fab fa-x-twitter"></i> X
+        </a>
+        <button type="button" id="copy-link"
+                class="inline-flex items-center gap-2 text-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all px-4 py-2 rounded-xl">
+          <i class="fas fa-link"></i> <span data-i18n="blog.share.copy">Copiar link</span>
+        </button>
+      </div>
+    </div>
+
+    {% if olderPost or newerPost %}
+    <nav class="mt-12 grid sm:grid-cols-2 gap-4">
+      {% if olderPost %}
+      <a href="{{ olderPost.url }}" class="bg-white/3 border border-white/8 hover:border-white/15 transition-all rounded-xl p-5 group">
+        <div class="text-xs text-gray-500 mb-1" data-i18n="blog.nav.previous">Artigo anterior</div>
+        <div class="text-white font-medium group-hover:text-blue-400 transition-colors">{{ olderPost.data.title }}</div>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
+      {% if newerPost %}
+      <a href="{{ newerPost.url }}" class="bg-white/3 border border-white/8 hover:border-white/15 transition-all rounded-xl p-5 group text-right">
+        <div class="text-xs text-gray-500 mb-1" data-i18n="blog.nav.next">Próximo artigo</div>
+        <div class="text-white font-medium group-hover:text-blue-400 transition-colors">{{ newerPost.data.title }}</div>
+      </a>
+      {% endif %}
+    </nav>
+    {% endif %}
+
+    <div class="mt-12 bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20 rounded-2xl p-6 sm:p-8 text-center">
+      <p class="text-gray-300 mb-4" data-i18n="contact.p">
+        Tem um projeto em mente ou quer conversar sobre oportunidades? Estou disponível para consultoria técnica, projetos freelance e oportunidades full-time.
+      </p>
+      <a href="/#contato"
+         class="inline-flex items-center gap-2 text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-5 py-2.5 rounded-lg font-medium"
+         data-i18n="nav.cta">
+        Fale comigo
+      </a>
+    </div>
+
+  </div>
+</article>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('copy-link');
+    if (!btn) return;
+    const label = btn.querySelector('[data-i18n="blog.share.copy"]') || btn;
+    const original = label.textContent;
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        label.textContent = document.documentElement.lang === 'en' ? 'Link copied!' : 'Link copiado!';
+        setTimeout(() => { label.textContent = original; }, 2000);
+      } catch (_) {}
+    });
+  });
+</script>
