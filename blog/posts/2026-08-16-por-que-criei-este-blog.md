@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Por que criei este blog"
-description: "A motivação por trás deste espaço: registrar estudos, compartilhar o que aprendo em TI e documentar a jornada profissional."
+description: "Um canto pra organizar o que estudo, o que construo e o que observo no dia a dia em tecnologia."
 date: 2026-08-16
 tags:
   - blog
@@ -10,32 +10,31 @@ lang: pt
 permalink: /blog/por-que-criei-este-blog/
 ---
 
-Há algum tempo eu sentia falta de um lugar próprio para organizar o que estudo, o que construo e o que observo no dia a dia em tecnologia. Este blog nasce exatamente para isso.
+Fazia tempo que eu queria um lugar só meu pra juntar o que estudo, o que construo e o que fico observando no trabalho. Caderno solto não aguentava mais. Então abri este blog.
 
-## O que você encontra aqui
+## O que entra aqui
 
-Escrevo sobre desenvolvimento, suporte, infraestrutura e os temas que aparecem na minha rotina profissional — com foco em clareza e utilidade prática.
+Vou escrever sobre o que aparece na minha rotina: desenvolvimento, suporte, infraestrutura. Sem enrolação — o que funcionou, o que não funcionou, e por quê.
 
-Alguns exemplos do que pretendo publicar:
+Coisas que devem aparecer com frequência:
 
-- notas de estudo e resumos técnicos;
-- lições aprendidas em projetos reais;
-- decisões de arquitetura e trade-offs;
-- ferramentas, processos e automações que uso no trabalho.
+- notas de estudo e resumos técnicos
+- decisões de projeto e os trade-offs que eu aceitaria de novo (ou não)
+- ferramentas e automações que uso de verdade no dia a dia
 
 ## Por que agora
 
-Depois de mais de 14 anos em TI, percebi que muita coisa boa fica só na cabeça ou em anotações soltas. Escrever força a sintetizar melhor — e, de quebra, pode ajudar outras pessoas que estão no mesmo caminho.
+Depois de mais de 14 anos em TI, muita coisa boa ficou presa na cabeça ou em anotações que ninguém mais abre. Escrever obriga a cortar o excesso. Se isso ajudar alguém no mesmo caminho, ótimo. Se não, pelo menos eu paro de perder o rastro do que aprendi.
 
-Também quero aproximar o portfólio do que realmente faço: não só listar projetos, mas mostrar o raciocínio por trás deles.
+Quero também que o portfólio pare de parecer só uma vitrine. Projeto sem o raciocínio por trás conta metade da história.
 
-## Como este blog funciona
+## Como isso roda
 
-Os posts são escritos em Markdown e publicados como HTML estático. Sem CMS complexo: o conteúdo vive no mesmo repositório do site, versionado no Git.
+Os posts saem em Markdown e viram HTML estático. Sem CMS. O conteúdo mora no mesmo repositório do site e vai pro Git junto com o resto.
 
 ```js
 // Exemplo: criar um novo post
 // npm run new:post -- "Título do Artigo"
 ```
 
-Se quiser conversar sobre algum tema, projeto ou oportunidade, use a [seção de contato](/#contato).
+Se quiser bater um papo sobre algum tema, projeto ou oportunidade, tem a [seção de contato](/#contato).
