@@ -9,35 +9,51 @@ pageType: post
 {% set newerPost = collections.posts | getPreviousCollectionItem %}
 
 <article class="pt-28 pb-24">
-  <div class="max-w-3xl mx-auto px-6">
+  <div class="max-w-2xl mx-auto px-6 post-enter">
 
-    <nav class="text-sm text-gray-500 mb-8 flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
-      <a href="/" class="hover:text-white transition-colors">Home</a>
-      <span aria-hidden="true">/</span>
-      <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
-      <span aria-hidden="true">/</span>
-      <span class="text-gray-400">{{ title }}</span>
-    </nav>
+    <a href="/blog/"
+       class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-blue-400 transition-colors mb-10">
+      <i class="fas fa-arrow-left text-[10px]"></i>
+      <span data-i18n="blog.back">Voltar ao blog</span>
+    </a>
 
-    <header class="mb-10">
+    <header class="mb-12">
       {% if tags and tags.length %}
-      <div class="flex items-center gap-2 mb-4 flex-wrap">
+      <div class="flex items-center gap-2 mb-5 flex-wrap">
         {% for tag in tags %}
           {% if tag != 'posts' %}
-          <a href="/blog/tags/{{ tag }}/" class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 hover:border-blue-500/40 transition-colors">{{ tag }}</a>
+          <a href="/blog/tags/{{ tag }}/"
+             class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 hover:border-blue-500/40 transition-colors">{{ tag }}</a>
           {% endif %}
         {% endfor %}
       </div>
       {% endif %}
 
-      <h1 class="text-3xl lg:text-4xl font-bold leading-tight mb-4">{{ title }}</h1>
+      <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.15] tracking-tight mb-5">
+        {{ title }}
+      </h1>
 
-      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-        <time datetime="{{ page.date | isoDate }}" data-i18n-date>{{ page.date | dateDisplay }}</time>
-        <span aria-hidden="true">·</span>
-        <span>
-          <span data-reading-minutes>{{ content | readingMinutes }}</span>
-          <span data-i18n="blog.reading.time.label">min de leitura</span>
+      {% if description %}
+      <p class="text-lg text-gray-400 leading-relaxed mb-6">
+        {{ description }}
+      </p>
+      {% endif %}
+
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 pt-5 border-t border-white/5">
+        <span class="inline-flex items-center gap-2">
+          <i class="far fa-calendar text-blue-400/80 text-xs"></i>
+          <time datetime="{{ page.date | isoDate }}" data-i18n-date>{{ page.date | dateDisplay }}</time>
+        </span>
+        <span class="inline-flex items-center gap-2">
+          <i class="far fa-clock text-blue-400/80 text-xs"></i>
+          <span>
+            <span data-reading-minutes>{{ content | readingMinutes }}</span>
+            <span data-i18n="blog.reading.time.label">min de leitura</span>
+          </span>
+        </span>
+        <span class="inline-flex items-center gap-2">
+          <i class="far fa-user text-blue-400/80 text-xs"></i>
+          <span>{{ site.author.name }}</span>
         </span>
       </div>
     </header>
@@ -46,48 +62,61 @@ pageType: post
       {{ content | safe }}
     </div>
 
-    <div class="mt-12 pt-8 border-t border-white/5">
-      <p class="text-sm text-gray-500 mb-4" data-i18n="blog.share">Compartilhar</p>
-      <div class="flex flex-wrap gap-3">
+    <div class="mt-14 pt-8 border-t border-white/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+      <p class="text-sm text-gray-500" data-i18n="blog.share">Compartilhar</p>
+      <div class="flex flex-wrap gap-2">
         <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absoluteUrl(site.url) | urlencode }}"
            target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 text-sm bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 hover:border-blue-500/40 transition-all px-4 py-2 rounded-xl text-blue-400">
-          <i class="fab fa-linkedin"></i> LinkedIn
+           class="inline-flex items-center gap-2 text-sm bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/20 hover:border-blue-500/40 transition-all px-3.5 py-2 rounded-lg text-blue-400"
+           aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+          <span class="hidden sm:inline">LinkedIn</span>
         </a>
         <a href="https://twitter.com/intent/tweet?url={{ page.url | absoluteUrl(site.url) | urlencode }}&text={{ title | urlencode }}"
            target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 text-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all px-4 py-2 rounded-xl">
-          <i class="fab fa-x-twitter"></i> X
+           class="inline-flex items-center gap-2 text-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all px-3.5 py-2 rounded-lg"
+           aria-label="X">
+          <i class="fab fa-x-twitter"></i>
+          <span class="hidden sm:inline">X</span>
         </a>
         <button type="button" id="copy-link"
-                class="inline-flex items-center gap-2 text-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all px-4 py-2 rounded-xl">
-          <i class="fas fa-link"></i> <span data-i18n="blog.share.copy">Copiar link</span>
+                class="inline-flex items-center gap-2 text-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all px-3.5 py-2 rounded-lg">
+          <i class="fas fa-link"></i>
+          <span data-i18n="blog.share.copy">Copiar link</span>
         </button>
       </div>
     </div>
 
     {% if olderPost or newerPost %}
-    <nav class="mt-12 grid sm:grid-cols-2 gap-4">
+    <nav class="mt-10 grid sm:grid-cols-2 gap-3" aria-label="Navegação entre artigos">
       {% if olderPost %}
-      <a href="{{ olderPost.url }}" class="bg-white/3 border border-white/8 hover:border-white/15 transition-all rounded-xl p-5 group">
-        <div class="text-xs text-gray-500 mb-1" data-i18n="blog.nav.previous">Artigo anterior</div>
-        <div class="text-white font-medium group-hover:text-blue-400 transition-colors">{{ olderPost.data.title }}</div>
+      <a href="{{ olderPost.url }}" class="bg-white/[0.03] border border-white/8 hover:border-blue-500/25 transition-all rounded-xl p-5 group card-hover">
+        <div class="text-xs text-gray-500 mb-2 inline-flex items-center gap-2">
+          <i class="fas fa-arrow-left text-[10px]"></i>
+          <span data-i18n="blog.nav.previous">Artigo anterior</span>
+        </div>
+        <div class="text-white font-medium leading-snug group-hover:text-blue-400 transition-colors">{{ olderPost.data.title }}</div>
       </a>
       {% else %}
-      <div></div>
+      <div class="hidden sm:block"></div>
       {% endif %}
       {% if newerPost %}
-      <a href="{{ newerPost.url }}" class="bg-white/3 border border-white/8 hover:border-white/15 transition-all rounded-xl p-5 group text-right">
-        <div class="text-xs text-gray-500 mb-1" data-i18n="blog.nav.next">Próximo artigo</div>
-        <div class="text-white font-medium group-hover:text-blue-400 transition-colors">{{ newerPost.data.title }}</div>
+      <a href="{{ newerPost.url }}" class="bg-white/[0.03] border border-white/8 hover:border-blue-500/25 transition-all rounded-xl p-5 group card-hover text-right">
+        <div class="text-xs text-gray-500 mb-2 inline-flex items-center gap-2 justify-end">
+          <span data-i18n="blog.nav.next">Próximo artigo</span>
+          <i class="fas fa-arrow-right text-[10px]"></i>
+        </div>
+        <div class="text-white font-medium leading-snug group-hover:text-blue-400 transition-colors">{{ newerPost.data.title }}</div>
       </a>
       {% endif %}
     </nav>
     {% endif %}
 
-    <div class="mt-12 bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20 rounded-2xl p-6 sm:p-8 text-center">
-      <p class="text-gray-300 mb-4" data-i18n="contact.p">
-        Tem um projeto em mente ou quer conversar sobre oportunidades? Estou disponível para consultoria técnica, projetos freelance e oportunidades full-time.
+    <div class="mt-12 relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-900/25 via-gray-950 to-purple-900/20 p-7 sm:p-9">
+      <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-blue-500/10 blur-3xl pointer-events-none"></div>
+      <p class="text-xs font-semibold tracking-widest text-blue-400 uppercase mb-3" data-i18n="blog.cta.eyebrow">Continuar a conversa</p>
+      <p class="text-gray-300 leading-relaxed mb-6 max-w-lg" data-i18n="blog.cta.desc">
+        Tem um projeto em mente ou quer conversar sobre tecnologia? Estou disponível para consultoria, freelance e oportunidades.
       </p>
       <a href="/#contato"
          class="inline-flex items-center gap-2 text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-5 py-2.5 rounded-lg font-medium"
@@ -101,6 +130,21 @@ pageType: post
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const progress = document.getElementById('reading-progress');
+    if (progress) {
+      const updateProgress = () => {
+        const article = document.querySelector('article');
+        if (!article) return;
+        const rect = article.getBoundingClientRect();
+        const total = article.offsetHeight - window.innerHeight;
+        const scrolled = Math.min(Math.max(-rect.top, 0), Math.max(total, 1));
+        progress.style.width = `${(scrolled / Math.max(total, 1)) * 100}%`;
+      };
+      updateProgress();
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress);
+    }
+
     const btn = document.getElementById('copy-link');
     if (!btn) return;
     const label = btn.querySelector('[data-i18n="blog.share.copy"]') || btn;
