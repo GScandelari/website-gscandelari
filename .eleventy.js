@@ -31,6 +31,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("scripts/**");
   eleventyConfig.ignores.add("node_modules/**");
 
+  // Rede de segurança: nunca processar pastas ocultas (.claude, .github, .vscode etc.)
+  // como conteúdo, mesmo que apareçam localmente sem estar no .gitignore.
+  eleventyConfig.ignores.add(".*/**");
+
   eleventyConfig.addFilter("dateDisplay", (date, locale = "pt-BR") => {
     return new Date(date).toLocaleDateString(locale, {
       year: "numeric",
