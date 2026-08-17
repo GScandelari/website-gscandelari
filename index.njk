@@ -432,18 +432,37 @@
   <section id="blog" class="py-24 border-t border-white/5">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-3"><span data-i18n="blog.teaser.heading.before">Do </span><span class="gradient-text" data-i18n="blog.teaser.heading.gradient">blog</span></h2>
-      <p class="text-gray-500 mb-10 text-sm uppercase tracking-widest" data-i18n="blog.hero.eyebrow">Publicações</p>
+      <p class="text-gray-500 mb-12 text-sm uppercase tracking-widest" data-i18n="blog.hero.eyebrow">Publicações</p>
 
-      <div class="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20 rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-        <div class="max-w-xl">
-          <p class="text-gray-300 leading-relaxed" data-i18n="blog.teaser.desc">
-            Artigos e notas sobre desenvolvimento, TI e tecnologia.
-          </p>
-        </div>
-        <a href="/blog/"
-           class="inline-flex items-center justify-center gap-2 text-sm bg-blue-600 hover:bg-blue-500 transition-colors px-5 py-3 rounded-lg font-medium whitespace-nowrap">
-          <span data-i18n="blog.teaser.cta">Visitar o blog</span>
-          <i class="fas fa-arrow-right text-xs"></i>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for post in collections.posts.slice(0, 3) %}
+        <article class="post-card group bg-white/3 border border-white/8 rounded-2xl overflow-hidden card-hover">
+          <div class="p-5 flex flex-col h-full">
+            <div class="flex items-center gap-2 mb-3 flex-wrap">
+              {% for tag in post.data.tags %}
+                {% if tag != 'posts' %}
+                <a href="/blog/tags/{{ tag }}/" class="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 hover:border-blue-500/40 transition-colors">{{ tag }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <time class="text-xs text-gray-500 mb-2" datetime="{{ post.date | isoDate }}" data-i18n-date>{{ post.date | dateDisplay("pt-BR") }}</time>
+            <h3 class="font-semibold text-white mb-2 text-lg leading-snug">
+              <a href="{{ post.url }}" class="hover:text-blue-400 transition-colors">{{ post.data.title }}</a>
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+              {{ post.data.description | excerpt }}
+            </p>
+            <a href="{{ post.url }}" class="text-xs text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 mt-auto">
+              <span data-i18n="blog.read.more">Ler artigo</span> <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/blog" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 transition-all px-6 py-3 rounded-xl">
+          <span data-i18n="blog.teaser.cta">Visitar o blog</span> <i class="fas fa-arrow-right text-xs"></i>
         </a>
       </div>
     </div>

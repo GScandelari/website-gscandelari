@@ -9,7 +9,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("imgs");
   eleventyConfig.addPassthroughCopy("favicon");
   eleventyConfig.addPassthroughCopy("translations");
-  eleventyConfig.addPassthroughCopy("index.html");
   eleventyConfig.addPassthroughCopy("carreira.html");
   eleventyConfig.addPassthroughCopy("formacao.html");
   eleventyConfig.addPassthroughCopy("dev-sites.html");
@@ -18,7 +17,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("llms.txt");
 
   // Não processar HTML/MD de documentação como templates
-  eleventyConfig.ignores.add("index.html");
   eleventyConfig.ignores.add("carreira.html");
   eleventyConfig.ignores.add("formacao.html");
   eleventyConfig.ignores.add("dev-sites.html");
