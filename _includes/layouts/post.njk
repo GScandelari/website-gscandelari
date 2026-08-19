@@ -7,6 +7,10 @@ pageType: post
    getPreviousCollectionItem = artigo mais novo #}
 {% set olderPost = collections.posts | getNextCollectionItem %}
 {% set newerPost = collections.posts | getPreviousCollectionItem %}
+{# page.date on a paginated template (CMS posts) reflects the source file's
+   filesystem date, not eleventyComputed.date — prefer the computed `date`
+   data value when present, since it's the one that's actually correct. #}
+{% set postDate = date or page.date %}
 
 <article class="pt-28 pb-24">
   <div class="max-w-2xl mx-auto px-6 post-enter">
@@ -42,7 +46,7 @@ pageType: post
       <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 pt-5 border-t border-white/5">
         <span class="inline-flex items-center gap-2">
           <i class="far fa-calendar text-blue-400/80 text-xs"></i>
-          <time datetime="{{ page.date | isoDate }}" data-i18n-date>{{ page.date | dateDisplay }}</time>
+          <time datetime="{{ postDate | isoDate }}" data-i18n-date>{{ postDate | dateDisplay }}</time>
         </span>
         <span class="inline-flex items-center gap-2">
           <i class="far fa-clock text-blue-400/80 text-xs"></i>
