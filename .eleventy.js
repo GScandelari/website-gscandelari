@@ -1,4 +1,25 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const getCmsPosts = require("./_data/cmsPosts.js");
+
+// Pagination only exposes one collection entry per source template, not one
+// per generated page — with a single CMS post that's indistinguishable from
+// "one per page", but it silently drops every CMS post past the first once
+// there's more than one. Building these entries straight from the same data
+// pagination itself reads (rather than through collectionApi) sidesteps that
+// entirely and always reflects every generated /blog/<slug>/ page.
+async function getCmsPostCollectionItems() {
+  const posts = await getCmsPosts();
+  return posts.map((post) => ({
+    url: `/blog/${post.slug}/`,
+    date: new Date(post.date),
+    data: {
+      title: post.title,
+      description: post.description,
+      tags: post.tags,
+      lang: post.lang,
+    },
+  }));
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -75,16 +96,16 @@ module.exports = function (eleventyConfig) {
     return encodeURIComponent(String(value || ""));
   });
 
-  eleventyConfig.addCollection("posts", (collectionApi) => {
+  eleventyConfig.addCollection("posts", async (collectionApi) => {
     const filePosts = collectionApi.getFilteredByGlob("blog/posts/*.md");
-    const cmsPosts = collectionApi.getFilteredByGlob("blog/cms-posts.md");
+    const cmsPosts = await getCmsPostCollectionItems();
     return [...filePosts, ...cmsPosts].sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("postTags", (collectionApi) => {
+  eleventyConfig.addCollection("postTags", async (collectionApi) => {
     const tags = new Set();
     const filePosts = collectionApi.getFilteredByGlob("blog/posts/*.md");
-    const cmsPosts = collectionApi.getFilteredByGlob("blog/cms-posts.md");
+    const cmsPosts = await getCmsPostCollectionItems();
     [...filePosts, ...cmsPosts].forEach((item) => {
       (item.data.tags || []).forEach((tag) => {
         if (tag && tag !== "posts") tags.add(tag);
