@@ -76,14 +76,16 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("posts", (collectionApi) => {
-    return collectionApi
-      .getFilteredByGlob("blog/posts/*.md")
-      .sort((a, b) => b.date - a.date);
+    const filePosts = collectionApi.getFilteredByGlob("blog/posts/*.md");
+    const cmsPosts = collectionApi.getFilteredByGlob("blog/cms-posts.md");
+    return [...filePosts, ...cmsPosts].sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("postTags", (collectionApi) => {
     const tags = new Set();
-    collectionApi.getFilteredByGlob("blog/posts/*.md").forEach((item) => {
+    const filePosts = collectionApi.getFilteredByGlob("blog/posts/*.md");
+    const cmsPosts = collectionApi.getFilteredByGlob("blog/cms-posts.md");
+    [...filePosts, ...cmsPosts].forEach((item) => {
       (item.data.tags || []).forEach((tag) => {
         if (tag && tag !== "posts") tags.add(tag);
       });
