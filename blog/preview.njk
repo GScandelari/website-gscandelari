@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: Pré-visualização
+description: Pré-visualização de post do CMS.
+pageType: post
+permalink: /blog/preview/
+eleventyExcludeFromCollections: true
+---
+<meta name="robots" content="noindex" />
+
+<article class="pt-28 pb-24">
+  <div class="max-w-2xl mx-auto px-6 post-enter">
+
+    <div class="mb-10 rounded-xl border border-yellow-500/25 bg-yellow-500/10 px-4 py-3 text-sm text-yellow-300 flex items-center gap-2">
+      <i class="fas fa-eye text-xs"></i>
+      Pré-visualização — este post pode ainda não estar publicado no site.
+    </div>
+
+    <div id="preview-root">
+      <p class="text-gray-500">Carregando post…</p>
+    </div>
+
+  </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
+<script>
+  (function () {
+    const CMS_API_URL = "https://southamerica-east1-gscandelari-cms.cloudfunctions.net/api";
+    const root = document.getElementById("preview-root");
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str || "";
+      return div.innerHTML;
+    }
+
+    function renderError(message) {
+      root.innerHTML = '<p class="text-red-400">' + escapeHtml(message) + "</p>";
+    }
+
+    if (!id) {
+      renderError("ID do post não informado (use ?id=...).");
+      return;
+    }
+
+    fetch(CMS_API_URL + "/posts/" + encodeURIComponent(id))
+      .then((res) => {
+        if (!res.ok) throw new Error("Post não encontrado (HTTP " + res.status + ").");
+        return res.json();
+      })
+      .then((post) => {
+        const md = window.markdownit();
+        const contentHtml = md.render(post.content || "");
+        const tags = (post.tags || []).filter((t) => t !== "posts");
+        const tagsHtml = tags
+          .map(
+            (t) =>
+              '<span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">' +
+              escapeHtml(t) +
+              "</span>"
+          )
+          .join("");
+        const dateStr = new Date(post.createdAt || Date.now()).toLocaleDateString("pt-BR", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
+        const words = String(post.content || "").split(/\s+/).filter(Boolean).length;
+        const readingMinutes = Math.max(1, Math.ceil(words / 200));
+
+        document.title = (post.title || "Pré-visualização") + " | Guilherme Scandelari";
+
+        root.innerHTML =
+          '<header class="mb-12">' +
+          (tagsHtml ? '<div class="flex items-center gap-2 mb-5 flex-wrap">' + tagsHtml + "</div>" : "") +
+          '<h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.15] tracking-tight mb-5">' +
+          escapeHtml(post.title) +
+          "</h1>" +
+          (post.description
+            ? '<p class="text-lg text-gray-400 leading-relaxed mb-6">' + escapeHtml(post.description) + "</p>"
+            : "") +
+          '<div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 pt-5 border-t border-white/5">' +
+          '<span class="inline-flex items-center gap-2"><i class="far fa-calendar text-blue-400/80 text-xs"></i>' +
+          dateStr +
+          "</span>" +
+          '<span class="inline-flex items-center gap-2"><i class="far fa-clock text-blue-400/80 text-xs"></i>' +
+          readingMinutes +
+          " min de leitura</span>" +
+          '<span class="inline-flex items-center gap-2"><i class="far fa-user text-blue-400/80 text-xs"></i>Guilherme Scandelari</span>' +
+          "</div>" +
+          "</header>" +
+          '<div class="post-content">' +
+          contentHtml +
+          "</div>";
+      })
+      .catch((err) => renderError(err.message));
+  })();
+</script>
