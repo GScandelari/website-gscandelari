@@ -112,13 +112,23 @@ eleventyExcludeFromCollections: true
 
     if (isEmbedded) {
       // Live preview mode: wait for post data pushed from the parent window.
+      let readyPingTimer;
       window.addEventListener("message", (event) => {
         if (event.origin !== LIVE_PREVIEW_ORIGIN) return;
         if (!event.data || event.data.type !== "preview-update") return;
+        clearInterval(readyPingTimer);
         renderPost(event.data.post || {});
       });
       root.innerHTML = '<p class="text-gray-500">Aguardando conteúdo…</p>';
-      // Let the parent know it's safe to start sending updates.
+      // Let the parent know it's safe to start sending updates. The parent's
+      // own "message" listener may not be registered yet at this exact
+      // instant (its script has an import chain to load first), so a single
+      // postMessage here can race and get lost forever, leaving the preview
+      // stuck on "Aguardando conteúdo…" with no second chance. Repeat the
+      // ping until the parent actually answers with real post data.
+      readyPingTimer = setInterval(() => {
+        window.parent.postMessage({ type: "preview-ready" }, LIVE_PREVIEW_ORIGIN);
+      }, 300);
       window.parent.postMessage({ type: "preview-ready" }, LIVE_PREVIEW_ORIGIN);
       return;
     }
