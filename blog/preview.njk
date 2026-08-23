@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
 <article class="pt-28 pb-24">
   <div class="max-w-2xl mx-auto px-6 post-enter">
 
-    <div class="mb-10 rounded-xl border border-yellow-500/25 bg-yellow-500/10 px-4 py-3 text-sm text-yellow-300 flex items-center gap-2">
+    <div id="preview-banner" class="mb-10 rounded-xl border border-yellow-500/25 bg-yellow-500/10 px-4 py-3 text-sm text-yellow-300 flex items-center gap-2">
       <i class="fas fa-eye text-xs"></i>
       Pré-visualização — este post pode ainda não estar publicado no site.
     </div>
@@ -27,9 +27,21 @@ eleventyExcludeFromCollections: true
 <script>
   (function () {
     const CMS_API_URL = "https://southamerica-east1-gscandelari-cms.cloudfunctions.net/api";
+    const LIVE_PREVIEW_ORIGIN = "https://gscandelari-cms-admin.web.app";
     const root = document.getElementById("preview-root");
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
+    const isEmbedded = window.self !== window.top;
+
+    if (isEmbedded) {
+      // Split-screen live preview inside the admin app — the nav/footer from
+      // base.njk just eat space and add nothing there.
+      document.querySelector("nav").style.display = "none";
+      document.querySelector("footer").style.display = "none";
+      document.getElementById("preview-banner").style.display = "none";
+      document.querySelector("article").classList.remove("pt-28");
+      document.querySelector("article").classList.add("pt-10");
+    }
 
     function escapeHtml(str) {
       const div = document.createElement("div");
@@ -39,6 +51,67 @@ eleventyExcludeFromCollections: true
 
     function renderError(message) {
       root.innerHTML = '<p class="text-red-400">' + escapeHtml(message) + "</p>";
+    }
+
+    function renderPost(post) {
+      const md = window.markdownit();
+      const contentHtml = md.render(post.content || "");
+      const tags = (post.tags || []).filter((t) => t !== "posts");
+      const tagsHtml = tags
+        .map(
+          (t) =>
+            '<span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">' +
+            escapeHtml(t) +
+            "</span>"
+        )
+        .join("");
+      const dateStr = new Date(post.createdAt || Date.now()).toLocaleDateString("pt-BR", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      });
+      const words = String(post.content || "").split(/\s+/).filter(Boolean).length;
+      const readingMinutes = Math.max(1, Math.ceil(words / 200));
+
+      if (!isEmbedded) {
+        document.title = (post.title || "Pré-visualização") + " | Guilherme Scandelari";
+      }
+
+      root.innerHTML =
+        '<header class="mb-12">' +
+        (tagsHtml ? '<div class="flex items-center gap-2 mb-5 flex-wrap">' + tagsHtml + "</div>" : "") +
+        '<h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.15] tracking-tight mb-5">' +
+        (escapeHtml(post.title) || '<span class="text-gray-600">Sem título</span>') +
+        "</h1>" +
+        (post.description
+          ? '<p class="text-lg text-gray-400 leading-relaxed mb-6">' + escapeHtml(post.description) + "</p>"
+          : "") +
+        '<div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 pt-5 border-t border-white/5">' +
+        '<span class="inline-flex items-center gap-2"><i class="far fa-calendar text-blue-400/80 text-xs"></i>' +
+        dateStr +
+        "</span>" +
+        '<span class="inline-flex items-center gap-2"><i class="far fa-clock text-blue-400/80 text-xs"></i>' +
+        readingMinutes +
+        " min de leitura</span>" +
+        '<span class="inline-flex items-center gap-2"><i class="far fa-user text-blue-400/80 text-xs"></i>Guilherme Scandelari</span>' +
+        "</div>" +
+        "</header>" +
+        '<div class="post-content">' +
+        contentHtml +
+        "</div>";
+    }
+
+    if (isEmbedded) {
+      // Live preview mode: wait for post data pushed from the parent window.
+      window.addEventListener("message", (event) => {
+        if (event.origin !== LIVE_PREVIEW_ORIGIN) return;
+        if (!event.data || event.data.type !== "preview-update") return;
+        renderPost(event.data.post || {});
+      });
+      root.innerHTML = '<p class="text-gray-500">Aguardando conteúdo…</p>';
+      // Let the parent know it's safe to start sending updates.
+      window.parent.postMessage({ type: "preview-ready" }, LIVE_PREVIEW_ORIGIN);
+      return;
     }
 
     if (!id) {
@@ -51,51 +124,7 @@ eleventyExcludeFromCollections: true
         if (!res.ok) throw new Error("Post não encontrado (HTTP " + res.status + ").");
         return res.json();
       })
-      .then((post) => {
-        const md = window.markdownit();
-        const contentHtml = md.render(post.content || "");
-        const tags = (post.tags || []).filter((t) => t !== "posts");
-        const tagsHtml = tags
-          .map(
-            (t) =>
-              '<span class="text-xs px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">' +
-              escapeHtml(t) +
-              "</span>"
-          )
-          .join("");
-        const dateStr = new Date(post.createdAt || Date.now()).toLocaleDateString("pt-BR", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        });
-        const words = String(post.content || "").split(/\s+/).filter(Boolean).length;
-        const readingMinutes = Math.max(1, Math.ceil(words / 200));
-
-        document.title = (post.title || "Pré-visualização") + " | Guilherme Scandelari";
-
-        root.innerHTML =
-          '<header class="mb-12">' +
-          (tagsHtml ? '<div class="flex items-center gap-2 mb-5 flex-wrap">' + tagsHtml + "</div>" : "") +
-          '<h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.15] tracking-tight mb-5">' +
-          escapeHtml(post.title) +
-          "</h1>" +
-          (post.description
-            ? '<p class="text-lg text-gray-400 leading-relaxed mb-6">' + escapeHtml(post.description) + "</p>"
-            : "") +
-          '<div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 pt-5 border-t border-white/5">' +
-          '<span class="inline-flex items-center gap-2"><i class="far fa-calendar text-blue-400/80 text-xs"></i>' +
-          dateStr +
-          "</span>" +
-          '<span class="inline-flex items-center gap-2"><i class="far fa-clock text-blue-400/80 text-xs"></i>' +
-          readingMinutes +
-          " min de leitura</span>" +
-          '<span class="inline-flex items-center gap-2"><i class="far fa-user text-blue-400/80 text-xs"></i>Guilherme Scandelari</span>' +
-          "</div>" +
-          "</header>" +
-          '<div class="post-content">' +
-          contentHtml +
-          "</div>";
-      })
+      .then(renderPost)
       .catch((err) => renderError(err.message));
   })();
 </script>
