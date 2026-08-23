@@ -35,12 +35,21 @@ eleventyExcludeFromCollections: true
 
     if (isEmbedded) {
       // Split-screen live preview inside the admin app — the nav/footer from
-      // base.njk just eat space and add nothing there.
-      document.querySelector("nav").style.display = "none";
-      document.querySelector("footer").style.display = "none";
-      document.getElementById("preview-banner").style.display = "none";
-      document.querySelector("article").classList.remove("pt-28");
-      document.querySelector("article").classList.add("pt-10");
+      // base.njk just eat space and add nothing there. Deferred to
+      // DOMContentLoaded because the footer markup comes after this script
+      // in the document and doesn't exist yet when this runs synchronously.
+      document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector("nav");
+        const footer = document.querySelector("footer");
+        const article = document.querySelector("article");
+        if (nav) nav.style.display = "none";
+        if (footer) footer.style.display = "none";
+        document.getElementById("preview-banner").style.display = "none";
+        if (article) {
+          article.classList.remove("pt-28");
+          article.classList.add("pt-10");
+        }
+      });
     }
 
     function escapeHtml(str) {
