@@ -33,6 +33,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("carreira.html");
   eleventyConfig.addPassthroughCopy("formacao.html");
   eleventyConfig.addPassthroughCopy("dev-sites.html");
+  eleventyConfig.addPassthroughCopy("cms.html");
   eleventyConfig.addPassthroughCopy("404.html");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("llms.txt");
@@ -41,6 +42,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("carreira.html");
   eleventyConfig.ignores.add("formacao.html");
   eleventyConfig.ignores.add("dev-sites.html");
+  eleventyConfig.ignores.add("cms.html");
   eleventyConfig.ignores.add("404.html");
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("BLOG-PLANO.md");
