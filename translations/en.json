@@ -73,6 +73,9 @@
   "project.ecommerceapi.desc": "E-commerce API in real production, split into three microservices (Orders, Payments, Notifications). Charges real cards through Stripe, always in test mode, handles cancellation and refunds, and has automated tests covering the business rules.",
   "project.ecommerceapi.github": "View on GitHub",
   "project.ecommerceapi.demo": "View live project",
+  "project.cms.desc": "Custom CMS system powering the gscandelari.com.br blog: a Node.js/Express API with Firebase Cloud Functions and Firestore, plus an admin panel with Google sign-in, real-time preview, image uploads and post scheduling.",
+  "project.cms.github": "View on GitHub",
+  "project.cms.demo": "View live project",
   "projects.viewall": "View all projects on GitHub",
 
   "blog.hero.eyebrow": "Publications",

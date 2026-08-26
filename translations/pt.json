@@ -73,6 +73,9 @@
   "project.ecommerceapi.desc": "API de e-commerce em produção real, dividida em três microsserviços (Orders, Payments, Notifications). Cobra de verdade com o Stripe, sempre em modo teste, cuida de cancelamento e reembolso, e tem testes automatizados cobrindo as regras de negócio.",
   "project.ecommerceapi.github": "Ver no GitHub",
   "project.ecommerceapi.demo": "Ver projeto no ar",
+  "project.cms.desc": "Sistema próprio de CMS que alimenta o blog do gscandelari.com.br: API em Node.js/Express com Firebase Cloud Functions e Firestore, e um painel administrativo com login Google, preview em tempo real, upload de imagens e agendamento de publicações.",
+  "project.cms.github": "Ver no GitHub",
+  "project.cms.demo": "Ver projeto no ar",
   "projects.viewall": "Ver todos os projetos no GitHub",
 
   "blog.hero.eyebrow": "Publicações",
