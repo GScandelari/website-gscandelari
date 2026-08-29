@@ -9,16 +9,21 @@ const getCmsPosts = require("./_data/cmsPosts.js");
 // entirely and always reflects every generated /blog/<slug>/ page.
 async function getCmsPostCollectionItems() {
   const posts = await getCmsPosts();
-  return posts.map((post) => ({
-    url: `/blog/${post.slug}/`,
-    date: new Date(post.date),
-    data: {
-      title: post.title,
-      description: post.description,
-      tags: post.tags,
-      lang: post.lang,
-    },
-  }));
+  // English translations get their own page (/en/blog/<slug>/) but don't
+  // join the main (Portuguese) blog listing, tag pages, or RSS feed — those
+  // stay PT-only for now. Reachable directly, or via a link from the PT page.
+  return posts
+    .filter((post) => post.locale !== "en")
+    .map((post) => ({
+      url: `/blog/${post.slug}/`,
+      date: new Date(post.date),
+      data: {
+        title: post.title,
+        description: post.description,
+        tags: post.tags,
+        lang: post.lang,
+      },
+    }));
 }
 
 module.exports = function (eleventyConfig) {
