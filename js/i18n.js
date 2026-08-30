@@ -38,6 +38,19 @@ function applyDates(lang) {
   });
 }
 
+// Blog post cards carry both URLs (data-pt-href always; data-en-href only
+// when that post has an edited translation) so they follow the current
+// language instead of always linking to the Portuguese page. A post with no
+// translation has no data-en-href, so it just stays on the Portuguese URL
+// even in English mode — no dead link to a page that doesn't exist.
+function applyLocaleLinks(lang) {
+  document.querySelectorAll('[data-pt-href]').forEach((el) => {
+    const enHref = el.dataset.enHref;
+    const ptHref = el.dataset.ptHref;
+    el.setAttribute('href', lang === 'en' && enHref ? enHref : ptHref);
+  });
+}
+
 async function applyLang(lang) {
   const translations = await loadTranslations(lang);
   if (!Object.keys(translations).length) return;
@@ -58,6 +71,7 @@ async function applyLang(lang) {
   });
 
   applyDates(lang);
+  applyLocaleLinks(lang);
 
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
   localStorage.setItem('lang', lang);

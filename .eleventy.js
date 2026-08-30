@@ -12,6 +12,7 @@ async function getCmsPostCollectionItems() {
   // English translations get their own page (/en/blog/<slug>/) but don't
   // join the main (Portuguese) blog listing, tag pages, or RSS feed — those
   // stay PT-only for now. Reachable directly, or via a link from the PT page.
+  const enSlugs = new Set(posts.filter((post) => post.locale === "en").map((post) => post.slug));
   return posts
     .filter((post) => post.locale !== "en")
     .map((post) => ({
@@ -21,6 +22,10 @@ async function getCmsPostCollectionItems() {
         title: post.title,
         description: post.description,
         tags: post.tags,
+        // Set only when this post has an edited English translation — lets
+        // post cards follow the site's PT/EN toggle to the right URL instead
+        // of always linking to the Portuguese page (see js/i18n.js).
+        enUrl: enSlugs.has(post.slug) ? `/en/blog/${post.slug}/` : null,
         lang: post.lang,
       },
     }));
