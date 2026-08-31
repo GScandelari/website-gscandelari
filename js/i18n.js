@@ -51,6 +51,18 @@ function applyLocaleLinks(lang) {
   });
 }
 
+// Same idea for the card's own title/description text (data-pt-text always;
+// data-en-text only when that post has an edited translation) — otherwise
+// the card kept linking to the English page while still showing the
+// Portuguese title and excerpt.
+function applyLocaleText(lang) {
+  document.querySelectorAll('[data-pt-text]').forEach((el) => {
+    const enText = el.dataset.enText;
+    const ptText = el.dataset.ptText;
+    el.textContent = lang === 'en' && enText ? enText : ptText;
+  });
+}
+
 async function applyLang(lang) {
   const translations = await loadTranslations(lang);
   if (!Object.keys(translations).length) return;
@@ -72,6 +84,7 @@ async function applyLang(lang) {
 
   applyDates(lang);
   applyLocaleLinks(lang);
+  applyLocaleText(lang);
 
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
   localStorage.setItem('lang', lang);

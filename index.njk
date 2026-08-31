@@ -479,9 +479,9 @@
             </div>
             <time class="text-xs text-gray-500 mb-2" datetime="{{ post.date | isoDate }}" data-i18n-date>{{ post.date | dateDisplay("pt-BR") }}</time>
             <h3 class="font-semibold text-white mb-2 text-lg leading-snug">
-              <a href="{{ post.url }}" data-pt-href="{{ post.url }}"{% if post.data.enUrl %} data-en-href="{{ post.data.enUrl }}"{% endif %} class="hover:text-blue-400 transition-colors">{{ post.data.title }}</a>
+              <a href="{{ post.url }}" data-pt-href="{{ post.url }}" data-pt-text="{{ post.data.title }}"{% if post.data.enUrl %} data-en-href="{{ post.data.enUrl }}"{% endif %}{% if post.data.enTitle %} data-en-text="{{ post.data.enTitle }}"{% endif %} class="hover:text-blue-400 transition-colors">{{ post.data.title }}</a>
             </h3>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1" data-pt-text="{{ post.data.description | excerpt }}"{% if post.data.enDescription %} data-en-text="{{ post.data.enDescription | excerpt }}"{% endif %}>
               {{ post.data.description | excerpt }}
             </p>
             <a href="{{ post.url }}" data-pt-href="{{ post.url }}"{% if post.data.enUrl %} data-en-href="{{ post.data.enUrl }}"{% endif %} class="text-xs text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 mt-auto">

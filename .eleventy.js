@@ -12,23 +12,29 @@ async function getCmsPostCollectionItems() {
   // English translations get their own page (/en/blog/<slug>/) but don't
   // join the main (Portuguese) blog listing, tag pages, or RSS feed — those
   // stay PT-only for now. Reachable directly, or via a link from the PT page.
-  const enSlugs = new Set(posts.filter((post) => post.locale === "en").map((post) => post.slug));
+  const enBySlug = new Map(posts.filter((post) => post.locale === "en").map((post) => [post.slug, post]));
   return posts
     .filter((post) => post.locale !== "en")
-    .map((post) => ({
-      url: `/blog/${post.slug}/`,
-      date: new Date(post.date),
-      data: {
-        title: post.title,
-        description: post.description,
-        tags: post.tags,
-        // Set only when this post has an edited English translation — lets
-        // post cards follow the site's PT/EN toggle to the right URL instead
-        // of always linking to the Portuguese page (see js/i18n.js).
-        enUrl: enSlugs.has(post.slug) ? `/en/blog/${post.slug}/` : null,
-        lang: post.lang,
-      },
-    }));
+    .map((post) => {
+      const en = enBySlug.get(post.slug);
+      return {
+        url: `/blog/${post.slug}/`,
+        date: new Date(post.date),
+        data: {
+          title: post.title,
+          description: post.description,
+          tags: post.tags,
+          // Set only when this post has an edited English translation — lets
+          // post cards follow the site's PT/EN toggle to the right URL, and
+          // show the translated title/description, instead of always
+          // showing the Portuguese page and text (see js/i18n.js).
+          enUrl: en ? `/en/blog/${post.slug}/` : null,
+          enTitle: en ? en.title : null,
+          enDescription: en ? en.description : null,
+          lang: post.lang,
+        },
+      };
+    });
 }
 
 module.exports = function (eleventyConfig) {
