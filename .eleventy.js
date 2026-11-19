@@ -53,6 +53,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("404.html");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("llms.txt");
+  eleventyConfig.addPassthroughCopy("baixada-maldita");
 
   // Não processar HTML/MD de documentação como templates
   eleventyConfig.ignores.add("carreira.html");
@@ -60,6 +61,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("dev-sites.html");
   eleventyConfig.ignores.add("cms.html");
   eleventyConfig.ignores.add("404.html");
+  eleventyConfig.ignores.add("baixada-maldita/**");
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("BLOG-PLANO.md");
   eleventyConfig.ignores.add("METODOLOGIA-IA.md");
