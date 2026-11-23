@@ -54,6 +54,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("baixada-maldita");
+  eleventyConfig.addPassthroughCopy("game");
 
   // Não processar HTML/MD de documentação como templates
   eleventyConfig.ignores.add("carreira.html");
