@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <title>Binary Switch — Teste antecipado</title>
+  <style>
+    :root {
+      --bg: #F4F7F2; --fg: #12241B; --muted: #4D6157; --line: #CCD8CF; --accent: #14533C; --btn-fg: #F4F7F2;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0B2A1F; --fg: #E4EDE6; --muted: #A2B9AC; --line: #24523F; --accent: #8FD1A9; --btn-fg: #0B2A1F; color-scheme: dark; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 640px; margin: 0 auto; padding: 32px 16px 64px; }
+    h1 { font-size: 28px; line-height: 1.2; margin: 0 0 4px; }
+    h2 { font-size: 19px; margin: 32px 0 8px; color: var(--accent); }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); margin: 0 0 24px; }
+    .cta {
+      display: block; text-align: center; text-decoration: none; font-weight: 700; font-size: 18px;
+      background: var(--accent); color: var(--btn-fg); padding: 16px; border-radius: 10px; margin: 24px 0 8px;
+    }
+    .cta-note { color: var(--muted); font-size: 14px; text-align: center; margin: 0; }
+    ol, ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .box { border: 1px solid var(--line); border-radius: 10px; padding: 4px 16px; margin: 16px 0; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Binary Switch</h1>
+  <p class="meta">Teste antecipado para Android</p>
+
+  <p>Converta o número decimal do display em binário ligando as chaves da placa antes de o tempo acabar. O jogo ainda não está na Google Play, e você pode jogar antes e me dizer o que achou.</p>
+
+  <a class="cta" href="https://appdistribution.firebase.dev/i/c2c2df9d6a0e2d21">Quero testar</a>
+  <p class="cta-note">Você informa o e-mail e recebe o convite. Só para Android.</p>
+
+  <h2>Como instalar</h2>
+  <ol>
+    <li>Toque em <strong>Quero testar</strong> e informe o e-mail da conta Google que você usa no celular.</li>
+    <li>Abra o convite que chega nesse e-mail, <strong>pelo celular</strong>, e aceite.</li>
+    <li>Siga as instruções na tela para baixar o app. Talvez apareça a sugestão de instalar o <strong>App Tester</strong>, do Firebase, que avisa quando sai versão nova.</li>
+    <li>O Android vai pedir permissão para instalar apps fora da Play Store. Autorize para o navegador ou para o App Tester.</li>
+    <li>Se o Play Protect mostrar um aviso de app desconhecido, toque em <strong>Mais detalhes → Instalar mesmo assim</strong>. Ele aparece porque o jogo ainda não passou pela loja.</li>
+  </ol>
+
+  <div class="box">
+    <h2>Bom saber</h2>
+    <ul>
+      <li>Quando o jogo chegar à Google Play, vai ser preciso desinstalar a versão de teste antes de instalar a da loja. O progresso da versão de teste não passa para a da loja.</li>
+      <li>O jogo envia estatísticas de uso e relatórios de erro, sem o seu nome. Dá para desligar em <strong>Opções → Estatísticas de uso</strong>.</li>
+      <li>Para sair do teste, é só pedir pelo e-mail abaixo.</li>
+    </ul>
+  </div>
+
+  <h2>Achou um problema ou tem uma ideia?</h2>
+  <p>Escreva para <a href="mailto:scandelari.guilherme@hotmail.com?subject=Binary%20Switch%20-%20teste">scandelari.guilherme@hotmail.com</a>. Se puder, mande o modelo do celular e um print.</p>
+
+  <footer>
+    O e-mail informado é usado só para enviar as versões de teste. Detalhes no item 4.1 da <a href="/game#pt">Política de Privacidade</a>.
+  </footer>
+</main>
+</body>
+</html>
